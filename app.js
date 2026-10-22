@@ -33,7 +33,11 @@ window.addEventListener('error', function (e) {
 (function () {
   'use strict';
 
-  var ENDPOINT = 'PASTE_THE_DEPLOYED_EXEC_URL_HERE';
+  /* The same /exec URL Spark Points, Results and Appraisal all use — homework
+     is a fourth add-on file in that one Apps Script project. It survives a
+     re-deploy as long as that is done with Manage deployments > Edit > New
+     version; only "New deployment" would mint a new URL. */
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxahzgarriiZeHw-RCWr8PivATnm1ajQa3cUcadNyyj0eNYdUFT4zbt8_yqxQSxSBqW/exec';
 
   var AUTH = { studentId: '', studentCode: '' };
   var ME = { name: '', className: '' };
@@ -152,8 +156,11 @@ window.addEventListener('error', function (e) {
         if (Object.prototype.hasOwnProperty.call(extra, k)) payload[k] = extra[k];
       }
     }
-    if (ENDPOINT.indexOf('PASTE_THE') === 0) {
-      cb({ success: false, error: 'This page is not connected yet: paste the deployed /exec URL into ENDPOINT in app.js.' });
+    /* Catches an unconfigured or blanked ENDPOINT. Deliberately "is this a URL"
+       rather than "is this script.google.com", so the portal can also be pointed
+       at a local stub for testing. */
+    if (!/^https?:\/\//.test(ENDPOINT)) {
+      cb({ success: false, error: 'This page is not connected: ENDPOINT in app.js is not a URL.' });
       return;
     }
     var xhr = new XMLHttpRequest();
