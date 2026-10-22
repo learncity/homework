@@ -107,10 +107,17 @@ function groupTopics(topics) {
     if (!byDomain[d]) byDomain[d] = {};
     const key = t.topic || t.outcomeId;
     if (!byDomain[d][key]) {
-      byDomain[d][key] = { topic: key, domain: d, outcomeIds: [], live: 0, reviewed: 0, liveTheory: 0 };
+      byDomain[d][key] = { topic: key, domain: d, outcomeIds: [], live: 0, reviewed: 0, liveTheory: 0, years: [] };
     }
     const slot = byDomain[d][key];
     slot.outcomeIds.push(t.outcomeId);
+    /* A topic can span two classes, and one outcome can too — a junior-secondary
+       foundation tagged "JSS 3, SSS 1" is taught in JSS 3 and revised in SSS 1,
+       so it should be offered under both. Keep every level, not the first seen. */
+    String(t.yearLevel || '').split(',').forEach(function (y) {
+      var v = y.trim();
+      if (v && slot.years.indexOf(v) < 0) slot.years.push(v);
+    });
     slot.live += t.liveMcq || 0;
     slot.reviewed += t.reviewedMcq || 0;
     slot.liveTheory += t.liveTheory || 0;
@@ -118,8 +125,36 @@ function groupTopics(topics) {
   return Object.keys(byDomain).sort().map(function (d) {
     return {
       domain: d,
-      topics: Object.keys(byDomain[d]).sort().map(function (k) { return byDomain[d][k]; })
+      topics: Object.keys(byDomain[d]).sort().map(function (k) {
+        byDomain[d][k].years.sort();
+        return byDomain[d][k];
+      })
     };
+  });
+}
+
+/* The year filter hides topics taught in other classes. It never unticks
+   anything, so a topic chosen before the filter was set still counts. */
+function yearFilter(selectId) {
+  const want = $(selectId) ? $(selectId).value : '';
+  return function (t) { return !want || t.years.indexOf(want) >= 0; };
+}
+
+function fillYearFilter(selectId) {
+  const years = [];
+  state.topics.forEach(function (t) {
+    String(t.yearLevel || '').split(',').forEach(function (y) {
+      const v = y.trim();
+      if (v && years.indexOf(v) < 0) years.push(v);
+    });
+  });
+  years.sort();
+  const sel = $(selectId);
+  if (!sel || sel.options.length > 1) return;
+  years.forEach(function (y) {
+    const o = document.createElement('option');
+    o.value = y; o.textContent = y;
+    sel.appendChild(o);
   });
 }
 
@@ -132,9 +167,11 @@ function renderPicker(elId, countId, filterFn, labelFn) {
     html += '<div class="dom"><div class="domName">' + esc(g.domain) + '</div>' +
       rows.map(function (t) {
         const info = labelFn(t);
+        const yr = t.years.length ? '<span class="yr">' + esc(t.years.join(', ')) + '</span>' : '';
         return '<label class="' + (info.dim ? 'dim' : '') + '">' +
           '<input type="checkbox" value="' + esc(t.outcomeIds.join(',')) + '"' + (info.disabled ? ' disabled' : '') + '>' +
-          '<span>' + esc(t.topic) + '</span><span class="avail">' + info.note + '</span></label>';
+          '<span class="tName">' + esc(t.topic) + '</span>' + yr +
+          '<span class="avail">' + info.note + '</span></label>';
       }).join('') + '</div>';
   });
   $(elId).innerHTML = html || '<p class="muted" style="margin:6px 0">' +
@@ -225,6 +262,8 @@ function applyBootstrap(r) {
 
   renderAssignments();
   renderNewTopicPicker();
+  fillYearFilter('pickYear');
+  fillYearFilter('bankYear');
   if (r.staff.canManageUsers) { renderBankPicker(); renderBankExplain(); }
 }
 
@@ -241,8 +280,10 @@ function reload(after) {
 function renderNewTopicPicker() {
   const scored = $('newMode').value === 'Scored';
   const onlyReady = $('pickOnlyReady').checked;
+  const inYear = yearFilter('pickYear');
   renderPicker('topicPicker', 'pickCount',
     function (t) {
+      if (!inYear(t)) return false;
       const n = scored ? t.live : t.liveTheory;
       return onlyReady ? n > 0 : true;
     },
@@ -304,7 +345,8 @@ function createAssignment(publish) {
     btn.disabled = false;
     if (!r || !r.success) { msg('createMsg', 'error', (r && r.error) || 'Could not create it.'); return; }
     msg('createMsg', 'ok', r.assignmentId + ' ' +
-      (publish ? 'is published — pupils in ' + className + ' will see it now.' : 'saved as a draft. Publish it when you are ready.'));
+      (publish ? 'is published — pupils in ' + className + ' will see it now.' : 'saved as a draft. Publish it when you are ready.') +
+      notifyNote(r));
     $('topicPicker').querySelectorAll('input:checked').forEach(function (b) { b.checked = false; });
     updateCount('topicPicker', 'pickCount');
     reload();
@@ -320,7 +362,7 @@ function setStatus(btn, id, next) {
   msg('listMsg', '', 'Updating ' + id + '...');
   call('setAssignmentStatus', { assignmentId: id, status: next }).then(function (r) {
     if (!r || !r.success) { btn.disabled = false; msg('listMsg', 'error', (r && r.error) || 'Could not update it.'); return; }
-    msg('listMsg', 'ok', id + ' is now ' + next + '.');
+    msg('listMsg', 'ok', id + ' is now ' + next + '.' + notifyNote(r));
     reload();
   }).catch(function () { btn.disabled = false; msg('listMsg', 'error', 'Could not reach the server.'); });
 }
@@ -448,6 +490,19 @@ function loadPracticeReport() {
   }).catch(function () { msg('pracMsg', 'error', 'Could not reach the server.'); });
 }
 
+/* The assignment is saved whether or not the emails went out, so the two are
+   reported separately — a mail problem must not read as a failure to publish. */
+function notifyNote(r) {
+  if (r.notifyError) return ' Pupils were not emailed: ' + r.notifyError;
+  const n = r.notified;
+  if (!n) return '';
+  if (n.note === 'already sent') return ' Pupils had already been emailed about it.';
+  let out = ' ' + n.sent + ' pupil' + (n.sent === 1 ? '' : 's') + ' emailed';
+  if (n.noEmail && n.noEmail.length) out += ', ' + n.noEmail.length + ' have no email address';
+  if (n.failures && n.failures.length) out += ', ' + n.failures.length + ' failed';
+  return out + '.';
+}
+
 /* ---------- question bank ---------- */
 
 function renderBankExplain() {
@@ -464,8 +519,9 @@ function renderBankExplain() {
 
 function renderBankPicker() {
   const onlyPending = $('bankOnlyPending').checked;
+  const inYear = yearFilter('bankYear');
   renderPicker('bankPicker', 'bankCount',
-    function (t) { return onlyPending ? t.reviewed > 0 : true; },
+    function (t) { return inYear(t) && (onlyPending ? t.reviewed > 0 : true); },
     function (t) {
       return {
         dim: t.reviewed === 0, disabled: t.reviewed === 0,
@@ -539,14 +595,34 @@ function issueCodes(reset) {
     .then(function (r) {
       btn.disabled = false;
       if (!r || !r.success) { msg('codeMsg', 'error', (r && r.error) || 'Could not issue codes.'); return; }
-      msg('codeMsg', r.failed ? 'warn' : 'ok',
+      const noEmail = r.noEmail || [], shared = r.sharedEmail || [];
+      const stuck = r.failed + noEmail.length + shared.length;
+      msg('codeMsg', stuck ? 'warn' : 'ok',
         r.issued + ' code' + (r.issued === 1 ? '' : 's') + ' issued, ' + r.emailed + ' emailed, ' +
-        r.skippedExisting + ' already had one, ' + r.failed + ' could not be emailed.');
-      if (r.failures && r.failures.length) {
-        $('codeBody').innerHTML = '<ul class="issues">' +
-          r.failures.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') +
-          '</ul><p class="muted">Give those pupils their code by hand, or add an email address and run this again.</p>';
+        r.skippedExisting + ' already had one' +
+        (noEmail.length ? ', ' + noEmail.length + ' have no email address' : '') +
+        (shared.length ? ', ' + shared.length + ' share an address with another pupil' : '') +
+        (r.failed ? ', ' + r.failed + ' could not be emailed' : '') + '.');
+
+      /* Pupils sign in with their email, so no address means no way in at all
+         — a different problem from an email that bounced. Listed apart. */
+      let html = '';
+      if (noEmail.length) {
+        html += '<p class="muted"><b>No email address, so they cannot sign in.</b> ' +
+          'Add one to STUDENTS and run this again.</p><ul class="issues">' +
+          noEmail.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>';
       }
+      if (shared.length) {
+        html += '<p class="muted"><b>Address used by more than one pupil.</b> ' +
+          'Sign-in cannot tell them apart, so each needs their own address.</p><ul class="issues">' +
+          shared.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>';
+      }
+      if (r.failures && r.failures.length) {
+        html += '<p class="muted"><b>Code issued but the email did not send.</b> ' +
+          'Give those pupils their code by hand, or try again.</p><ul class="issues">' +
+          r.failures.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>';
+      }
+      $('codeBody').innerHTML = html;
     }).catch(function () { btn.disabled = false; msg('codeMsg', 'error', 'Could not reach the server.'); });
 }
 
@@ -607,6 +683,8 @@ function wire() {
   $('pracLoadBtn').addEventListener('click', loadPracticeReport);
 
   $('bankOnlyPending').addEventListener('change', renderBankPicker);
+  $('bankYear').addEventListener('change', renderBankPicker);
+  $('pickYear').addEventListener('change', renderNewTopicPicker);
   $('bankClear').addEventListener('click', function () {
     $('bankPicker').querySelectorAll('input:checked').forEach(function (b) { b.checked = false; });
     updateCount('bankPicker', 'bankCount');
