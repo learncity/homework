@@ -39,7 +39,7 @@ window.addEventListener('error', function (e) {
      version; only "New deployment" would mint a new URL. */
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxahzgarriiZeHw-RCWr8PivATnm1ajQa3cUcadNyyj0eNYdUFT4zbt8_yqxQSxSBqW/exec';
 
-  var AUTH = { studentId: '', studentCode: '' };
+  var AUTH = { studentEmail: '', studentCode: '' };
   var ME = { name: '', className: '' };
   var Q = { attempt: null, questions: [], answers: {}, i: 0 };
   var SELF = { attempt: null, questions: [], i: 0 };
@@ -150,7 +150,7 @@ window.addEventListener('error', function (e) {
   }
 
   function api(action, extra, cb) {
-    var payload = { action: action, studentId: AUTH.studentId, studentCode: AUTH.studentCode };
+    var payload = { action: action, studentEmail: AUTH.studentEmail, studentCode: AUTH.studentCode };
     if (extra) {
       for (var k in extra) {
         if (Object.prototype.hasOwnProperty.call(extra, k)) payload[k] = extra[k];
@@ -186,10 +186,10 @@ window.addEventListener('error', function (e) {
   /* ---------- sign in ---------- */
 
   function signIn() {
-    var id = $('sid').value.trim();
+    var id = $('semail').value.trim();
     var code = $('scode').value.trim();
-    if (!id || !code) { say('signInMsg', 'error', 'Enter your student ID and access code.'); return; }
-    AUTH.studentId = id;
+    if (!id || !code) { say('signInMsg', 'error', 'Enter your school email and access code.'); return; }
+    AUTH.studentEmail = id;
     AUTH.studentCode = code;
     $('signInBtn').disabled = true;
     say('signInMsg', '', 'Checking...');
@@ -213,7 +213,7 @@ window.addEventListener('error', function (e) {
   function keepAuth(remember) {
     var keep = remember ? 'local' : 'session';
     var drop = remember ? 'session' : 'local';
-    store(keep, 'set', 'lc_hw_id', AUTH.studentId);
+    store(keep, 'set', 'lc_hw_id', AUTH.studentEmail);
     store(keep, 'set', 'lc_hw_code', AUTH.studentCode);
     store(drop, 'remove', 'lc_hw_id');
     store(drop, 'remove', 'lc_hw_code');
@@ -236,10 +236,10 @@ window.addEventListener('error', function (e) {
 
   function signOut() {
     stopTimer();
-    AUTH = { studentId: '', studentCode: '' };
+    AUTH = { studentEmail: '', studentCode: '' };
     clearAuth();
     $('who').textContent = 'Learn City Academy';
-    $('sid').value = '';
+    $('semail').value = '';
     $('scode').value = '';
     show('SignIn');
   }
@@ -248,7 +248,7 @@ window.addEventListener('error', function (e) {
      only for this browser session: the email is the way back in, and these are
      often shared phones. */
   function autoSignIn(id, code, remembered) {
-    AUTH.studentId = id;
+    AUTH.studentEmail = id;
     AUTH.studentCode = code;
     say('signInMsg', '', 'Signing you in...');
     api('homework.listAssignments', null, function (r) {
@@ -260,7 +260,7 @@ window.addEventListener('error', function (e) {
       }
       AUTH.studentCode = '';
       clearAuth();
-      $('sid').value = id;
+      $('semail').value = id;
       say('signInMsg', 'error', r.error || 'Please sign in again.');
     });
   }
@@ -718,7 +718,7 @@ window.addEventListener('error', function (e) {
   document.addEventListener('DOMContentLoaded', function () {
     $('signInBtn').addEventListener('click', signIn);
     $('scode').addEventListener('keydown', function (e) { if (e.key === 'Enter') signIn(); });
-    $('sid').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('scode').focus(); });
+    $('semail').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('scode').focus(); });
     $('signOut').addEventListener('click', signOut);
 
     $('listRows').addEventListener('click', function (e) {
@@ -775,10 +775,10 @@ window.addEventListener('error', function (e) {
       if (v) rate(v);
     });
 
-    /* A link from the access email looks like ?sid=...&code=... — sign in with
+    /* A link from the access email looks like ?email=...&code=... — sign in with
        it, then strip it from the address bar so the code is not left visible in
-       history or in a bookmark. The staff portals do the same with ?email=. */
-    var linkId = queryParam('sid'), linkCode = queryParam('code');
+       history or in a bookmark. Same shape as the staff portals. */
+    var linkId = queryParam('email'), linkCode = queryParam('code');
     if (linkId && linkCode) {
       if (window.history && history.replaceState) {
         history.replaceState({}, document.title, location.pathname);
