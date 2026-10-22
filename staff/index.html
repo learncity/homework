@@ -77,6 +77,9 @@
           <label class="muted" style="display:flex;align-items:center;gap:7px;margin:0">
             <input id="pickOnlyReady" type="checkbox" checked style="width:auto;margin:0"> Only topics with questions released
           </label>
+          <label class="muted" style="display:flex;align-items:center;gap:7px;margin:0">
+            Class <select id="pickYear" style="width:auto;margin:0"><option value="">any</option></select>
+          </label>
           <span class="count" id="pickCount">none chosen</span>
         </div>
         <div class="picker" id="topicPicker"></div>
@@ -132,6 +135,9 @@
           <label class="muted" style="display:flex;align-items:center;gap:7px;margin:0">
             <input id="bankOnlyPending" type="checkbox" checked style="width:auto;margin:0"> Only topics with questions waiting
           </label>
+          <label class="muted" style="display:flex;align-items:center;gap:7px;margin:0">
+            Class <select id="bankYear" style="width:auto;margin:0"><option value="">any</option></select>
+          </label>
           <span class="count" id="bankCount">none chosen</span>
         </div>
         <div class="picker" id="bankPicker"></div>
@@ -155,7 +161,7 @@
     <div id="tab-students" class="hidden">
       <div class="card">
         <h2>Student access codes</h2>
-        <p class="muted">Pupils sign in with their Student ID and a code. The email carries a one-click link, and goes to the pupil's school email, or their parent's if there isn't one.</p>
+        <p class="muted">Pupils sign in with their school email and a code. The email carries a one-click link, goes to the pupil, and copies their parent or guardian. A pupil with no email address on their record cannot sign in at all, and is listed here rather than given a code.</p>
         <div class="row">
           <div><label for="codeClass">Class</label><select id="codeClass"></select></div>
         </div>

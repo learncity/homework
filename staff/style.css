@@ -126,3 +126,20 @@ ul.issues li { margin-bottom: 5px; }
   .bar h1 { font-size: 20px; }
   .tabs button { flex: 1 1 44%; }
 }
+
+/* Year level beside a topic name — a quiet tag, not a second heading. */
+.picker .yr {
+  flex: 0 0 auto;
+  padding: 1px 7px;
+  border-radius: 9px;
+  background: #eef2f9;
+  border: 1px solid #dfe5f0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5a6478;
+  white-space: nowrap;
+}
+.picker label.dim .yr { opacity: .6; }
+
+/* The class filter is its own control, not the tail of the checkbox label. */
+.pickerBar label + label { margin-left: 6px; padding-left: 12px; border-left: 1px solid var(--line, #dfe5f0); }
