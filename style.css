@@ -175,7 +175,7 @@ button:disabled { opacity: .5; cursor: default; }
 .track { height: 6px; background: #e3e8f0; border-radius: 3px; overflow: hidden; margin-bottom: 16px; }
 .track span { display: block; height: 100%; background: var(--amber); transition: width .2s; }
 
-.prompt { font-size: 19px; margin-bottom: 16px; }
+.prompt { font-size: 19px; margin-bottom: 16px; white-space: pre-line; }
 .prompt .topic { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
 
 .opt {
@@ -231,3 +231,13 @@ button:disabled { opacity: .5; cursor: default; }
   .bar h1 { font-size: 22px; }
   .wrap { padding-bottom: 110px; }
 }
+
+/* Subject chooser — only shown when the bank holds more than one subject. */
+.subjectBar { display: flex; align-items: center; gap: 10px; margin: 4px 0 14px; }
+.subjectBar label { margin: 0; flex: 0 0 auto; }
+.subjectBar select { width: auto; flex: 1 1 auto; font: inherit; font-size: 17px; padding: 11px 12px;
+  border: 1px solid #ccd3da; border-radius: 8px; background: #fff; }
+
+/* diagrams in questions */
+.review .q { white-space: pre-line; }
+.fig { display: block; max-width: 100%; height: auto; margin: 12px 0 4px; background: #fff; border-radius: 8px; }

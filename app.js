@@ -81,6 +81,13 @@ window.addEventListener('error', function (e) {
     return esc(v).replace(/\*\*([^*\n]+?)\*\*/g, '<b>$1</b>');
   }
 
+  /* A question's diagram, if it has one. The id is checked again here so a bad
+     sheet value can never become anything but a file name under figures/. */
+  function figHtml(q) {
+    return (q && /^[A-Za-z0-9_-]{1,80}$/.test(q.figure || ''))
+      ? '<img class="fig" src="figures/' + q.figure + '.svg" alt="Diagram for this question">' : '';
+  }
+
   function say(id, cls, text) {
     var el = $(id);
     el.className = 'msg' + (cls ? ' ' + cls : '');
@@ -554,7 +561,7 @@ window.addEventListener('error', function (e) {
     var n = Q.questions.length;
     $('qProgress').textContent = 'Question ' + (Q.i + 1) + ' of ' + n;
     $('qTrack').style.width = Math.round(100 * (Q.i + 1) / n) + '%';
-    $('qPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt);
+    $('qPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt) + figHtml(q);
 
     var picked = Q.answers[q.id] || '';
     $('qOptions').innerHTML = ['A', 'B', 'C', 'D'].filter(function (L) {
@@ -671,7 +678,7 @@ window.addEventListener('error', function (e) {
         if (x.commonError) ex += '<p><b>Watch out for:</b> ' + esc(x.commonError) + '</p>';
 
         return '<div class="review"><div class="q"><span class="n">Question ' + num + '</span><br>' +
-          fmt(q.prompt) + '</div>' + opts + '<div class="explain">' + ex + '</div></div>';
+          fmt(q.prompt) + figHtml(q) + '</div>' + opts + '<div class="explain">' + ex + '</div></div>';
       }).join('');
 
     show('Results');
@@ -710,7 +717,7 @@ window.addEventListener('error', function (e) {
     var q = SELF.questions[SELF.i], n = SELF.questions.length;
     $('sProgress').textContent = 'Question ' + (SELF.i + 1) + ' of ' + n;
     $('sTrack').style.width = Math.round(100 * (SELF.i + 1) / n) + '%';
-    $('sPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt);
+    $('sPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt) + figHtml(q);
     $('sAnswer').classList.add('hidden');
     $('sAnswer').innerHTML = '';
     $('sRate').classList.add('hidden');
