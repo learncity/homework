@@ -407,6 +407,7 @@ window.addEventListener('error', function (e) {
     if (r.subject) SUBJECT = r.subject;
     var list = r.subjects || [];
     var bar = $('subjectBar'), sel = $('subject');
+    if (!bar || !sel) return;   /* stale index.html without the subject picker */
     if (list.length < 2) { bar.classList.add('hidden'); return; }
     if (sel.options.length !== list.length) {
       sel.innerHTML = list.map(function (s) {
@@ -499,7 +500,7 @@ window.addEventListener('error', function (e) {
     $('progressBody').innerHTML = html;
     var btn = $('weakFromProgress');
     if (btn) btn.addEventListener('click', function () { startPractice({}, 'homework.startWeakPractice'); });
-    $('subject').addEventListener('change', function () {
+    if ($('subject')) $('subject').addEventListener('change', function () {
       SUBJECT = $('subject').value;
       openPractice();
     });
