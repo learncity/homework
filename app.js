@@ -132,6 +132,48 @@ window.addEventListener('error', function (e) {
     } catch (e) { return null; }
   }
 
+  /* ---------- last-seen cache ----------
+     The first thing a pupil sees should not wait for the school server. What was
+     on screen last time is kept on this device and drawn at once; the fresh copy
+     replaces it a moment later. Keyed to the signed-in email, kept where the
+     sign-in itself is kept, and removed on sign-out. Never needed for the page
+     to work. */
+  var CKEY = 'lc_hw_cache';
+
+  function cacheKind() { return store('local', 'get', 'lc_hw_id') ? 'local' : 'session'; }
+
+  function cacheGet(part) {
+    var raw = store(cacheKind(), 'get', CKEY);
+    if (!raw) return null;
+    try {
+      var o = JSON.parse(raw);
+      return (o && o.email === AUTH.studentEmail.toLowerCase() && o.parts) ? (o.parts[part] || null) : null;
+    } catch (e) { return null; }
+  }
+
+  function cachePut(part, value) {
+    var o = null;
+    try { o = JSON.parse(store(cacheKind(), 'get', CKEY) || 'null'); } catch (e) { o = null; }
+    if (!o || o.email !== AUTH.studentEmail.toLowerCase()) o = { email: AUTH.studentEmail.toLowerCase(), parts: {} };
+    o.parts[part] = value;
+    store(cacheKind(), 'set', CKEY, JSON.stringify(o));
+  }
+
+  function cacheClear() {
+    store('local', 'remove', CKEY);
+    store('session', 'remove', CKEY);
+  }
+
+  function sameData(a, b) { try { return JSON.stringify(a) === JSON.stringify(b); } catch (e) { return false; } }
+
+  /* Grey placeholder cards, so a slow connection shows the shape of the page
+     rather than a blank. */
+  function skeleton(n) {
+    var h = '';
+    for (var i = 0; i < n; i++) h += '<div class="card skel"><i></i><i></i><i></i></div>';
+    return h;
+  }
+
   var SCREENS = ['SignIn', 'List', 'Practice', 'Progress', 'Quiz', 'Results', 'Self'];
 
   function show(name) {
@@ -241,12 +283,14 @@ window.addEventListener('error', function (e) {
       store(k, 'remove', 'lc_hw_id');
       store(k, 'remove', 'lc_hw_code');
     });
+    cacheClear();
   }
 
   function onSignedIn(r) {
     ME.name = r.student.name;
     ME.className = r.student.className;
     $('who').textContent = ME.name + ' · ' + ME.className;
+    cachePut('list', { student: r.student, assignments: r.assignments });
     renderList(r.assignments);
     show('List');
   }
@@ -268,17 +312,41 @@ window.addEventListener('error', function (e) {
   function autoSignIn(id, code, remembered) {
     AUTH.studentEmail = id;
     AUTH.studentCode = code;
-    say('signInMsg', '', 'Signing you in...');
+    /* A returning pupil sees their last list straight away while the server wakes. */
+    var seen = remembered ? cacheGet('list') : null;
+    if (seen && seen.student) {
+      ME.name = seen.student.name;
+      ME.className = seen.student.className;
+      $('who').textContent = ME.name + ' \u00b7 ' + ME.className;
+      renderList(seen.assignments);
+      say('listMsg', '', 'Updating...');
+      show('List');
+    } else {
+      say('signInMsg', '', 'Signing you in...');
+    }
     api('homework.listAssignments', null, function (r) {
       if (r.success) {
         say('signInMsg', '', '');
         keepAuth(remembered && $('remember').checked);
-        onSignedIn(r);
+        if (seen && TAB === 'List' && !$('screenList').classList.contains('hidden')) {
+          say('listMsg', '', '');
+          cachePut('list', { student: r.student, assignments: r.assignments });
+          renderList(r.assignments);
+        } else if (!seen) {
+          onSignedIn(r);
+        }
+        return;
+      }
+      /* Only a refusal from the server signs the pupil out; a dropped connection
+         keeps what they were looking at. */
+      if (seen && /Could not reach|unexpected|empty reply/.test(r.error || '')) {
+        say('listMsg', 'error', 'Could not refresh. Showing what you saw last time.');
         return;
       }
       AUTH.studentCode = '';
       clearAuth();
       $('semail').value = id;
+      show('SignIn');
       say('signInMsg', 'error', r.error || 'Please sign in again.');
     });
   }
@@ -286,10 +354,16 @@ window.addEventListener('error', function (e) {
   /* ---------- assignment list ---------- */
 
   function refreshList(message) {
-    say('listMsg', '', 'Loading...');
+    var seen = cacheGet('list');
+    if (seen) { renderList(seen.assignments); show('List'); say('listMsg', '', 'Updating...'); }
+    else { $('listRows').innerHTML = skeleton(3); say('listMsg', '', ''); show('List'); }
     api('homework.listAssignments', null, function (r) {
-      if (!r.success) { say('listMsg', 'error', r.error); return; }
+      if (!r.success) {
+        say('listMsg', 'error', seen ? 'Could not refresh. Showing what you saw last time.' : r.error);
+        return;
+      }
       say('listMsg', message ? 'ok' : '', message || '');
+      cachePut('list', { student: r.student, assignments: r.assignments });
       renderList(r.assignments);
       show('List');
     });
@@ -307,27 +381,30 @@ window.addEventListener('error', function (e) {
       return (order[a.state] - order[b.state]) || String(a.due).localeCompare(String(b.due));
     });
     box.innerHTML = list.map(function (a) {
-      var tag, label;
+      var tag, label, st;
+      var when = prettyDate(a.due);
       if (a.state === 'done') {
-        tag = 'done';
-        label = a.mode === 'Self-Check' ? 'Finished'
-          : 'Scored ' + a.score + '/' + a.total;
-      } else if (a.overdue) { tag = 'late'; label = 'Overdue'; }
-      else if (a.state === 'in_progress') { tag = 'open'; label = 'Started'; }
-      else { tag = ''; label = 'To do'; }
+        tag = 'done'; st = 'st-done';
+        label = a.mode === 'Self-Check' ? 'Finished' : 'Scored ' + a.score + '/' + a.total;
+      } else if (a.overdue) { tag = 'late'; st = 'st-late'; label = 'Overdue'; }
+      else if (when === 'today') { tag = 'late'; st = 'st-late'; label = 'Due today'; }
+      else if (a.state === 'in_progress') { tag = 'open'; st = 'st-open'; label = 'Started'; }
+      else if (when === 'tomorrow') { tag = 'soon'; st = 'st-todo'; label = 'Due tomorrow'; }
+      else { tag = 'todo'; st = 'st-todo'; label = 'To do'; }
 
       var topics = a.topics.length ? a.topics.join(', ') : a.subject;
       var bits = [];
       bits.push(a.mode === 'Self-Check' ? 'Self-check, not marked' : a.questionCount + ' questions');
-      bits.push('Due ' + esc(prettyDate(a.due)));
+      bits.push('Due ' + esc(when));
       if (a.retryAvailable) bits.push('retry available');
 
-      return '<button class="card hw" type="button" data-id="' + esc(a.assignmentId) +
+      return '<button class="card hw ' + st + '" type="button" data-id="' + esc(a.assignmentId) +
         '" data-mode="' + esc(a.mode) + '" data-state="' + esc(a.state) +
         '" data-retry="' + (a.retryAvailable ? '1' : '') + '">' +
-        '<span class="top"><span class="ttl">' + esc(topics) + '</span>' +
+        '<span class="top"><span class="kicker">' + esc(a.subject || 'Homework') + '</span>' +
         '<span class="tag ' + tag + '">' + esc(label) + '</span></span>' +
-        '<span class="meta">' + bits.join(' · ') + '</span></button>';
+        '<span class="ttl">' + esc(topics) + '</span>' +
+        '<span class="meta">' + bits.join(' \u00b7 ') + '</span></button>';
     }).join('');
   }
 
@@ -360,23 +437,36 @@ window.addEventListener('error', function (e) {
 
   /* ---------- practice ---------- */
 
+  function paintPractice(r) {
+    renderSubjects(r);
+    $('weakBtn').disabled = !r.weakReady;
+    $('mockBtn').disabled = !r.mockReady;
+    $('mockNote').textContent = r.mockReady
+      ? 'A full paper across ' + r.mockTopics + ' topics, timed like the real thing.'
+      : 'A mock test needs questions ready across at least 5 topics. Only ' + r.mockTopics +
+        ' ' + (r.mockTopics === 1 ? 'is' : 'are') + ' ready so far.';
+    $('weakNote').textContent = r.weakReady
+      ? 'Pulls from the topics you get wrong most.'
+      : 'Answer a few more questions and this will find the topics you need to work on.';
+    renderDomains(r.domains);
+  }
+
   function openPractice() {
-    say('practiceMsg', '', 'Loading topics...');
+    var part = 'practice:' + (SUBJECT || '');
+    var seen = cacheGet(part);
+    if (seen) { paintPractice(seen); say('practiceMsg', '', 'Updating...'); }
+    else { $('domainRows').innerHTML = skeleton(3); say('practiceMsg', '', ''); }
+    show('Practice');
     api('homework.practiceTopics', { subject: SUBJECT || undefined }, function (r) {
-      if (!r.success) { say('practiceMsg', 'error', r.error); show('Practice'); return; }
+      if (!r.success) {
+        say('practiceMsg', 'error', seen ? 'Could not refresh. Showing what you saw last time.' : r.error);
+        return;
+      }
       say('practiceMsg', '', '');
-      renderSubjects(r);
-      $('weakBtn').disabled = !r.weakReady;
-      $('mockBtn').disabled = !r.mockReady;
-      $('mockNote').textContent = r.mockReady
-        ? 'A full paper across ' + r.mockTopics + ' topics, timed like the real thing.'
-        : 'A mock test needs questions ready across at least 5 topics. Only ' + r.mockTopics +
-          ' ' + (r.mockTopics === 1 ? 'is' : 'are') + ' ready so far.';
-      $('weakNote').textContent = r.weakReady
-        ? 'Pulls from the topics you get wrong most.'
-        : 'Answer a few more questions and this will find the topics you need to work on.';
-      renderDomains(r.domains);
-      show('Practice');
+      if (r.subject) SUBJECT = r.subject;
+      cachePut('practice:' + (SUBJECT || ''), r);
+      cachePut(part, r);
+      if (!seen || !sameData(seen, r)) paintPractice(r);
     });
   }
 
@@ -436,13 +526,20 @@ window.addEventListener('error', function (e) {
   /* ---------- progress ---------- */
 
   function openProgress() {
-    say('progressMsg', '', 'Loading...');
+    var part = 'progress:' + (SUBJECT || '');
+    var seen = cacheGet(part);
+    if (seen) { renderProgress(seen); say('progressMsg', '', 'Updating...'); }
+    else { $('progressBody').innerHTML = skeleton(2); say('progressMsg', '', ''); }
+    show('Progress');
     api('homework.myProgress', { subject: SUBJECT || undefined }, function (r) {
-      if (!r.success) { say('progressMsg', 'error', r.error); show('Progress'); return; }
+      if (!r.success) {
+        say('progressMsg', 'error', seen ? 'Could not refresh. Showing what you saw last time.' : r.error);
+        return;
+      }
       say('progressMsg', '', '');
       if (r.subject) SUBJECT = r.subject;
-      renderProgress(r);
-      show('Progress');
+      cachePut('progress:' + (SUBJECT || ''), r);
+      if (!seen || !sameData(seen, r)) renderProgress(r);
     });
   }
 
@@ -828,6 +925,11 @@ window.addEventListener('error', function (e) {
       }
       autoSignIn(linkId, linkCode, false);
       return;
+    }
+
+    /* Wake the school server while the pupil is still typing. */
+    if (!store('local', 'get', 'lc_hw_id') && !store('session', 'get', 'lc_hw_id')) {
+      api('homework.ping', null, function () {});
     }
 
     var savedId = store('local', 'get', 'lc_hw_id') || store('session', 'get', 'lc_hw_id');
