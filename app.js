@@ -40,6 +40,10 @@ window.addEventListener('error', function (e) {
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxahzgarriiZeHw-RCWr8PivATnm1ajQa3cUcadNyyj0eNYdUFT4zbt8_yqxQSxSBqW/exec';
 
   var AUTH = { studentEmail: '', studentCode: '' };
+  /* Practice, the mock and progress are all one subject at a time. Empty until
+     the first reply says which subjects exist; the server decides the default so
+     the two screens cannot disagree. */
+  var SUBJECT = '';
   var ME = { name: '', className: '' };
   var Q = { attempt: null, questions: [], answers: {}, i: 0 };
   var SELF = { attempt: null, questions: [], i: 0 };
@@ -69,6 +73,12 @@ window.addEventListener('error', function (e) {
     return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
+  }
+
+  /* Question text may carry **bold** (English items point at a word that way).
+     Escape first, then turn the markers into <b>, so nothing else can inject markup. */
+  function fmt(v) {
+    return esc(v).replace(/\*\*([^*\n]+?)\*\*/g, '<b>$1</b>');
   }
 
   function say(id, cls, text) {
@@ -237,6 +247,7 @@ window.addEventListener('error', function (e) {
   function signOut() {
     stopTimer();
     AUTH = { studentEmail: '', studentCode: '' };
+    SUBJECT = '';
     clearAuth();
     $('who').textContent = 'Learn City Academy';
     $('semail').value = '';
@@ -344,9 +355,10 @@ window.addEventListener('error', function (e) {
 
   function openPractice() {
     say('practiceMsg', '', 'Loading topics...');
-    api('homework.practiceTopics', null, function (r) {
+    api('homework.practiceTopics', { subject: SUBJECT || undefined }, function (r) {
       if (!r.success) { say('practiceMsg', 'error', r.error); show('Practice'); return; }
       say('practiceMsg', '', '');
+      renderSubjects(r);
       $('weakBtn').disabled = !r.weakReady;
       $('mockBtn').disabled = !r.mockReady;
       $('mockNote').textContent = r.mockReady
@@ -382,8 +394,26 @@ window.addEventListener('error', function (e) {
     }).join('');
   }
 
+  /* One subject in the bank is the normal case, and a dropdown with a single
+     option is just clutter — so the bar only appears once there are two. */
+  function renderSubjects(r) {
+    if (r.subject) SUBJECT = r.subject;
+    var list = r.subjects || [];
+    var bar = $('subjectBar'), sel = $('subject');
+    if (list.length < 2) { bar.classList.add('hidden'); return; }
+    if (sel.options.length !== list.length) {
+      sel.innerHTML = list.map(function (s) {
+        return '<option value="' + esc(s) + '">' + esc(s) + '</option>';
+      }).join('');
+    }
+    sel.value = SUBJECT;
+    bar.classList.remove('hidden');
+  }
+
   function startPractice(extra, action) {
     say('practiceMsg', '', 'Setting up...');
+    extra = extra || {};
+    if (SUBJECT) extra.subject = SUBJECT;
     api(action, extra, function (r) {
       if (!r.success) { say('practiceMsg', 'error', r.error); return; }
       say('practiceMsg', '', '');
@@ -399,9 +429,10 @@ window.addEventListener('error', function (e) {
 
   function openProgress() {
     say('progressMsg', '', 'Loading...');
-    api('homework.myProgress', null, function (r) {
+    api('homework.myProgress', { subject: SUBJECT || undefined }, function (r) {
       if (!r.success) { say('progressMsg', 'error', r.error); show('Progress'); return; }
       say('progressMsg', '', '');
+      if (r.subject) SUBJECT = r.subject;
       renderProgress(r);
       show('Progress');
     });
@@ -461,6 +492,10 @@ window.addEventListener('error', function (e) {
     $('progressBody').innerHTML = html;
     var btn = $('weakFromProgress');
     if (btn) btn.addEventListener('click', function () { startPractice({}, 'homework.startWeakPractice'); });
+    $('subject').addEventListener('change', function () {
+      SUBJECT = $('subject').value;
+      openPractice();
+    });
   }
 
   /* ---------- quiz ---------- */
@@ -519,7 +554,7 @@ window.addEventListener('error', function (e) {
     var n = Q.questions.length;
     $('qProgress').textContent = 'Question ' + (Q.i + 1) + ' of ' + n;
     $('qTrack').style.width = Math.round(100 * (Q.i + 1) / n) + '%';
-    $('qPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + esc(q.prompt);
+    $('qPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt);
 
     var picked = Q.answers[q.id] || '';
     $('qOptions').innerHTML = ['A', 'B', 'C', 'D'].filter(function (L) {
@@ -636,7 +671,7 @@ window.addEventListener('error', function (e) {
         if (x.commonError) ex += '<p><b>Watch out for:</b> ' + esc(x.commonError) + '</p>';
 
         return '<div class="review"><div class="q"><span class="n">Question ' + num + '</span><br>' +
-          esc(q.prompt) + '</div>' + opts + '<div class="explain">' + ex + '</div></div>';
+          fmt(q.prompt) + '</div>' + opts + '<div class="explain">' + ex + '</div></div>';
       }).join('');
 
     show('Results');
@@ -675,7 +710,7 @@ window.addEventListener('error', function (e) {
     var q = SELF.questions[SELF.i], n = SELF.questions.length;
     $('sProgress').textContent = 'Question ' + (SELF.i + 1) + ' of ' + n;
     $('sTrack').style.width = Math.round(100 * (SELF.i + 1) / n) + '%';
-    $('sPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + esc(q.prompt);
+    $('sPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt);
     $('sAnswer').classList.add('hidden');
     $('sAnswer').innerHTML = '';
     $('sRate').classList.add('hidden');
