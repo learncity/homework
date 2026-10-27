@@ -30,7 +30,15 @@ const STORE_CODE = 'LC_HOMEWORK_CODE';
 
 const $ = function (id) { return document.getElementById(id); };
 
-let state = { email: '', code: '', staff: null, topics: [], assignments: [], tab: 'assignments', category: '' };
+let state = { email: '', code: '', staff: null, topics: [], assignments: [], tab: 'assignments',
+  category: '', subject: '', subjects: [] };
+
+/* One subject at a time, everywhere topics are listed. A bank with one subject
+   behaves exactly as before, because the filter then matches everything. */
+function subjectTopics() {
+  if (!state.subject) return state.topics;
+  return state.topics.filter(function (t) { return (t.subject || state.subject) === state.subject; });
+}
 
 function call(action, extra) {
   /* "Is this a URL", not "is this script.google.com", so the portal can also be
@@ -133,6 +141,38 @@ function groupTopics(topics) {
   });
 }
 
+/* Shown only once the bank holds two subjects; with one it would be a dropdown
+   that can only say what it already says. */
+function renderSubjectBars() {
+  ['pickSubject', 'bankSubject'].forEach(function (id) {
+    const sel = $(id), bar = $(id + 'Bar');
+    if (!sel || !bar) return;
+    if (state.subjects.length < 2) { bar.classList.add('hidden'); return; }
+    if (sel.options.length !== state.subjects.length) {
+      sel.innerHTML = state.subjects.map(function (s) {
+        return '<option value="' + esc(s) + '">' + esc(s) + '</option>';
+      }).join('');
+    }
+    sel.value = state.subject;
+    bar.classList.remove('hidden');
+  });
+}
+
+/* Changing subject changes which topics exist, so the year filter has to be
+   rebuilt from scratch rather than kept from the previous subject. */
+function changeSubject(value) {
+  state.subject = value;
+  ['pickYear', 'bankYear'].forEach(function (id) {
+    const sel = $(id);
+    if (sel) { sel.innerHTML = '<option value="">any</option>'; }
+  });
+  renderSubjectBars();
+  fillYearFilter('pickYear');
+  fillYearFilter('bankYear');
+  renderNewTopicPicker();
+  if (state.staff && state.staff.canManageUsers) { renderBankPicker(); renderBankExplain(); }
+}
+
 /* The year filter hides topics taught in other classes. It never unticks
    anything, so a topic chosen before the filter was set still counts. */
 function yearFilter(selectId) {
@@ -142,7 +182,7 @@ function yearFilter(selectId) {
 
 function fillYearFilter(selectId) {
   const years = [];
-  state.topics.forEach(function (t) {
+  subjectTopics().forEach(function (t) {
     String(t.yearLevel || '').split(',').forEach(function (y) {
       const v = y.trim();
       if (v && years.indexOf(v) < 0) years.push(v);
@@ -159,7 +199,7 @@ function fillYearFilter(selectId) {
 }
 
 function renderPicker(elId, countId, filterFn, labelFn) {
-  const groups = groupTopics(state.topics);
+  const groups = groupTopics(subjectTopics());
   let html = '';
   groups.forEach(function (g) {
     const rows = g.topics.filter(filterFn);
@@ -171,6 +211,8 @@ function renderPicker(elId, countId, filterFn, labelFn) {
         return '<label class="' + (info.dim ? 'dim' : '') + '">' +
           '<input type="checkbox" value="' + esc(t.outcomeIds.join(',')) + '"' + (info.disabled ? ' disabled' : '') + '>' +
           '<span class="tName">' + esc(t.topic) + '</span>' + yr +
+          (info.preview ? '<button type="button" class="linkBtn preview" data-outcomes="' + esc(t.outcomeIds.join(',')) +
+            '" data-name="' + esc(t.topic) + '">Preview</button>' : '') +
           '<span class="avail">' + info.note + '</span></label>';
       }).join('') + '</div>';
   });
@@ -234,6 +276,11 @@ function applyBootstrap(r) {
   state.topics = r.topics || [];
   state.assignments = r.assignments || [];
   state.category = r.achievementCategory || '';
+  state.subjects = r.subjects || [];
+  if (!state.subject || state.subjects.indexOf(state.subject) < 0) {
+    state.subject = state.subjects[0] || r.defaultSubject || '';
+  }
+  renderSubjectBars();
 
   $('who').textContent = r.staff.name + ' · ' + r.staff.role +
     ' · ' + (r.staff.classes.length ? r.staff.classes.join(', ') : 'no classes assigned');
@@ -275,6 +322,65 @@ function reload(after) {
   });
 }
 
+/* ---------- preview a topic's questions ----------
+   Read-only, and only what pupils could actually be given (Live). Staff see the
+   key; pupils never do until after they have answered. */
+
+let preview = { outcomes: [], name: '', shown: 0, total: 0 };
+
+function openPreview(outcomes, name) {
+  preview = { outcomes: outcomes, name: name, shown: 0, total: 0 };
+  $('previewTitle').textContent = 'Preview: ' + name;
+  $('previewBody').innerHTML = '';
+  $('previewNote').textContent = 'Loading...';
+  $('previewMore').classList.add('hidden');
+  $('previewBox').classList.remove('hidden');
+  $('previewBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  loadPreview();
+}
+
+function loadPreview() {
+  call('previewTopic', { outcomeIds: preview.outcomes, offset: preview.shown, limit: 10 }).then(function (r) {
+    if (!r || !r.success) { $('previewNote').textContent = (r && r.error) || 'Could not load the preview.'; return; }
+    preview.total = r.total;
+    $('previewBody').insertAdjacentHTML('beforeend', r.questions.map(function (q, i) {
+      return renderPreviewQuestion(q, preview.shown + i + 1);
+    }).join(''));
+    if (r.theory && r.theory.length) {
+      $('previewBody').insertAdjacentHTML('beforeend',
+        '<h3>Written tasks (' + r.theoryTotal + ' live' + (r.theoryTotal > r.theory.length ? ', first ' + r.theory.length + ' shown' : '') + ')</h3>' +
+        r.theory.map(function (t) {
+          return '<div class="pq"><div class="pqHead"><span class="chip">' + esc(t.marks || '') + ' marks</span> <span class="muted">' + esc(t.id) + '</span></div>' +
+            '<div class="pqPrompt">' + fmtText(t.prompt) + figImg(t.figure) + '</div>' +
+            (t.modelAnswer ? '<div class="pqKey"><b>Model answer.</b> ' + fmtText(t.modelAnswer) + '</div>' : '') + '</div>';
+        }).join(''));
+    }
+    preview.shown += r.questions.length;
+    $('previewNote').textContent = r.total
+      ? 'Showing ' + preview.shown + ' of ' + r.total + ' live questions. A homework gives each pupil a random selection from these. The correct answer is marked for you; pupils never see it before they answer.'
+      : 'This topic has no live questions yet.';
+    $('previewMore').classList.toggle('hidden', preview.shown >= preview.total);
+  }).catch(function () { $('previewNote').textContent = 'Could not reach the school server.'; });
+}
+
+/* Question text may carry **bold** and line breaks; escape first, then format. */
+function fmtText(v) { return esc(v).replace(/\*\*([^*\n]+?)\*\*/g, '<b>$1</b>').replace(/\n/g, '<br>'); }
+
+function figImg(id) {
+  return /^[A-Za-z0-9_-]{1,80}$/.test(id || '')
+    ? '<img class="fig" src="../figures/' + id + '.svg" alt="Diagram for this question">' : '';
+}
+
+function renderPreviewQuestion(q, n) {
+  const opts = ['A', 'B', 'C', 'D'].map(function (L) {
+    return '<div class="pqOpt' + (q.correct === L ? ' right' : '') + '"><span class="ltr">' + L + '</span><span>' +
+      fmtText(q.options[L]) + '</span>' + (q.correct === L ? '<span class="tick">Correct</span>' : '') + '</div>';
+  }).join('');
+  return '<div class="pq"><div class="pqHead"><b>' + n + '.</b> <span class="chip">' + esc(q.difficulty || 'Mixed') +
+    '</span> <span class="muted">' + esc(q.id) + '</span></div><div class="pqPrompt">' + fmtText(q.prompt) +
+    figImg(q.figure) + '</div>' + opts + '</div>';
+}
+
 /* ---------- assignments ---------- */
 
 function renderNewTopicPicker() {
@@ -290,7 +396,7 @@ function renderNewTopicPicker() {
     function (t) {
       const n = scored ? t.live : t.liveTheory;
       return {
-        dim: n === 0, disabled: n === 0,
+        dim: n === 0, disabled: n === 0, preview: n > 0,
         note: n > 0 ? n + ' ready' : (t.reviewed > 0 ? t.reviewed + ' waiting to be released' : 'none yet')
       };
     });
@@ -507,7 +613,7 @@ function notifyNote(r) {
 
 function renderBankExplain() {
   let live = 0, reviewed = 0;
-  state.topics.forEach(function (t) { live += t.liveMcq || 0; reviewed += t.reviewedMcq || 0; });
+  subjectTopics().forEach(function (t) { live += t.liveMcq || 0; reviewed += t.reviewedMcq || 0; });
   $('bankExplain').innerHTML = '<b>Nothing reaches a pupil until it is released.</b> ' +
     'Questions start as <i>Reviewed</i> or <i>Draft</i>. Releasing a topic turns its <i>Reviewed</i> ' +
     'questions into <i>Live</i>; <i>Draft</i> ones are never released automatically, because those are ' +
@@ -661,6 +767,12 @@ function wire() {
     renderNewTopicPicker();
   });
   $('pickOnlyReady').addEventListener('change', renderNewTopicPicker);
+  $('topicPicker').addEventListener('click', function (e) {
+    const b = e.target.closest ? e.target.closest('.preview') : null;
+    if (b) { e.preventDefault(); openPreview(b.getAttribute('data-outcomes').split(','), b.getAttribute('data-name')); }
+  });
+  $('previewClose').addEventListener('click', function () { $('previewBox').classList.add('hidden'); });
+  $('previewMore').addEventListener('click', loadPreview);
   $('pickClear').addEventListener('click', function () {
     $('topicPicker').querySelectorAll('input:checked').forEach(function (b) { b.checked = false; });
     updateCount('topicPicker', 'pickCount');
@@ -684,6 +796,8 @@ function wire() {
 
   $('bankOnlyPending').addEventListener('change', renderBankPicker);
   $('bankYear').addEventListener('change', renderBankPicker);
+  $('pickSubject').addEventListener('change', function () { changeSubject(this.value); });
+  $('bankSubject').addEventListener('change', function () { changeSubject(this.value); });
   $('pickYear').addEventListener('change', renderNewTopicPicker);
   $('bankClear').addEventListener('click', function () {
     $('bankPicker').querySelectorAll('input:checked').forEach(function (b) { b.checked = false; });

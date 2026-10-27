@@ -161,3 +161,19 @@ ul.issues li { margin-bottom: 6px; }
 
 input[type=checkbox], input[type=radio] { width: 22px; height: 22px; min-height: 0; padding: 0; accent-color: var(--indigo); }
 .picker input[type=checkbox] { transform: none; width: 20px; height: 20px; }
+
+/* ---------- question preview ---------- */
+.previewBox { border: 1px solid var(--line-d); border-left: 5px solid var(--indigo); border-radius: 12px; background: #fff; padding: 16px 18px; margin: 16px 0; }
+.previewHead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.previewHead h3 { margin: 0; }
+.pq { border-top: 1px solid var(--line); padding: 14px 0 6px; }
+.pqHead { margin-bottom: 6px; font-size: 15px; }
+.pqPrompt { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.pqOpt { display: flex; align-items: baseline; gap: 12px; padding: 9px 12px; margin-bottom: 6px; border: 1px solid var(--line); border-radius: 8px; font-size: 17px; }
+.pqOpt .ltr { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--indigo); color: var(--indigo-d); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }
+.pqOpt.right { background: var(--good-bg); border-color: var(--mint); }
+.pqOpt.right .ltr { background: var(--mint); border-color: var(--mint); color: #fff; }
+.pqOpt .tick { margin-left: auto; font-size: 13px; font-weight: 800; color: var(--good); text-transform: uppercase; letter-spacing: .4px; }
+.pqKey { background: var(--page); border-left: 4px solid var(--indigo); border-radius: 0 8px 8px 0; padding: 10px 12px; font-size: 16px; margin-bottom: 8px; }
+.fig { display: block; max-width: 100%; height: auto; margin: 10px 0 4px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+.picker .preview { margin-left: 2px; font-size: 14px; padding: 2px 6px; }

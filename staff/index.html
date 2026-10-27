@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -91,6 +91,17 @@
           <span class="count" id="pickCount">none chosen</span>
         </div>
         <div class="picker" id="topicPicker"></div>
+
+        <!-- read-only look at a topic's live questions, opened from a topic's Preview button -->
+        <div class="previewBox hidden" id="previewBox">
+          <div class="previewHead">
+            <h3 id="previewTitle">Preview</h3>
+            <button class="small" id="previewClose" type="button">Close</button>
+          </div>
+          <p class="muted" id="previewNote"></p>
+          <div id="previewBody"></div>
+          <div class="actions"><button class="small hidden" id="previewMore" type="button">Show more</button></div>
+        </div>
 
         <div class="actions">
           <button class="primary" id="createPublishBtn" type="button">Create and publish</button>
@@ -192,6 +203,6 @@
   </section>
 </div>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>
