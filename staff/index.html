@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -64,6 +64,7 @@
           <div><label for="newMode">Type</label><select id="newMode">
             <option value="Scored">Scored homework (marked)</option>
             <option value="Self-Check">Self-check (theory, not marked)</option>
+            <option value="Exam">Exam paper (whole syllabus)</option>
           </select></div>
           <div><label for="newCount">Number of questions</label><input id="newCount" type="number" min="1" max="60" value="10"></div>
           <div><label for="newDue">Due date</label><input id="newDue" type="date"></div>
@@ -74,6 +75,17 @@
         </label>
         <p class="muted" id="pointsNote" style="margin-top:4px"></p>
 
+        <!-- exam mode: a blueprint, not a topic list -->
+        <div class="hidden" id="examSetup">
+          <div class="row">
+            <div><label for="examBoard">Exam board</label><select id="examBoard"></select></div>
+            <div><label for="examSubject">Subject</label><select id="examSubject"></select></div>
+          </div>
+          <p class="msg" id="examMsg"></p>
+          <div id="examBlueprint"></div>
+        </div>
+
+        <div id="topicSetup">
         <label>Topics</label>
         <div class="pickerBar hidden" id="pickSubjectBar">
           <label class="muted" style="display:flex;align-items:center;gap:7px;margin:0">
@@ -101,6 +113,8 @@
           <p class="muted" id="previewNote"></p>
           <div id="previewBody"></div>
           <div class="actions"><button class="small hidden" id="previewMore" type="button">Show more</button></div>
+        </div>
+
         </div>
 
         <div class="actions">
@@ -203,6 +217,6 @@
   </section>
 </div>
 
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

@@ -177,3 +177,10 @@ input[type=checkbox], input[type=radio] { width: 22px; height: 22px; min-height:
 .pqKey { background: var(--page); border-left: 4px solid var(--indigo); border-radius: 0 8px 8px 0; padding: 10px 12px; font-size: 16px; margin-bottom: 8px; }
 .fig { display: block; max-width: 100%; height: auto; margin: 10px 0 4px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
 .picker .preview { margin-left: 2px; font-size: 14px; padding: 2px 6px; }
+
+/* ---------- exam setup and theory marks ---------- */
+#examBlueprint .stat b { font-size: 26px; }
+.theoryCell { white-space: nowrap; }
+.theoryCell input { width: 84px; display: inline-block; margin-right: 8px; min-height: 40px; padding: 7px 9px; }
+.theoryCell .small { vertical-align: middle; }
+.theoryCell .muted { display: block; font-size: 13px; margin-top: 4px; }

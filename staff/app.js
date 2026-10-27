@@ -31,7 +31,7 @@ const STORE_CODE = 'LC_HOMEWORK_CODE';
 const $ = function (id) { return document.getElementById(id); };
 
 let state = { email: '', code: '', staff: null, topics: [], assignments: [], tab: 'assignments',
-  category: '', subject: '', subjects: [] };
+  category: '', subject: '', subjects: [], examBoards: [], examSubjects: [], report: null };
 
 /* One subject at a time, everywhere topics are listed. A bank with one subject
    behaves exactly as before, because the filter then matches everything. */
@@ -307,6 +307,9 @@ function applyBootstrap(r) {
     ? 'How much it is worth is set once in the ACHIEVEMENT LIBRARY, under "' + state.category + '".'
     : '';
 
+  state.examBoards = r.examBoards || [];
+  state.examSubjects = r.examSubjects || [];
+  fillExamPickers();
   renderAssignments();
   renderNewTopicPicker();
   fillYearFilter('pickYear');
@@ -419,8 +422,10 @@ function renderAssignments() {
     const next = a.status === 'Draft' ? 'Published' : a.status === 'Published' ? 'Closed' : '';
     const label = a.status === 'Draft' ? 'Publish' : a.status === 'Published' ? 'Close' : '';
     return '<tr><td>' + esc(a.assignmentId) + '</td><td>' + esc(a.className) + '</td>' +
-      '<td>' + (a.mode === 'Self-Check' ? 'Self-check' : 'Scored') + '</td>' +
-      '<td>' + esc(topics.join(', ')) + '</td><td>' + a.count + '</td>' +
+      '<td>' + (a.mode === 'Self-Check' ? 'Self-check' : a.mode === 'Exam' ? 'Exam' : 'Scored') + '</td>' +
+      '<td>' + (a.mode === 'Exam'
+        ? esc((a.board || '') + ' ' + (a.subject || '') + ' \u2014 whole syllabus')
+        : esc(topics.join(', '))) + '</td><td>' + a.count + '</td>' +
       '<td>' + esc(prettyDate(a.due)) + '</td>' +
       '<td><span class="chip ' + esc(a.status) + '">' + esc(a.status) + '</span></td>' +
       '<td>' + esc(a.teacher) + '</td>' +
@@ -435,19 +440,24 @@ function createAssignment(publish) {
   const count = Number($('newCount').value);
   const due = $('newDue').value;
   const mode = $('newMode').value;
+  const isExam = mode === 'Exam';
 
   if (!className) { msg('createMsg', 'error', 'Choose a class.'); return; }
-  if (!outcomeIds.length) { msg('createMsg', 'error', 'Tick at least one topic.'); return; }
   if (!due) { msg('createMsg', 'error', 'Set a due date.'); return; }
-  if (!(count > 0)) { msg('createMsg', 'error', 'Set how many questions.'); return; }
+  if (!isExam && !outcomeIds.length) { msg('createMsg', 'error', 'Tick at least one topic.'); return; }
+  if (!isExam && !(count > 0)) { msg('createMsg', 'error', 'Set how many questions.'); return; }
+
+  const body = isExam
+    ? { className: className, mode: 'Exam', due: due, publish: publish,
+        board: $('examBoard').value, subject: $('examSubject').value,
+        awardPoints: $('newPoints').checked }
+    : { className: className, outcomeIds: outcomeIds, mode: mode, count: count, due: due,
+        publish: publish, awardPoints: mode === 'Scored' && $('newPoints').checked };
 
   const btn = publish ? $('createPublishBtn') : $('createDraftBtn');
   btn.disabled = true;
   msg('createMsg', '', publish ? 'Creating and publishing...' : 'Saving...');
-  call('createAssignment', {
-    className: className, outcomeIds: outcomeIds, mode: mode, count: count, due: due,
-    publish: publish, awardPoints: mode === 'Scored' && $('newPoints').checked
-  }).then(function (r) {
+  call('createAssignment', body).then(function (r) {
     btn.disabled = false;
     if (!r || !r.success) { msg('createMsg', 'error', (r && r.error) || 'Could not create it.'); return; }
     msg('createMsg', 'ok', r.assignmentId + ' ' +
@@ -460,6 +470,99 @@ function createAssignment(publish) {
     btn.disabled = false;
     msg('createMsg', 'error', 'Could not reach the server. Nothing was created.');
   });
+}
+
+/* ---------- exam papers ----------
+   An exam is set by board and subject. The blueprint below shows the shape of
+   the paper the class will sit, so a Head of Department can check the weighting
+   before anyone sits it. */
+
+function fillExamPickers() {
+  const fill = function (id, values) {
+    const sel = $(id);
+    if (!sel || sel.options.length === values.length) return;
+    sel.innerHTML = values.map(function (v) {
+      return '<option value="' + esc(v) + '">' + esc(v) + '</option>';
+    }).join('');
+  };
+  fill('examBoard', state.examBoards);
+  const subs = state.examSubjects.length ? state.examSubjects
+    : (state.subjects.length ? state.subjects : ['Mathematics']);
+  fill('examSubject', subs);
+  /* Start on the subject the teacher is already working in, not whichever comes
+     first alphabetically. */
+  const want = subs.indexOf(state.subject) >= 0 ? state.subject : subs[0];
+  if (want) $('examSubject').value = want;
+}
+
+function examMode() { return $('newMode').value === 'Exam'; }
+
+function toggleExamSetup() {
+  const on = examMode();
+  msg('createMsg', '', '');
+  $('examSetup').classList.toggle('hidden', !on);
+  $('topicSetup').classList.toggle('hidden', on);
+  $('newCount').closest('div').classList.toggle('hidden', on);
+  $('newPointsWrap').classList.toggle('hidden', $('newMode').value === 'Self-Check');
+  if (on) loadExamBlueprint();
+}
+
+function loadExamBlueprint() {
+  const board = $('examBoard').value, subject = $('examSubject').value;
+  if (!board || !subject) return;
+  msg('examMsg', '', 'Working out the paper...');
+  $('examBlueprint').innerHTML = '';
+  call('examPreview', { board: board, subject: subject }).then(function (r) {
+    if (!r || !r.success) { msg('examMsg', 'error', (r && r.error) || 'Could not load the paper.'); return; }
+    msg('examMsg', r.objective.ready ? '' : 'warn',
+      r.objective.ready ? '' : 'Not enough has been released for a full paper yet. Release more topics in the Question Bank first.');
+    $('examBlueprint').innerHTML = blueprintHtml(r);
+  }).catch(function () { msg('examMsg', 'error', 'Could not reach the server.'); });
+}
+
+function blueprintHtml(r) {
+  const o = r.objective, t = r.theory;
+  let html = '<div class="stats">' +
+    '<div class="stat"><b>' + o.questions + '</b><span>' + esc(o.label) + ' questions</span></div>' +
+    '<div class="stat"><b>' + o.minutes + '</b><span>minutes</span></div>' +
+    '<div class="stat"><b>' + o.marks + '</b><span>marks</span></div>' +
+    (t ? '<div class="stat"><b>' + t.questions + '</b><span>' + esc(t.label) + ' questions</span></div>' +
+         '<div class="stat"><b>' + t.minutes + '</b><span>theory minutes</span></div>' +
+         '<div class="stat"><b>' + t.marks + '</b><span>theory marks</span></div>' : '') +
+    '</div>';
+  html += '<p class="muted">The objective paper is marked by the portal. The theory paper is shown on the clock, written on paper and handed to you; type the mark into the class report afterwards and the portal shows a combined grade.</p>';
+  html += '<h3>How ' + esc(o.label) + ' is made up</h3>' +
+    '<p class="muted">Weighted by the number of learning outcomes each part of the syllabus has. Every pupil gets a different draw to this same shape.</p>' +
+    '<div class="tableWrap"><table><thead><tr><th>Part of the syllabus</th><th>Topics</th>' +
+    '<th>Questions</th><th>Released</th></tr></thead><tbody>' +
+    o.rows.map(function (x) {
+      return '<tr><td>' + esc(x.domain) + '</td><td>' + x.topics + '</td><td><b>' + x.questions +
+        '</b></td><td>' + x.live + '</td></tr>';
+    }).join('') +
+    '<tr><td><b>Total</b></td><td><b>' + o.outcomesReady + '</b></td><td><b>' + o.questions +
+    '</b></td><td><b>' + o.available + '</b></td></tr>' +
+    '</tbody></table></div>';
+  if (t && t.note) html += '<p class="muted"><b>' + esc(t.label) + ':</b> ' + esc(t.note) + '</p>';
+  return html;
+}
+
+/* The mark a teacher has worked out on paper. One number per pupil, out of the
+   theory paper's own total. */
+function saveTheoryScore(btn, studentId) {
+  const box = document.querySelector('[data-theory="' + studentId + '"]');
+  if (!box) return;
+  const raw = String(box.value).trim();
+  btn.disabled = true;
+  msg('repMsg', '', 'Saving the mark...');
+  call('enterTheoryScore', { assignmentId: $('repAssignment').value, studentId: studentId, score: raw })
+    .then(function (r) {
+      btn.disabled = false;
+      if (!r || !r.success) { msg('repMsg', 'error', (r && r.error) || 'Could not save the mark.'); return; }
+      loadClassReport(raw === '' ? 'Mark cleared.' : 'Mark saved.');
+    }).catch(function () {
+      btn.disabled = false;
+      msg('repMsg', 'error', 'Could not reach the server. The mark was not saved.');
+    });
 }
 
 function setStatus(btn, id, next) {
@@ -511,12 +614,18 @@ function loadClassReport(after) {
         }).join('') + '</tbody></table></div>';
     }
 
+    const isExam = r.mode === 'Exam';
+    const theoryMarks = isExam && r.papers && r.papers.theory ? r.papers.theory.marks : 0;
     html += '<h3>Pupil by pupil</h3>' +
       '<p class="muted">The point for handing in on time is given automatically. The extra ' +
-      'two are yours to give, after reading the work, when it is of an appreciable standard.</p>' +
+      'two are yours to give, after reading the work, when it is of an appreciable standard.' +
+      (isExam ? ' Type each pupil\'s theory mark out of ' + theoryMarks +
+        ' once you have marked their paper, and the combined grade appears beside it.' : '') + '</p>' +
       '<div class="tableWrap"><table>' +
-      '<thead><tr><th>Pupil</th><th>State</th><th>Score</th><th>On time</th><th>Auto</th>' +
-      '<th>Quality</th><th>Retries</th><th>Handed in</th></tr></thead><tbody>' +
+      '<thead><tr><th>Pupil</th><th>State</th><th>' + (isExam ? 'Objective' : 'Score') + '</th>' +
+      (isExam ? '<th>Theory mark</th><th>Combined</th>' : '') +
+      '<th>On time</th><th>Auto</th>' +
+      '<th>Quality</th>' + (isExam ? '' : '<th>Retries</th>') + '<th>Handed in</th></tr></thead><tbody>' +
       r.students.map(function (x) {
         const state_ = x.state === 'done' ? 'Done' : x.state === 'in_progress' ? 'Started' : 'Not started';
         const flag = /too_fast/.test(x.flags) ? ' <span class="chip Closed">rushed</span>' : '';
@@ -529,14 +638,28 @@ function loadClassReport(after) {
         } else {
           merit = '<span class="muted">–</span>';
         }
+        let examCells = '';
+        if (isExam) {
+          const val = (x.theoryScore === null || x.theoryScore === undefined) ? '' : x.theoryScore;
+          examCells = '<td class="theoryCell"><input type="number" min="0" max="' + theoryMarks +
+            '" data-theory="' + esc(x.studentId) + '" value="' + esc(val) + '" placeholder="/' + theoryMarks + '">' +
+            '<button class="small" data-act="theory" data-id="' + esc(x.studentId) + '">Save</button>' +
+            (x.theoryMarkedBy ? '<span class="muted">' + esc(x.theoryMarkedBy) + '</span>' : '') + '</td>' +
+            '<td>' + (x.combined
+              ? '<b>' + esc(x.combined.grade) + '</b> ' + x.combined.percent + '%<br>' +
+                '<span class="muted">' + x.combined.objectiveMark + ' + ' + x.combined.theoryMark +
+                ' of ' + x.combined.totalMarks + '</span>'
+              : '<span class="muted">needs the theory mark</span>') + '</td>';
+        }
         return '<tr data-row="' + esc(x.studentId) + '"><td>' + esc(x.name) +
           '<br><span class="muted">' + esc(x.studentId) + '</span></td>' +
           '<td>' + state_ + flag + '</td>' +
           '<td>' + (x.score === null ? '–' : x.score + '/' + x.total + ' ' + pct(x.percent)) + '</td>' +
+          examCells +
           '<td>' + (x.onTime === null ? '–' : x.onTime ? 'Yes' : 'No') + '</td>' +
           '<td>' + (x.pointsAwarded || (x.pointsNote ? '<span class="muted">' + esc(x.pointsNote.replace(/_/g, ' ')) + '</span>' : '0')) + '</td>' +
           '<td>' + merit + '</td>' +
-          '<td>' + x.retries + '</td><td>' + esc(x.submittedAt) + '</td></tr>';
+          (isExam ? '' : '<td>' + x.retries + '</td>') + '<td>' + esc(x.submittedAt) + '</td></tr>';
       }).join('') + '</tbody></table></div>';
     $('repBody').innerHTML = html;
   }).catch(function () { msg('repMsg', 'error', 'Could not reach the server.'); });
@@ -763,7 +886,8 @@ function wire() {
   });
 
   $('newMode').addEventListener('change', function () {
-    $('newPointsWrap').classList.toggle('hidden', $('newMode').value !== 'Scored');
+    $('newPointsWrap').classList.toggle('hidden', $('newMode').value === 'Self-Check');
+    toggleExamSetup();
     renderNewTopicPicker();
   });
   $('pickOnlyReady').addEventListener('change', renderNewTopicPicker);
@@ -789,8 +913,19 @@ function wire() {
 
   $('repLoadBtn').addEventListener('click', function () { loadClassReport(); });
   $('repBody').addEventListener('click', function (e) {
+    const t = e.target.closest ? e.target.closest('[data-act="theory"]') : null;
+    if (t) { saveTheoryScore(t, t.getAttribute('data-id')); return; }
     const b = e.target.closest ? e.target.closest('[data-act="merit"]') : null;
     if (b) giveMerit(b, b.getAttribute('data-id'), b.getAttribute('data-name'));
+  });
+  /* Enter saves the mark, which is how anyone types a column of marks. */
+  $('repBody').addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    const box = e.target.closest ? e.target.closest('[data-theory]') : null;
+    if (!box) return;
+    e.preventDefault();
+    const btn = box.parentNode.querySelector('[data-act="theory"]');
+    if (btn) saveTheoryScore(btn, box.getAttribute('data-theory'));
   });
   $('pracLoadBtn').addEventListener('click', loadPracticeReport);
 
@@ -799,6 +934,8 @@ function wire() {
   $('pickSubject').addEventListener('change', function () { changeSubject(this.value); });
   $('bankSubject').addEventListener('change', function () { changeSubject(this.value); });
   $('pickYear').addEventListener('change', renderNewTopicPicker);
+  $('examBoard').addEventListener('change', loadExamBlueprint);
+  $('examSubject').addEventListener('change', loadExamBlueprint);
   $('bankClear').addEventListener('click', function () {
     $('bankPicker').querySelectorAll('input:checked').forEach(function (b) { b.checked = false; });
     updateCount('bankPicker', 'bankCount');
