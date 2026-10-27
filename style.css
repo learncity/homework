@@ -276,3 +276,42 @@ button:disabled { opacity: .5; cursor: default; }
 @media (max-width: 380px) {
   .tabs .tab { font-size: 15px; }
 }
+
+/* ---------- exam papers ---------- */
+
+.score .grade {
+  display: inline-block; font-size: 34px; font-weight: 800; letter-spacing: -.5px;
+  color: var(--indigo-d); background: var(--indigo-t); border: 1px solid #C7D2FE;
+  border-radius: 999px; padding: 4px 20px; margin-bottom: 10px;
+}
+
+/* An exam card is a div with a button per paper, not one big button. */
+.hw.exam { cursor: default; }
+.hw.exam .papers { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.hw.exam .paper {
+  flex: 1 1 180px; display: block; text-align: left; padding: 12px 14px;
+  background: #fff; border: 1px solid var(--line-d); border-radius: 10px;
+}
+.hw.exam .paper:disabled { opacity: 1; background: var(--good-bg); border-color: #6EE7B7; }
+.hw.exam .pname { display: block; font-size: 17px; font-weight: 700; color: var(--navy); }
+.hw.exam .pmeta { display: block; font-size: 15px; font-weight: 500; color: var(--muted); margin-top: 2px; }
+
+/* The theory paper: one long page, as a printed paper would be. */
+.tq { padding: 18px 20px; }
+.tqHead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; font-size: 17px; color: var(--navy); }
+.tqHead .marks { font-size: 14px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; }
+.tqPrompt { font-size: 19px; font-weight: 500; line-height: 1.55; white-space: pre-line; }
+#theoryHead h2 { margin-top: 6px; }
+
+/* Printing a theory paper: the pupil writes on it, so drop everything that is
+   only useful on screen and let the questions break across pages. */
+@media print {
+  .noprint, .bar, .tabs, .navbar, .msg { display: none !important; }
+  body { background: #fff; font-size: 12pt; }
+  .wrap { max-width: none; padding: 0; }
+  .card { border: 0; padding: 0 0 6pt; margin: 0 0 10pt; break-inside: avoid; }
+  .tq { border-bottom: 1px solid #ccc; }
+  .tqPrompt { font-size: 12pt; }
+  #theoryHead { border-bottom: 2px solid #000; margin-bottom: 14pt; }
+  .fig { border: 0; max-width: 60%; }
+}

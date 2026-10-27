@@ -47,9 +47,15 @@ window.addEventListener('error', function (e) {
   var ME = { name: '', className: '' };
   var Q = { attempt: null, questions: [], answers: {}, i: 0 };
   var SELF = { attempt: null, questions: [], i: 0 };
+  var THEORY = { attempt: null, questions: [], label: '', assigned: false };
   var LAST = null;
   var TAB = 'List';
   var TIMER = null;
+  var THTIMER = null;
+  /* Which exam board the pupil last chose, and what each board can currently
+     offer. An exam is one board at a time, as a real paper is. */
+  var BOARD = '';
+  var EXAMS = {};
 
   var POINTS_NOTE = {
     late: 'This was handed in after the due date, so it does not earn Spark Points. It is still recorded.',
@@ -62,7 +68,9 @@ window.addEventListener('error', function (e) {
     library_value_zero: '',
     spark_log_failed: '',
     practice_no_points: '',
-    mock_no_points: ''
+    mock_no_points: '',
+    exam_no_points: 'Practice papers you set yourself do not earn Spark Points. An exam your teacher sets does.',
+    theory_marked_by_teacher: ''
   };
 
   /* ---------- small helpers ---------- */
@@ -174,7 +182,7 @@ window.addEventListener('error', function (e) {
     return h;
   }
 
-  var SCREENS = ['SignIn', 'List', 'Practice', 'Progress', 'Quiz', 'Results', 'Self'];
+  var SCREENS = ['SignIn', 'List', 'Practice', 'Progress', 'Quiz', 'Results', 'Self', 'Theory'];
 
   function show(name) {
     SCREENS.forEach(function (s) {
@@ -297,6 +305,7 @@ window.addEventListener('error', function (e) {
 
   function signOut() {
     stopTimer();
+    stopTheoryTimer();
     AUTH = { studentEmail: '', studentCode: '' };
     SUBJECT = '';
     clearAuth();
@@ -381,6 +390,7 @@ window.addEventListener('error', function (e) {
       return (order[a.state] - order[b.state]) || String(a.due).localeCompare(String(b.due));
     });
     box.innerHTML = list.map(function (a) {
+      if (a.mode === 'Exam') return examCardHtml(a);
       var tag, label, st;
       var when = prettyDate(a.due);
       if (a.state === 'done') {
@@ -406,6 +416,34 @@ window.addEventListener('error', function (e) {
         '<span class="ttl">' + esc(topics) + '</span>' +
         '<span class="meta">' + bits.join(' \u00b7 ') + '</span></button>';
     }).join('');
+  }
+
+  /* An exam is two papers under one card, so it cannot be a single button like
+     the other homework. Each paper is opened on its own. */
+  function examCardHtml(a) {
+    var when = prettyDate(a.due);
+    var done = a.state === 'done';
+    var tag = done ? 'done' : (a.overdue ? 'late' : (when === 'today' ? 'late' : (when === 'tomorrow' ? 'soon' : 'todo')));
+    var label = done ? 'Finished' : (a.overdue ? 'Overdue' : (when === 'today' ? 'Due today' : (when === 'tomorrow' ? 'Due tomorrow' : 'To do')));
+    var st = done ? 'st-done' : ((a.overdue || when === 'today') ? 'st-late' : 'st-todo');
+
+    function paperBtn(p, which) {
+      var state = p.state === 'done'
+        ? (p.score !== null ? 'Done — ' + p.score + '/' + p.total : 'Handed in')
+        : (p.state === 'in_progress' ? 'Started — carry on' : p.questions + ' questions, ' + p.minutes + ' min');
+      return '<button class="paper" type="button" data-id="' + esc(a.assignmentId) + '" data-paper="' + which +
+        '"' + (p.state === 'done' ? ' disabled' : '') + '>' +
+        '<span class="pname">' + esc(p.label) + ' \u00b7 ' + (which === 'theory' ? 'theory' : 'objective') + '</span>' +
+        '<span class="pmeta">' + esc(state) + '</span></button>';
+    }
+
+    return '<div class="card hw exam ' + st + '">' +
+      '<span class="top"><span class="kicker">' + esc(a.board + ' ' + a.subject + ' exam') + '</span>' +
+      '<span class="tag ' + tag + '">' + esc(label) + '</span></span>' +
+      '<span class="ttl">Full paper, whole syllabus</span>' +
+      '<span class="meta">Due ' + esc(when) + ' · both papers</span>' +
+      '<div class="papers">' + paperBtn(a.papers.objective, 'objective') +
+      paperBtn(a.papers.theory, 'theory') + '</div></div>';
   }
 
   function openAssignment(btn) {
@@ -451,6 +489,61 @@ window.addEventListener('error', function (e) {
     renderDomains(r.domains);
   }
 
+  /* Which boards can currently fill a paper. Kept beside the practice menu
+     because it is the same question: what is released. */
+  function loadExamOptions() {
+    var part = 'exams:' + (SUBJECT || '');
+    var seen = cacheGet(part);
+    if (seen) paintExams(seen);
+    api('homework.examOptions', { subject: SUBJECT || undefined }, function (r) {
+      if (!r.success) { $('examCard').classList.add('hidden'); return; }
+      cachePut('exams:' + (SUBJECT || ''), r);
+      paintExams(r);
+    });
+  }
+
+  function paintExams(r) {
+    var boards = r.boards || [];
+    var card = $('examCard');
+    if (!boards.length) { card.classList.add('hidden'); return; }
+    var sel = $('examBoard');
+    if (sel.options.length !== boards.length) {
+      sel.innerHTML = boards.map(function (b) {
+        return '<option value="' + esc(b.board) + '">' + esc(b.board) + '</option>';
+      }).join('');
+    }
+    $('boardBar').classList.toggle('hidden', boards.length < 2);
+    if (!BOARD || !boards.some(function (b) { return b.board === BOARD; })) BOARD = boards[0].board;
+    sel.value = BOARD;
+    EXAMS = {};
+    boards.forEach(function (b) { EXAMS[b.board] = b; });
+    paintExamNotes();
+    card.classList.remove('hidden');
+  }
+
+  function paintExamNotes() {
+    var b = EXAMS[BOARD];
+    if (!b) return;
+    var o = b.objective, t = b.theory;
+    $('examObjBtn').disabled = !(o && o.ready);
+    $('examObjBtn').textContent = o ? o.label + ' \u2014 objective' : 'Objective paper';
+    $('examObjNote').textContent = (o && o.ready)
+      ? o.questions + ' questions in ' + o.minutes + ' minutes, marked as soon as you hand it in.'
+      : 'Not enough topics have been released for a full paper yet. Only ' +
+        ((o && o.outcomesReady) || 0) + ' so far.';
+    if (!t) {
+      $('examTheoryBtn').classList.add('hidden');
+      $('examTheoryNote').textContent = '';
+      return;
+    }
+    $('examTheoryBtn').classList.remove('hidden');
+    $('examTheoryBtn').disabled = !t.ready;
+    $('examTheoryBtn').textContent = t.label + ' \u2014 theory';
+    $('examTheoryNote').textContent = t.ready
+      ? t.questions + ' questions in ' + t.minutes + ' minutes. You write on paper; the model answers are shown when you finish.'
+      : 'Not enough written tasks have been released for a full theory paper yet.';
+  }
+
   function openPractice() {
     var part = 'practice:' + (SUBJECT || '');
     var seen = cacheGet(part);
@@ -468,6 +561,7 @@ window.addEventListener('error', function (e) {
       cachePut(part, r);
       if (!seen || !sameData(seen, r)) paintPractice(r);
     });
+    loadExamOptions();
   }
 
   function renderDomains(domains) {
@@ -599,6 +693,7 @@ window.addEventListener('error', function (e) {
     if (btn) btn.addEventListener('click', function () { startPractice({}, 'homework.startWeakPractice'); });
     if ($('subject')) $('subject').addEventListener('change', function () {
       SUBJECT = $('subject').value;
+      BOARD = '';
       openPractice();
     });
   }
@@ -708,22 +803,144 @@ window.addEventListener('error', function (e) {
     });
   }
 
+  /* ---------- exam papers ---------- */
+
+  function startExamPaper(extra) {
+    say('practiceMsg', '', 'Setting up your paper...');
+    api('homework.startExam', extra || {}, function (r) {
+      if (!r.success) { say('practiceMsg', 'error', r.error); say('listMsg', 'error', r.error); return; }
+      say('practiceMsg', '', '');
+      say('listMsg', '', '');
+      startQuiz(r);
+      var bits = [r.board + ' ' + r.paperLabel + '. ' + r.questions.length + ' questions in ' +
+        Math.round(r.timeLimit / 60) + ' minutes.'];
+      if (r.repeatsAllowed) bits.push('Some of these you have seen before — there were not enough new ones left.');
+      say('quizMsg', '', bits.join(' '));
+    });
+  }
+
+  function startTheoryPaper(extra) {
+    say('practiceMsg', '', 'Setting up your paper...');
+    api('homework.startExamTheory', extra || {}, function (r) {
+      if (!r.success) { say('practiceMsg', 'error', r.error); say('listMsg', 'error', r.error); return; }
+      say('practiceMsg', '', '');
+      say('listMsg', '', '');
+      renderTheory(r);
+    });
+  }
+
+  /* The theory paper is one long page rather than one question at a time: a
+     pupil writing on paper needs to see what is coming, exactly as they would
+     with a printed paper in front of them. */
+  function renderTheory(r) {
+    THEORY = { attempt: r, questions: r.questions, label: r.paperLabel, assigned: r.assigned === true };
+    $('thTitle').textContent = (r.board ? r.board + ' ' : '') + (r.subject || '') + ' — ' + r.paperLabel;
+    $('thProgress').textContent = r.questions.length + ' questions · ' + r.paperMarks + ' marks · ' +
+      Math.round(r.timeLimit / 60) + ' minutes';
+    $('thNote').textContent = r.paperNote || '';
+    $('thBody').innerHTML = r.questions.map(function (q, i) {
+      return '<div class="card tq"><div class="tqHead"><b>Question ' + (i + 1) + '</b>' +
+        '<span class="marks">' + esc(q.marks || '') + ' marks</span></div>' +
+        '<div class="tqPrompt">' + fmt(q.prompt) + figHtml(q) + '</div></div>';
+    }).join('');
+    $('thFinishBtn').classList.remove('hidden');
+    $('thExitBtn').classList.remove('hidden');
+    say('theoryMsg', '', '');
+    stopTheoryTimer();
+    if (typeof r.secondsLeft === 'number') startTheoryTimer(r.secondsLeft);
+    show('Theory');
+  }
+
+  /* Same arrangement as the quiz clock: a convenience, not the rule. The server
+     records when the paper started and flags one handed in over time. */
+  function startTheoryTimer(seconds) {
+    var endsAt = Date.now() + seconds * 1000;
+    var el = $('thTimer');
+    el.classList.remove('hidden');
+    var tick = function () {
+      var left = Math.round((endsAt - Date.now()) / 1000);
+      el.textContent = mmss(left);
+      el.classList.toggle('low', left <= 600);
+      if (left <= 0) {
+        stopTheoryTimer();
+        say('theoryMsg', 'error', 'Time is up. Press Finish and hand your paper in.');
+      }
+    };
+    tick();
+    THTIMER = window.setInterval(tick, 1000);
+  }
+
+  function stopTheoryTimer() {
+    if (THTIMER) { window.clearInterval(THTIMER); THTIMER = null; }
+    var el = $('thTimer');
+    el.classList.add('hidden');
+    el.classList.remove('low');
+  }
+
+  function finishTheory() {
+    if (!window.confirm('Finish the paper? Your teacher marks it from the paper you hand in.')) return;
+    $('thFinishBtn').disabled = true;
+    say('theoryMsg', '', 'Handing in...');
+    api('homework.finishExamTheory', { attemptId: THEORY.attempt.attemptId }, function (r) {
+      $('thFinishBtn').disabled = false;
+      if (!r.success) { say('theoryMsg', 'error', r.error); return; }
+      stopTheoryTimer();
+      $('thFinishBtn').classList.add('hidden');
+      var mins = Math.round(r.secondsTaken / 60);
+      var head = '<div class="banner ' + (r.overTime ? 'warn' : 'good') + '">' +
+        (r.overTime
+          ? 'Handed in after the time ran out, which is recorded with your paper. You took ' + mins + ' minutes.'
+          : 'Handed in, and you took ' + mins + ' minutes.') +
+        (r.assigned ? ' Give your written paper to your teacher — they mark it and enter your score.' : '') +
+        '</div>';
+      if (r.answers && r.answers.length) {
+        $('thBody').innerHTML = head + r.answers.map(function (a, i) {
+          var ex = '';
+          if (a.modelAnswer) ex += '<p><b>Model answer.</b> ' + fmt(a.modelAnswer) + '</p>';
+          if (a.markScheme) ex += '<p><b>Where the marks come from.</b> ' + fmt(a.markScheme) + '</p>';
+          if (a.workedSolution) ex += '<p><b>How to get there.</b> ' + fmt(a.workedSolution) + '</p>';
+          return '<div class="card tq"><div class="tqHead"><b>Question ' + (i + 1) + '</b>' +
+            '<span class="marks">' + esc(a.marks || '') + ' marks</span></div>' +
+            '<div class="tqPrompt">' + fmt(a.prompt) + figHtml(a) + '</div>' +
+            (ex ? '<div class="explain">' + ex + '</div>' : '') + '</div>';
+        }).join('');
+        say('theoryMsg', 'ok', 'Mark your own work against these, honestly.');
+      } else {
+        $('thBody').innerHTML = head;
+        say('theoryMsg', 'ok', 'Your teacher will mark it.');
+      }
+      $('thExitBtn').textContent = 'Back';
+      window.scrollTo(0, 0);
+    });
+  }
+
   /* ---------- results ---------- */
 
   function renderResults(r) {
     LAST = r;
     $('rScore').textContent = r.score + '/' + r.total;
-    $('rOf').textContent = r.percent + '% · ' + (r.round > 1 ? 'retry ' + (r.round - 1) : 'first attempt');
+    $('rOf').textContent = r.grade
+      ? r.percent + '%' + (r.paperLabel ? ' \u00b7 ' + r.board + ' ' + r.paperLabel : '')
+      : r.percent + '% \u00b7 ' + (r.round > 1 ? 'retry ' + (r.round - 1) : 'first attempt');
+    $('rGrade').classList.toggle('hidden', !r.grade);
+    if (r.grade) $('rGrade').textContent = r.grade + ' \u2014 ' + r.gradeMeaning;
 
     var html = '';
     if (r.overTime) {
       html += '<div class="banner warn">This was handed in after the time ran out, so treat the score with that in mind.</div>';
     }
+    /* Said plainly, because a grade from half an exam reads far better or worse
+       than the real thing. */
+    if (r.objectiveOnly) {
+      html += '<div class="banner warn">This grade is for the objective paper only. The theory paper counts for twice as many marks, so your real grade depends on it too.</div>';
+    }
+    /* Appended, not assigned: an over-time paper that also missed its points
+       needs to say both. */
     if (r.pointsAwarded > 0) {
-      html = '<div class="banner good">Well done — ' + r.pointsAwarded +
+      html += '<div class="banner good">Well done — ' + r.pointsAwarded +
         ' Spark Point' + (r.pointsAwarded === 1 ? '' : 's') + ' added for handing this in on time.</div>';
     } else if (POINTS_NOTE[r.pointsNote]) {
-      html = '<div class="banner warn">' + esc(POINTS_NOTE[r.pointsNote]) + '</div>';
+      html += '<div class="banner warn">' + esc(POINTS_NOTE[r.pointsNote]) + '</div>';
     }
     $('rBanner').innerHTML = html;
 
@@ -731,7 +948,8 @@ window.addEventListener('error', function (e) {
     if (r.retryAvailable) {
       $('retryBtn').textContent = 'Try the ' + r.retryQuestions + ' I missed';
     }
-    $('backBtn').textContent = (r.mode === 'Scored' || !r.mode) ? 'Back to my homework' : 'Back to practice';
+    $('backBtn').textContent = (r.mode === 'Scored' || !r.mode) ? 'Back to my homework'
+      : (r.mode === 'Exam' && !r.pointsNote ? 'Back to my homework' : 'Back to Self-learning');
 
     /* A mock is read by section of the syllabus, not question by question. */
     var hasDomains = !!(r.byDomain && r.byDomain.length);
@@ -862,8 +1080,35 @@ window.addEventListener('error', function (e) {
     $('signOut').addEventListener('click', signOut);
 
     $('listRows').addEventListener('click', function (e) {
-      var btn = e.target.closest ? e.target.closest('.hw') : null;
+      /* An exam card holds a button per paper; everything else is one button. */
+      var paper = e.target.closest ? e.target.closest('.paper') : null;
+      if (paper) {
+        var id = paper.getAttribute('data-id');
+        if (paper.getAttribute('data-paper') === 'theory') startTheoryPaper({ assignmentId: id });
+        else startExamPaper({ assignmentId: id });
+        return;
+      }
+      var btn = e.target.closest ? e.target.closest('button.hw') : null;
       if (btn) openAssignment(btn);
+    });
+
+    $('examBoard').addEventListener('change', function () {
+      BOARD = $('examBoard').value;
+      paintExamNotes();
+    });
+    $('examObjBtn').addEventListener('click', function () {
+      if (!window.confirm('An exam paper is timed and should be done in one sitting. Start now?')) return;
+      startExamPaper({ board: BOARD, subject: SUBJECT || undefined });
+    });
+    $('examTheoryBtn').addEventListener('click', function () {
+      if (!window.confirm('Get paper and a pen first \u2014 you write your answers by hand. Start the clock now?')) return;
+      startTheoryPaper({ board: BOARD, subject: SUBJECT || undefined });
+    });
+    $('thFinishBtn').addEventListener('click', finishTheory);
+    $('thPrintBtn').addEventListener('click', function () { window.print(); });
+    $('thExitBtn').addEventListener('click', function () {
+      stopTheoryTimer();
+      if (THEORY.assigned) refreshList(); else openPractice();
     });
 
     $('qOptions').addEventListener('click', function (e) {
