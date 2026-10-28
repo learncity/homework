@@ -96,6 +96,14 @@ window.addEventListener('error', function (e) {
       ? '<img class="fig" src="figures/' + q.figure + '.svg" alt="Diagram for this question">' : '';
   }
 
+  /* Physics names a paper the portal cannot give ("Paper 3, the practical").
+     Every place a grade or a paper list leaves it out says so, in one wording. */
+  function capFirst(t) { return t ? t.charAt(0).toUpperCase() + t.slice(1) : ''; }
+
+  function notInPortalText(name) {
+    return name ? capFirst(name) + ' is not in the portal.' : '';
+  }
+
   function say(id, cls, text) {
     var el = $(id);
     el.className = 'msg' + (cls ? ' ' + cls : '');
@@ -442,6 +450,7 @@ window.addEventListener('error', function (e) {
       '<span class="tag ' + tag + '">' + esc(label) + '</span></span>' +
       '<span class="ttl">Full paper, whole syllabus</span>' +
       '<span class="meta">Due ' + esc(when) + ' · both papers</span>' +
+      (a.notInPortal ? '<span class="meta">' + esc(notInPortalText(a.notInPortal)) + '</span>' : '') +
       '<div class="papers">' + paperBtn(a.papers.objective, 'objective') +
       paperBtn(a.papers.theory, 'theory') + '</div></div>';
   }
@@ -531,6 +540,8 @@ window.addEventListener('error', function (e) {
       ? o.questions + ' questions in ' + o.minutes + ' minutes, marked as soon as you hand it in.'
       : 'Not enough topics have been released for a full paper yet. Only ' +
         ((o && o.outcomesReady) || 0) + ' so far.';
+    $('examMissing').textContent = notInPortalText(b.notInPortal);
+    $('examMissing').classList.toggle('hidden', !b.notInPortal);
     if (!t) {
       $('examTheoryBtn').classList.add('hidden');
       $('examTheoryNote').textContent = '';
@@ -691,11 +702,6 @@ window.addEventListener('error', function (e) {
     $('progressBody').innerHTML = html;
     var btn = $('weakFromProgress');
     if (btn) btn.addEventListener('click', function () { startPractice({}, 'homework.startWeakPractice'); });
-    if ($('subject')) $('subject').addEventListener('change', function () {
-      SUBJECT = $('subject').value;
-      BOARD = '';
-      openPractice();
-    });
   }
 
   /* ---------- quiz ---------- */
@@ -932,7 +938,10 @@ window.addEventListener('error', function (e) {
     /* Said plainly, because a grade from half an exam reads far better or worse
        than the real thing. */
     if (r.objectiveOnly) {
-      html += '<div class="banner warn">This grade is for the objective paper only. The theory paper counts for twice as many marks, so your real grade depends on it too.</div>';
+      html += '<div class="banner warn">This grade is for the objective paper only.' +
+        (r.theoryMarks ? ' ' + esc(r.theoryLabel || 'The theory paper') + ' is worth ' + r.theoryMarks +
+          ' marks, so your real grade depends on it too.' : ' Your real grade depends on the theory paper too.') +
+        (r.notInPortal ? ' ' + esc(capFirst(r.notInPortal)) + ' is not in the portal, so it is not in this grade either.' : '') + '</div>';
     }
     /* Appended, not assigned: an over-time paper that also missed its points
        needs to say both. */
@@ -1092,6 +1101,14 @@ window.addEventListener('error', function (e) {
       if (btn) openAssignment(btn);
     });
 
+    /* Wired once, here. It used to be wired inside renderProgress, so on a fresh
+       page the subject picker did nothing until the Progress tab had been drawn,
+       and each visit to Progress added another copy of the handler. */
+    if ($('subject')) $('subject').addEventListener('change', function () {
+      SUBJECT = $('subject').value;
+      BOARD = '';
+      openPractice();
+    });
     $('examBoard').addEventListener('change', function () {
       BOARD = $('examBoard').value;
       paintExamNotes();

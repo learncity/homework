@@ -203,6 +203,10 @@ button:disabled { opacity: .5; cursor: default; }
 .track { height: 8px; background: #E2E8F0; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
 .track span { display: block; height: 100%; background: var(--indigo); transition: width .2s; }
 
+/* Physics working is often one unspaced run, up to 64 characters
+   ("finaltemp=(m_cT_c+m_hT_h)/(m_c+m_h)=…"). Without this it pushes a 360px
+   phone sideways. Only question text breaks this way; labels and buttons don't. */
+.prompt, .opt, .explain, .tqPrompt { overflow-wrap: anywhere; }
 .prompt { font-size: 22px; font-weight: 600; line-height: 1.5; color: var(--ink); margin-bottom: 20px; white-space: pre-line; }
 .prompt .topic { display: block; font-size: 14px; font-weight: 800; color: var(--indigo-d); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
 
