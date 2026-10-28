@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Lens Rays physics examination diagram">
+<title>Lens Rays physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Principal-ray construction for a convex lens</text>
+<line x1="115" y1="322" x2="840" y2="322" stroke="#203A5E" stroke-width="3"/>
+<path d="M480 165 Q442 320 480 476 Q518 320 480 165" stroke="#347DB0" stroke-width="4" fill="#DDEEF9"/>
+<line x1="396" y1="307" x2="396" y2="339" stroke="#203A5E" stroke-width="3"/>
+<text x="396" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">F₁</text>
+<line x1="564" y1="307" x2="564" y2="339" stroke="#203A5E" stroke-width="3"/>
+<text x="564" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">F₂</text>
+<line x1="228" y1="322" x2="228" y2="202" stroke="#B64030" stroke-width="5" marker-end="url(#r)"/>
+<line x1="228" y1="202" x2="480" y2="202" stroke="#23816B" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="480" y1="202" x2="606.0" y2="382.0" stroke="#23816B" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="228" y1="202" x2="480" y2="322" stroke="#B64030" stroke-width="3"/>
+<line x1="480" y1="322" x2="606.0" y2="382.0" stroke="#B64030" stroke-width="3"/>
+<line x1="606.0" y1="322" x2="606.0" y2="382.0" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="228" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Object</text>
+<text x="641.0" y="409.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Image</text>
+<text x="480" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">f = 12 cm; object distance u = 36 cm</text>
+</svg>

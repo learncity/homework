@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Fuse physics examination diagram">
+<title>Fuse physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Domestic appliance connected through a fuse</text>
+<rect x="330" y="233" width="350" height="202" fill="#ECF2F7" stroke="#203A5E" stroke-width="3"/>
+<text x="510" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">APPLIANCE</text>
+<text x="510" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">Power 720 W</text>
+<text x="510" y="376" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Supply 240 V</text>
+<line x1="140" y1="275" x2="330" y2="275" stroke="#B64030" stroke-width="4"/>
+<rect x="213" y="262" width="60" height="25" fill="#FFE9CC" stroke="#203A5E" stroke-width="3"/>
+<text x="242" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Fuse</text>
+<line x1="140" y1="380" x2="330" y2="380" stroke="#203A5E" stroke-width="4"/>
+<text x="480" y="505" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Fuse is installed in the live wire</text>
+</svg>

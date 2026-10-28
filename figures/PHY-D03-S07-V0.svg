@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: dc motor">
+<title>Physics diagram: dc motor</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Dc Motor — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="180" y="190" width="170" height="260" fill="#F9DCD2" stroke="#203A5E" stroke-width="3"/>
+<rect x="615" y="190" width="170" height="260" fill="#D3E9F9" stroke="#203A5E" stroke-width="3"/>
+<text x="260" y="322" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="normal" fill="#203A5E" text-anchor="middle">N</text>
+<text x="700" y="322" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="normal" fill="#203A5E" text-anchor="middle">S</text>
+<rect x="410" y="225" width="135" height="150" fill="#FFFFFF" stroke="#203A5E" stroke-width="3"/>
+<line x1="415" y1="230" x2="540" y2="230" stroke="#B64030" stroke-width="6"/>
+<line x1="415" y1="367" x2="540" y2="367" stroke="#B64030" stroke-width="6"/>
+<line x1="472" y1="374" x2="472" y2="453" stroke="#203A5E" stroke-width="3"/>
+<circle cx="472" cy="457" r="23" fill="#DCE7EE" stroke="#203A5E" stroke-width="3"/>
+<line x1="445" y1="467" x2="498" y2="467" stroke="#203A5E" stroke-width="5"/>
+<text x="480" y="496" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">50 turns   B=0.2 T   I=2 A</text>
+<text x="480" y="530" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Area=0.02 m²; commutator on axle</text>
+</svg>

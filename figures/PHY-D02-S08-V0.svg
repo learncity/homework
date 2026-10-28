@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Floating physics examination diagram">
+<title>Floating physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Floating block in a measuring vessel</text>
+<rect x="255" y="163" width="460" height="325" fill="#FFF" stroke="#203A5E" stroke-width="3"/>
+<rect x="258" y="279" width="454" height="206" fill="#CFEAFB" stroke="none" stroke-width="0"/>
+<rect x="385" y="220" width="190" height="145" fill="#E7BA75" stroke="#203A5E" stroke-width="3"/>
+<line x1="605" y1="380" x2="605" y2="260" stroke="#B64030" stroke-width="3" marker-end="url(#r)"/>
+<text x="480" y="192" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">Mass = 0.6 kg</text>
+<text x="480" y="526" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Volume of block = 1000 cm³; water density = 1000 kg/m³</text>
+<text x="620" y="340" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Upthrust</text>
+<text x="376" y="404" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Water</text>
+</svg>

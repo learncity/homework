@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="instrument care diagram">
+<title>instrument care diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Instrument Care — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<rect x="90" y="180" width="280" height="238" fill="#E5F2EE" stroke="#203A5E" stroke-width="3"/>
+<line x1="135" y1="315" x2="325" y2="315" stroke="#203A5E" stroke-width="7"/>
+<line x1="170" y1="290" x2="170" y2="339" stroke="#203A5E" stroke-width="4"/>
+<line x1="292" y1="290" x2="292" y2="339" stroke="#203A5E" stroke-width="4"/>
+<text x="230" y="239" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="normal" fill="#208071" text-anchor="middle">✓</text>
+<text x="230" y="380" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">DRY AND CASE</text>
+<rect x="510" y="180" width="280" height="238" fill="#FCEBE6" stroke="#203A5E" stroke-width="3"/>
+<line x1="555" y1="315" x2="745" y2="315" stroke="#203A5E" stroke-width="7"/>
+<line x1="590" y1="290" x2="590" y2="339" stroke="#203A5E" stroke-width="4"/>
+<line x1="712" y1="290" x2="712" y2="339" stroke="#203A5E" stroke-width="4"/>
+<text x="650" y="239" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="normal" fill="#B64030" text-anchor="middle">!</text>
+<text x="650" y="380" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">DIRTY JAWS</text>
+<text x="480" y="491" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Inspect zero and jaws; remove dirt and moisture before storage</text>
+</svg>

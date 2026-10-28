@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="coil flux diagram">
+<title>coil flux diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Coil Flux — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<path d="M275 255 C287 190 308 190 317 255 C305 320 287 320 275 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M319 255 C331 190 352 190 361 255 C349 320 331 320 319 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M363 255 C375 190 396 190 405 255 C393 320 375 320 363 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M407 255 C419 190 440 190 449 255 C437 320 419 320 407 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M451 255 C463 190 484 190 493 255 C481 320 463 320 451 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M495 255 C507 190 528 190 537 255 C525 320 507 320 495 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M539 255 C551 190 572 190 581 255 C569 320 551 320 539 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M583 255 C595 190 616 190 625 255 C613 320 595 320 583 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M627 255 C639 190 660 190 669 255 C657 320 639 320 627 255" stroke="#203A5E" stroke-width="3" fill="none"/>
+<line x1="330" y1="170" x2="330" y2="213" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="405" y1="170" x2="405" y2="213" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="480" y1="170" x2="480" y2="213" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="555" y1="170" x2="555" y2="213" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="495" y="365" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">N=200 turns; A=0.02 m²</text>
+<text x="485" y="409" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">B: 0.3 T → 0 T in 0.5 s</text>
+<text x="480" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Field normal to coil plane</text>
+</svg>

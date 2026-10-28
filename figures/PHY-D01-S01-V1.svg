@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Vernier diagram">
+<title>Vernier diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Vernier caliper: scale reading</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Least count = 0.01 cm</text>
+<rect x="100" y="185" width="750" height="85" fill="#F4F8FC" stroke="#203A5E" stroke-width="3"/>
+<rect x="152" y="279" width="630" height="92" fill="#E9F3FD" stroke="#203A5E" stroke-width="3"/>
+<line x1="134" y1="186" x2="134" y2="244" stroke="#203A5E" stroke-width="2"/>
+<text x="134" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">2.7</text>
+<line x1="178" y1="186" x2="178" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="178" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">2.8</text>
+<line x1="222" y1="186" x2="222" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="222" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">2.9</text>
+<line x1="266" y1="186" x2="266" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="266" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3</text>
+<line x1="310" y1="186" x2="310" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="310" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.1</text>
+<line x1="354" y1="186" x2="354" y2="244" stroke="#203A5E" stroke-width="2"/>
+<text x="354" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.2</text>
+<line x1="398" y1="186" x2="398" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="398" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.3</text>
+<line x1="442" y1="186" x2="442" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="442" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.4</text>
+<line x1="486" y1="186" x2="486" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="486" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.5</text>
+<line x1="530" y1="186" x2="530" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="530" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.6</text>
+<line x1="574" y1="186" x2="574" y2="244" stroke="#203A5E" stroke-width="2"/>
+<text x="574" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.7</text>
+<line x1="618" y1="186" x2="618" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="618" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.8</text>
+<line x1="662" y1="186" x2="662" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="662" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3.9</text>
+<line x1="706" y1="186" x2="706" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="706" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">4</text>
+<line x1="750" y1="186" x2="750" y2="224" stroke="#203A5E" stroke-width="2"/>
+<text x="750" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">4.1</text>
+<line x1="794" y1="186" x2="794" y2="244" stroke="#203A5E" stroke-width="2"/>
+<text x="794" y="171" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">4.2</text>
+<line x1="327.6" y1="280" x2="327.6" y2="375" stroke="#B64030" stroke-width="4"/>
+<line x1="327.6" y1="285" x2="327.6" y2="324" stroke="#203A5E" stroke-width="2"/>
+<text x="327.6" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">0</text>
+<line x1="367.20000000000005" y1="285" x2="367.20000000000005" y2="310" stroke="#203A5E" stroke-width="2"/>
+<text x="367.20000000000005" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">1</text>
+<line x1="406.8" y1="285" x2="406.8" y2="324" stroke="#203A5E" stroke-width="2"/>
+<text x="406.8" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">2</text>
+<line x1="446.40000000000003" y1="285" x2="446.40000000000003" y2="310" stroke="#203A5E" stroke-width="2"/>
+<text x="446.40000000000003" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">3</text>
+<line x1="486.0" y1="285" x2="486.0" y2="324" stroke="#203A5E" stroke-width="2"/>
+<text x="486.0" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">4</text>
+<line x1="525.6" y1="285" x2="525.6" y2="310" stroke="#203A5E" stroke-width="2"/>
+<text x="525.6" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">5</text>
+<line x1="565.2" y1="285" x2="565.2" y2="324" stroke="#203A5E" stroke-width="2"/>
+<text x="565.2" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">6</text>
+<line x1="604.8" y1="285" x2="604.8" y2="310" stroke="#203A5E" stroke-width="2"/>
+<text x="604.8" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">7</text>
+<line x1="644.4000000000001" y1="285" x2="644.4000000000001" y2="324" stroke="#203A5E" stroke-width="2"/>
+<text x="644.4000000000001" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">8</text>
+<line x1="684.0" y1="285" x2="684.0" y2="310" stroke="#203A5E" stroke-width="2"/>
+<text x="684.0" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="normal" fill="#172B4D" text-anchor="middle">9</text>
+<rect x="478.0" y="348" width="16" height="10" fill="#B64030" stroke="#B64030" stroke-width="0"/>
+<text x="480" y="420" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">Upper: main scale (cm)    Lower: vernier divisions</text>
+<text x="480" y="463" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#B64030" text-anchor="middle">Coinciding vernier mark highlighted in red</text>
+</svg>

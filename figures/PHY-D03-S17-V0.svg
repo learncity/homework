@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: capacitor">
+<title>Physics diagram: capacitor</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Capacitor — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="370" y="150" width="30" height="275" fill="#B6D3F0" stroke="#203A5E" stroke-width="3"/>
+<rect x="560" y="150" width="30" height="275" fill="#ECCAB6" stroke="#203A5E" stroke-width="3"/>
+<line x1="410" y1="185" x2="545" y2="185" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="410" y1="245" x2="545" y2="245" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="410" y1="305" x2="545" y2="305" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="410" y1="365" x2="545" y2="365" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="325" y="290" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" font-weight="normal" fill="#203A5E" text-anchor="middle">+</text>
+<text x="638" y="290" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" font-weight="normal" fill="#203A5E" text-anchor="middle">−</text>
+<text x="480" y="466" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Area A=0.02 m²; gap d=0.001 m</text>
+<text x="480" y="504" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Potential difference V=100 V; air capacitor</text>
+</svg>

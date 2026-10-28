@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: echo">
+<title>Physics diagram: echo</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Echo — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="740" y="178" width="35" height="282" fill="#D0D5DB" stroke="#203A5E" stroke-width="3"/>
+<circle cx="195" cy="324" r="27" fill="#F6DFC7" stroke="#203A5E" stroke-width="3"/>
+<line x1="235" y1="310" x2="716" y2="310" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="715" y1="338" x2="244" y2="338" stroke="#B64030" stroke-width="3" marker-end="url(#r)"/>
+<text x="480" y="267" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Incident sound →</text>
+<text x="480" y="376" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">← Reflected echo</text>
+<text x="480" y="481" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">Distance to wall d=170 m</text>
+<text x="480" y="515" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Sound speed v=340 m/s</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="solar array diagram">
+<title>solar array diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Solar Array — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<circle cx="250" cy="193" r="65" fill="#FBE7B7" stroke="#203A5E" stroke-width="3"/>
+<line x1="327" y1="207" x2="525" y2="266" stroke="#D7A428" stroke-width="6" marker-end="url(#ar)"/>
+<polyline points="500,270 720,270 775,419 550,419" fill="#CFE6FA" stroke="#203A5E" stroke-width="4"/>
+<line x1="553" y1="270" x2="603" y2="419" stroke="#6288BA" stroke-width="2"/>
+<line x1="606" y1="270" x2="656" y2="419" stroke="#6288BA" stroke-width="2"/>
+<line x1="659" y1="270" x2="709" y2="419" stroke="#6288BA" stroke-width="2"/>
+<line x1="520" y1="320" x2="741" y2="320" stroke="#6288BA" stroke-width="2"/>
+<line x1="520" y1="368" x2="741" y2="368" stroke="#6288BA" stroke-width="2"/>
+<text x="460" y="146" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Irradiance 800 W/m²</text>
+<text x="595" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Area=3 m², efficiency=20%</text>
+<text x="736" y="218" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Electrical output</text>
+</svg>

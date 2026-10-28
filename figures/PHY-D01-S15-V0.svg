@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Wave diagram">
+<title>Wave diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Displacement–distance snapshot of a wave</text>
+<line x1="120" y1="315" x2="845" y2="315" stroke="#203A5E" stroke-width="2"/>
+<line x1="120" y1="465" x2="120" y2="145" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="120" y1="315" x2="855" y2="315" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<polyline points="130,315.0 135,305.1 140,295.4 145,285.7 150,276.3 155,267.3 160,258.6 165,250.3 170,242.6 175,235.5 180,229.0 185,223.2 190,218.1 195,213.9 200,210.4 205,207.8 210,206.0 215,205.1 220,205.1 225,206.0 230,207.8 235,210.4 240,213.9 245,218.1 250,223.2 255,229.0 260,235.5 265,242.6 270,250.3 275,258.6 280,267.3 285,276.3 290,285.7 295,295.4 300,305.1 305,315.0 310,324.9 315,334.6 320,344.3 325,353.7 330,362.7 335,371.4 340,379.7 345,387.4 350,394.5 355,401.0 360,406.8 365,411.9 370,416.1 375,419.6 380,422.2 385,424.0 390,424.9 395,424.9 400,424.0 405,422.2 410,419.6 415,416.1 420,411.9 425,406.8 430,401.0 435,394.5 440,387.4 445,379.7 450,371.4 455,362.7 460,353.7 465,344.3 470,334.6 475,324.9 480,315.0 485,305.1 490,295.4 495,285.7 500,276.3 505,267.3 510,258.6 515,250.3 520,242.6 525,235.5 530,229.0 535,223.2 540,218.1 545,213.9 550,210.4 555,207.8 560,206.0 565,205.1 570,205.1 575,206.0 580,207.8 585,210.4 590,213.9 595,218.1 600,223.2 605,229.0 610,235.5 615,242.6 620,250.3 625,258.6 630,267.3 635,276.3 640,285.7 645,295.4 650,305.1 655,315.0 660,324.9 665,334.6 670,344.3 675,353.7 680,362.7 685,371.4 690,379.7 695,387.4 700,394.5 705,401.0 710,406.8 715,411.9 720,416.1 725,419.6 730,422.2 735,424.0 740,424.9 745,424.9 750,424.0 755,422.2 760,419.6 765,416.1 770,411.9 775,406.8 780,401.0 785,394.5 790,387.4 795,379.7 800,371.4 805,362.7 810,353.7 815,344.3 820,334.6 825,324.9 830,315.0" fill="none" stroke="#B64030" stroke-width="4"/>
+<line x1="306" y1="315" x2="306" y2="205" stroke="#203A5E" stroke-width="2"/>
+<text x="332" y="260" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">4 cm</text>
+<line x1="217" y1="420" x2="567" y2="420" stroke="#203A5E" stroke-width="2"/>
+<text x="389" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="normal" fill="#172B4D" text-anchor="middle">λ = 40 cm</text>
+<text x="470" y="520" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">Frequency = 5 Hz</text>
+</svg>

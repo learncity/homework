@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="urban heat diagram">
+<title>urban heat diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Urban Heat — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<rect x="135" y="270" width="245" height="180" fill="#E6E6EA" stroke="#203A5E" stroke-width="3"/>
+<rect x="580" y="315" width="245" height="135" fill="#D9EEE1" stroke="#203A5E" stroke-width="3"/>
+<text x="265" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Urban</text>
+<text x="705" y="295" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Rural</text>
+<rect x="175" y="318" width="40" height="132" fill="#A6AFC2" stroke="#203A5E" stroke-width="3"/>
+<rect x="245" y="318" width="40" height="132" fill="#A6AFC2" stroke="#203A5E" stroke-width="3"/>
+<rect x="315" y="318" width="40" height="132" fill="#A6AFC2" stroke="#203A5E" stroke-width="3"/>
+<circle cx="640" cy="349" r="27" fill="#6DAA74" stroke="#203A5E" stroke-width="3"/>
+<line x1="640" y1="375" x2="640" y2="426" stroke="#208071" stroke-width="5"/>
+<circle cx="717" cy="349" r="27" fill="#6DAA74" stroke="#203A5E" stroke-width="3"/>
+<line x1="717" y1="375" x2="717" y2="426" stroke="#208071" stroke-width="5"/>
+<circle cx="781" cy="349" r="27" fill="#6DAA74" stroke="#203A5E" stroke-width="3"/>
+<line x1="781" y1="375" x2="781" y2="426" stroke="#208071" stroke-width="5"/>
+<text x="265" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">32 °C initially</text>
+<text x="705" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">27 °C initially</text>
+<text x="480" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Urban later: 28 °C after 4 h</text>
+</svg>

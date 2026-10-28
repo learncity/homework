@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Pulley physics examination diagram">
+<title>Pulley physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Two masses linked over a smooth pulley</text>
+<circle cx="480" cy="191" r="53" fill="#EAF4FC" stroke="#203A5E" stroke-width="3"/>
+<path d="M427 191 V390 M533 191 V420" stroke="#203A5E" stroke-width="5" fill="none"/>
+<rect x="388" y="386" width="78" height="85" fill="#FFF3E5" stroke="#203A5E" stroke-width="3"/>
+<rect x="495" y="415" width="76" height="85" fill="#DBEBFB" stroke="#203A5E" stroke-width="3"/>
+<text x="426" y="434" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">3 kg</text>
+<text x="533" y="464" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">2 kg</text>
+<text x="480" y="115" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Light inextensible string</text>
+<text x="480" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">g = 10 m/s²; no friction</text>
+</svg>

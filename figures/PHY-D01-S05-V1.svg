@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Forces diagram">
+<title>Forces diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Free-body diagram: rough horizontal surface</text>
+<line x1="125" y1="397" x2="830" y2="397" stroke="#8D9CAD" stroke-width="6"/>
+<rect x="395" y="306" width="170" height="90" fill="#EDF4FC" stroke="#203A5E" stroke-width="3"/>
+<line x1="566" y1="348" x2="825" y2="348" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="755" y="328" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#172B4D" text-anchor="middle">Pull 45 N</text>
+<line x1="394" y1="349" x2="222" y2="349" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<text x="255" y="326" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#172B4D" text-anchor="middle">Friction 15 N</text>
+<line x1="480" y1="307" x2="480" y2="175" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<text x="510" y="210" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#172B4D" text-anchor="middle">N</text>
+<line x1="480" y1="397" x2="480" y2="480" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<text x="518" y="477" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">W = 60 N</text>
+<text x="480" y="532" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#172B4D" text-anchor="middle">Horizontal surface; g = 10 m/s²</text>
+</svg>

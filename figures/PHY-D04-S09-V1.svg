@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="bar compass diagram">
+<title>bar compass diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Bar Compass — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<rect x="315" y="252" width="160" height="108" fill="#F4D0CE" stroke="#203A5E" stroke-width="3"/>
+<rect x="475" y="252" width="160" height="108" fill="#D4E9FC" stroke="#203A5E" stroke-width="3"/>
+<text x="393" y="317" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="normal" fill="#203A5E" text-anchor="middle">N</text>
+<text x="555" y="317" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="normal" fill="#203A5E" text-anchor="middle">S</text>
+<path d="M395 190 Q475 135 560 190" stroke="#B64030" stroke-width="3" fill="none"/>
+<text x="650" y="196" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#B64030" text-anchor="middle">N → S</text>
+<path d="M395 215 Q475 160 560 215" stroke="#B64030" stroke-width="3" fill="none"/>
+<text x="650" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#B64030" text-anchor="middle">N → S</text>
+<path d="M395 395 Q475 450 560 395" stroke="#B64030" stroke-width="3" fill="none"/>
+<text x="650" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#B64030" text-anchor="middle">N → S</text>
+<path d="M395 420 Q475 475 560 420" stroke="#B64030" stroke-width="3" fill="none"/>
+<text x="650" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#B64030" text-anchor="middle">N → S</text>
+<circle cx="549" cy="154" r="38" fill="#FFF" stroke="#203A5E" stroke-width="3"/>
+<line x1="522" y1="154" x2="576" y2="154" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="549" y="103" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Compass P</text>
+</svg>

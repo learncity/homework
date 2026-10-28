@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Solenoid diagram">
+<title>Solenoid diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Magnetic field around a solenoid</text>
+<rect x="313" y="216" width="333" height="127" fill="#ECF2F6" stroke="#A2B6C5" stroke-width="2"/>
+<path d="M322 219 C362 250 302 306 322 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M356 219 C396 250 336 306 356 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M390 219 C430 250 370 306 390 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M424 219 C464 250 404 306 424 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M458 219 C498 250 438 306 458 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M492 219 C532 250 472 306 492 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M526 219 C566 250 506 306 526 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M560 219 C600 250 540 306 560 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M594 219 C634 250 574 306 594 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M628 219 C668 250 608 306 628 340" stroke="#203A5E" stroke-width="3" fill="none"/>
+<text x="267" y="294" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="normal" fill="#172B4D" text-anchor="middle">S</text>
+<text x="693" y="295" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="normal" fill="#172B4D" text-anchor="middle">N</text>
+<line x1="705" y1="278" x2="839" y2="278" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<text x="782" y="246" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#172B4D" text-anchor="middle">B direction</text>
+<circle cx="735" cy="403" r="45" fill="#ffffff" stroke="#203A5E" stroke-width="3"/>
+<line x1="735" y1="403" x2="770" y2="403" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="735" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#172B4D" text-anchor="middle">Compass</text>
+<text x="480" y="537" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">Current in winding = 4 A</text>
+</svg>

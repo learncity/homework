@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: rutherford">
+<title>Physics diagram: rutherford</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Rutherford — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="455" y="165" width="28" height="285" fill="#D5E4F2" stroke="#203A5E" stroke-width="3"/>
+<text x="470" y="143" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Gold foil</text>
+<circle cx="470" cy="308" r="16" fill="#E8A066" stroke="#B64030" stroke-width="3"/>
+<line x1="160" y1="215" x2="435" y2="215" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="160" y1="265" x2="435" y2="265" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="160" y1="340" x2="435" y2="340" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="160" y1="395" x2="435" y2="395" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="500" y1="215" x2="780" y2="215" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="500" y1="265" x2="780" y2="265" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="500" y1="395" x2="780" y2="395" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<path d="M440 340 Q490 316 532 215 Q575 145 650 146" stroke="#B64030" stroke-width="4" fill="none"/>
+<path d="M440 306 Q465 302 440 279 Q381 239 307 264" stroke="#B64030" stroke-width="4" fill="none"/>
+<text x="730" y="202" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Pass / small deflection</text>
+<text x="330" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">200 incident α particles</text>
+<text x="715" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#B64030" text-anchor="middle">4 rebound (&gt;90°)</text>
+</svg>

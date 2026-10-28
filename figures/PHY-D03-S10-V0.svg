@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: satellite">
+<title>Physics diagram: satellite</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Satellite — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<circle cx="310" cy="310" r="122" fill="#D9ECF9" stroke="#203A5E" stroke-width="3"/>
+<text x="310" y="316" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">Earth</text>
+<circle cx="310" cy="310" r="198" fill="none" stroke="#879BAC" stroke-width="3"/>
+<rect x="484" y="286" width="68" height="36" fill="#DCE4EA" stroke="#203A5E" stroke-width="3"/>
+<rect x="460" y="292" width="20" height="25" fill="#94B7DB" stroke="#203A5E" stroke-width="3"/>
+<rect x="552" y="292" width="20" height="25" fill="#94B7DB" stroke="#203A5E" stroke-width="3"/>
+<line x1="525" y1="282" x2="526" y2="240" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="695" y="222" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Satellite (eastward)</text>
+<text x="714" y="365" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Orbital radius r=4.2e+07 m</text>
+<text x="716" y="403" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Period T=24 h</text>
+<rect x="603" y="458" width="278" height="50" fill="#FFF4E7" stroke="#203A5E" stroke-width="3"/>
+<text x="742.0" y="490.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Rocket stages → payload</text>
+</svg>

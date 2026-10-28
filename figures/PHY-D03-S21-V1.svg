@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: data plot">
+<title>Physics diagram: data plot</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Data Plot — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<line x1="145" y1="452" x2="820" y2="452" stroke="#203A5E" stroke-width="3"/>
+<line x1="145" y1="452" x2="145" y2="152" stroke="#203A5E" stroke-width="3"/>
+<polyline points="145,452 345,366 545,280 745,194" fill="none" stroke="15" stroke-width="4"/>
+<circle cx="145" cy="452" r="7" fill="15" stroke="#203A5E" stroke-width="3"/>
+<text x="145" y="481" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">0.0</text>
+<text x="105" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal" fill="#203A5E" text-anchor="middle">0</text>
+<circle cx="345" cy="366" r="7" fill="15" stroke="#203A5E" stroke-width="3"/>
+<text x="345" y="481" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">0.1</text>
+<text x="105" y="370" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal" fill="#203A5E" text-anchor="middle">1.5</text>
+<circle cx="545" cy="280" r="7" fill="15" stroke="#203A5E" stroke-width="3"/>
+<text x="545" y="481" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">0.2</text>
+<text x="105" y="284" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal" fill="#203A5E" text-anchor="middle">3</text>
+<circle cx="745" cy="194" r="7" fill="15" stroke="#203A5E" stroke-width="3"/>
+<text x="745" y="481" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">0.3</text>
+<text x="105" y="198" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal" fill="#203A5E" text-anchor="middle">4.5</text>
+<text x="490" y="528" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Current I (A)</text>
+<text x="55" y="303" transform="rotate(-90 55 303)" font-size="20" font-family="Arial" text-anchor="middle" fill="#203A5E">Voltage V (V)</text>
+</svg>

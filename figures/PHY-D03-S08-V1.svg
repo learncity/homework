@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: transmit">
+<title>Physics diagram: transmit</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Transmit — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="85" y="230" width="185" height="105" fill="#F0F6FC" stroke="#203A5E" stroke-width="3"/>
+<text x="177.5" y="289.5" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">AC 200 V</text>
+<rect x="342" y="220" width="230" height="130" fill="#E2F2E9" stroke="#203A5E" stroke-width="3"/>
+<text x="457.0" y="292.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Step-up transformer</text>
+<rect x="665" y="220" width="205" height="130" fill="#FFEEDC" stroke="#203A5E" stroke-width="3"/>
+<text x="767.5" y="292.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Transmission line</text>
+<line x1="280" y1="283" x2="335" y2="283" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="580" y1="283" x2="657" y2="283" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="456" y="392" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Np=200; Ns=2000</text>
+<text x="480" y="445" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Power = 6000 W; line resistance = 5 Ω</text>
+<text x="480" y="510" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Ideal transformer; use the stepped-up voltage on the line</text>
+</svg>

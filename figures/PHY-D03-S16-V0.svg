@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: wheatstone">
+<title>Physics diagram: wheatstone</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Wheatstone — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<line x1="480" y1="155" x2="670" y2="315" stroke="#203A5E" stroke-width="3"/>
+<line x1="670" y1="315" x2="480" y2="470" stroke="#203A5E" stroke-width="3"/>
+<line x1="480" y1="470" x2="290" y2="315" stroke="#203A5E" stroke-width="3"/>
+<line x1="290" y1="315" x2="480" y2="155" stroke="#203A5E" stroke-width="3"/>
+<rect x="353" y="207" width="74" height="34" fill="#F7FAFF" stroke="#203A5E" stroke-width="3"/>
+<text x="390" y="230" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">10 Ω</text>
+<rect x="531" y="205" width="74" height="34" fill="#F7FAFF" stroke="#203A5E" stroke-width="3"/>
+<text x="568" y="228" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">20 Ω</text>
+<rect x="349" y="397" width="74" height="34" fill="#F7FAFF" stroke="#203A5E" stroke-width="3"/>
+<text x="386" y="420" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">15 Ω</text>
+<rect x="531" y="397" width="74" height="34" fill="#F7FAFF" stroke="#203A5E" stroke-width="3"/>
+<text x="568" y="420" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">Rx</text>
+<line x1="290" y1="315" x2="670" y2="315" stroke="#203A5E" stroke-width="3"/>
+<circle cx="480" cy="315" r="38" fill="#F9F3E4" stroke="#203A5E" stroke-width="3"/>
+<text x="480" y="323" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">G</text>
+<text x="480" y="515" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Balanced bridge: galvanometer current = 0</text>
+</svg>

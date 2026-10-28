@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Calorimetry physics examination diagram">
+<title>Calorimetry physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Hot metal immersed in cooler water</text>
+<rect x="280" y="237" width="390" height="230" fill="#F8FCFE" stroke="#203A5E" stroke-width="3"/>
+<rect x="296" y="310" width="358" height="139" fill="#9DD4EB" stroke="none" stroke-width="0"/>
+<circle cx="470" cy="347" r="35" fill="#CBA25C" stroke="#203A5E" stroke-width="3"/>
+<line x1="585" y1="232" x2="585" y2="340" stroke="#203A5E" stroke-width="5"/>
+<text x="480" y="120" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">Water: 0.2 kg at 25 °C</text>
+<text x="480" y="156" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">Metal: 0.1 kg at 65 °C</text>
+<text x="470" y="500" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Insulated calorimeter; final temperature is measured</text>
+</svg>

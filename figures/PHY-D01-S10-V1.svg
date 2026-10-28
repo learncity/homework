@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Projectile diagram">
+<title>Projectile diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Projectile launched from level ground</text>
+<line x1="110" y1="440" x2="850" y2="440" stroke="#203A5E" stroke-width="5"/>
+<circle cx="175" cy="433" r="15" fill="#EB7C50" stroke="#203A5E" stroke-width="3"/>
+<polyline points="175.0,430.0 185.5,412.1 196.0,394.8 206.5,378.2 217.0,362.1 227.5,346.6 238.0,331.8 248.5,317.5 259.0,303.9 269.5,290.9 280.0,278.4 290.5,266.6 301.0,255.4 311.5,244.8 322.0,234.8 332.5,225.4 343.0,216.6 353.5,208.4 364.0,200.8 374.5,193.9 385.0,187.5 395.5,181.8 406.0,176.6 416.5,172.1 427.0,168.1 437.5,164.8 448.0,162.1 458.5,159.9 469.0,158.4 479.5,157.5 490.0,157.2 500.5,157.5 511.0,158.4 521.5,159.9 532.0,162.1 542.5,164.8 553.0,168.1 563.5,172.1 574.0,176.6 584.5,181.8 595.0,187.5 605.5,193.9 616.0,200.8 626.5,208.4 637.0,216.6 647.5,225.4 658.0,234.8 668.5,244.8 679.0,255.4 689.5,266.6 700.0,278.4 710.5,290.9 721.0,303.9 731.5,317.5 742.0,331.8 752.5,346.6 763.0,362.1 773.5,378.2 784.0,394.8 794.5,412.1 805.0,430.0" fill="none" stroke="#B64030" stroke-width="4"/>
+<line x1="175" y1="430" x2="237.5" y2="321.7" stroke="#203A5E" stroke-width="5" marker-end="url(#ar)"/>
+<text x="335" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#172B4D" text-anchor="middle">u = 30 m/s</text>
+<text x="268" y="406" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">60°</text>
+<text x="510" y="495" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">Horizontal range →</text>
+<text x="480" y="535" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#172B4D" text-anchor="middle">g = 10 m/s²; air resistance neglected</text>
+</svg>

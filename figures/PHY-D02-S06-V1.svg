@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Incline physics examination diagram">
+<title>Incline physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Trolley rolling down a smooth ramp</text>
+<path d="M170 455 L800 455 L800 170 Z" stroke="#203A5E" stroke-width="4" fill="#E5F0FC"/>
+<rect x="510" y="289" width="120" height="65" fill="#FCF2D8" stroke="#203A5E" stroke-width="3"/>
+<line x1="561" y1="330" x2="430" y2="390" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="737" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">h = 4 m</text>
+<text x="420" y="248" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">slope = 8 m</text>
+<text x="580" y="365" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">m = 4 kg</text>
+<text x="470" y="510" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Released from rest; resistive forces negligible; g=10 m/s²</text>
+</svg>

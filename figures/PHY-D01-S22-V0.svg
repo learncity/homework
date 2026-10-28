@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Transformer diagram">
+<title>Transformer diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Ideal transformer with two windings</text>
+<rect x="402" y="155" width="156" height="310" fill="#EFF3F7" stroke="#8295AB" stroke-width="2"/>
+<path d="M338 202.0 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M338 275.3 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M338 348.7 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M338 422.0 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 202.0 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 226.4 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 250.9 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 275.3 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 299.8 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 324.2 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 348.7 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 373.1 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 397.6 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M625 422.0 c-38 -7 -38 21 0 20" stroke="#203A5E" stroke-width="3" fill="none"/>
+<text x="275" y="151" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">N₁ = 200</text>
+<text x="676" y="151" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">N₂ = 800</text>
+<text x="273" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">V₁ = 12 V AC</text>
+<text x="675" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">V₂ = ?</text>
+<text x="480" y="525" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">Assume 100% efficiency and negligible losses.</text>
+</svg>

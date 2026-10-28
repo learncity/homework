@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Mirror diagram">
+<title>Mirror diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Object and image in a plane mirror</text>
+<rect x="479" y="138" width="12" height="350" fill="#A4B7CC" stroke="#203A5E" stroke-width="2"/>
+<line x1="492" y1="151" x2="512" y2="169" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="173" x2="512" y2="191" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="195" x2="512" y2="213" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="217" x2="512" y2="235" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="239" x2="512" y2="257" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="261" x2="512" y2="279" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="283" x2="512" y2="301" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="305" x2="512" y2="323" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="327" x2="512" y2="345" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="349" x2="512" y2="367" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="371" x2="512" y2="389" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="393" x2="512" y2="411" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="415" x2="512" y2="433" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="437" x2="512" y2="455" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="459" x2="512" y2="477" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="492" y1="481" x2="512" y2="499" stroke="#8EA2B8" stroke-width="2"/>
+<line x1="300" y1="430" x2="300" y2="240" stroke="#B64030" stroke-width="5" marker-end="url(#r)"/>
+<line x1="660" y1="430" x2="660" y2="240" stroke="#8897A8" stroke-width="4" stroke-dasharray="7 7" marker-end="url(#ar)"/>
+<text x="300" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">Object</text>
+<text x="660" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">Virtual image</text>
+<line x1="300" y1="490" x2="480" y2="490" stroke="#203A5E" stroke-width="2"/>
+<line x1="480" y1="490" x2="660" y2="490" stroke="#203A5E" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="375" y="520" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">15 cm</text>
+<text x="595" y="520" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">?</text>
+</svg>

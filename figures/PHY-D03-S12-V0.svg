@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: projectile path">
+<title>Physics diagram: projectile path</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Projectile Path — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<line x1="130" y1="443" x2="852" y2="443" stroke="#203A5E" stroke-width="4"/>
+<line x1="140" y1="445" x2="140" y2="155" stroke="#203A5E" stroke-width="3"/>
+<polyline points="140.0,443.0 148.5,431.396875 157.0,420.0875 165.5,409.071875 174.0,398.35 182.5,387.921875 191.0,377.7875 199.5,367.946875 208.0,358.4 216.5,349.146875 225.0,340.1875 233.5,331.521875 242.0,323.15 250.5,315.07187500000003 259.0,307.2875 267.5,299.796875 276.0,292.6 284.5,285.696875 293.0,279.0875 301.5,272.771875 310.0,266.75 318.5,261.021875 327.0,255.5875 335.5,250.446875 344.0,245.6 352.5,241.046875 361.0,236.78750000000005 369.5,232.821875 378.0,229.14999999999998 386.5,225.771875 395.0,222.6875 403.5,219.89687500000002 412.0,217.4 420.5,215.19687499999998 429.0,213.2875 437.5,211.671875 446.0,210.35 454.5,209.321875 463.0,208.5875 471.5,208.146875 480.0,208.0 488.49999999999994,208.146875 497.0,208.5875 505.5,209.321875 514.0,210.35000000000002 522.5,211.671875 531.0,213.2875 539.5,215.196875 548.0,217.39999999999995 556.5,219.89687500000002 565.0,222.6875 573.5,225.77187499999997 582.0,229.15000000000003 590.5,232.82187499999998 599.0,236.78750000000005 607.5,241.046875 616.0,245.59999999999997 624.5,250.44687500000006 633.0,255.58749999999998 641.5,261.021875 650.0,266.75 658.5,272.7718749999999 667.0,279.0875000000001 675.5,285.696875 684.0,292.6 692.5,299.796875 701.0,307.2874999999999 709.5,315.07187500000003 718.0,323.15 726.5,331.521875 735.0,340.1875 743.5,349.14687499999997 752.0,358.4 760.5,367.946875 769.0,377.7875 777.5,387.921875 786.0,398.35 794.5,409.071875 803.0,420.0875 811.5,431.396875 820.0,443.0" fill="none" stroke="#B64030" stroke-width="5"/>
+<line x1="140" y1="445" x2="266" y2="445" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="140" y1="443" x2="140" y2="289" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="250" y="419" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">ux=10 m/s</text>
+<text x="253" y="302" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">uy=20 m/s</text>
+<text x="140" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">A</text>
+<text x="479" y="181" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">B (apex)</text>
+<text x="824" y="477" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">C</text>
+<text x="575" y="521" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">g=10 m/s²; level ground</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: reactor flow">
+<title>Physics diagram: reactor flow</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Reactor Flow — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="82" y="250" width="170" height="107" fill="#FBEDE5" stroke="#203A5E" stroke-width="3"/>
+<text x="167.0" y="310.5" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Reactor core</text>
+<rect x="312" y="250" width="180" height="107" fill="#F0F6FC" stroke="#203A5E" stroke-width="3"/>
+<text x="402.0" y="310.5" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Steam generator</text>
+<rect x="552" y="250" width="130" height="107" fill="#F0F6FC" stroke="#203A5E" stroke-width="3"/>
+<text x="617.0" y="310.5" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Turbine</text>
+<rect x="742" y="250" width="146" height="107" fill="#F0F6FC" stroke="#203A5E" stroke-width="3"/>
+<text x="815.0" y="310.5" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Generator</text>
+<line x1="253" y1="304" x2="308" y2="304" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="496" y1="304" x2="545" y2="304" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="687" y1="304" x2="737" y2="304" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="482" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">P thermal = 500 MW</text>
+<text x="480" y="432" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">P electrical = 200 MW</text>
+<text x="480" y="491" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Core: control rods + moderator + coolant + shielding</text>
+</svg>

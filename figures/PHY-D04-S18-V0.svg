@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="rotating mass diagram">
+<title>rotating mass diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Rotating Mass — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<circle cx="465" cy="315" r="145" fill="#FFF" stroke="#203A5E" stroke-width="3"/>
+<circle cx="465" cy="315" r="9" fill="#203A5E" stroke="#203A5E" stroke-width="3"/>
+<circle cx="610" cy="315" r="16" fill="#F8CC87" stroke="#203A5E" stroke-width="3"/>
+<line x1="465" y1="315" x2="610" y2="315" stroke="#203A5E" stroke-width="4"/>
+<text x="536" y="287" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">r=2 m</text>
+<line x1="609" y1="309" x2="609" y2="169" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="605" y1="312" x2="490" y2="312" stroke="#208071" stroke-width="4" marker-end="url(#ar)"/>
+<text x="700" y="196" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">v=6 m/s</text>
+<text x="376" y="350" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Centre</text>
+</svg>

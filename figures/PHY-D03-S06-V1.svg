@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: electroplate">
+<title>Physics diagram: electroplate</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Electroplate — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<path d="M190 230 V435 H785 V230" stroke="#203A5E" stroke-width="4" fill="none"/>
+<rect x="200" y="275" width="572" height="158" fill="#CFE7FC" stroke="#203A5E" stroke-width="3"/>
+<rect x="300" y="211" width="45" height="165" fill="#CF8B51" stroke="#203A5E" stroke-width="3"/>
+<rect x="618" y="211" width="65" height="165" fill="#B9D2E7" stroke="#203A5E" stroke-width="3"/>
+<line x1="322" y1="211" x2="322" y2="155" stroke="#203A5E" stroke-width="3"/>
+<line x1="652" y1="211" x2="652" y2="155" stroke="#203A5E" stroke-width="3"/>
+<line x1="322" y1="155" x2="655" y2="155" stroke="#203A5E" stroke-width="3"/>
+<rect x="421" y="122" width="135" height="56" fill="#FFF2E4" stroke="#203A5E" stroke-width="3"/>
+<text x="488.5" y="157.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">DC supply</text>
+<text x="310" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Anode (+)</text>
+<text x="668" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Object (−)</text>
+<text x="480" y="332" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">CuSO₄ solution, Cu²⁺ ions</text>
+<text x="480" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">I = 3 A     t = 1200 s</text>
+</svg>

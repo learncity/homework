@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="photogates diagram">
+<title>photogates diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Photogates — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<line x1="110" y1="405" x2="865" y2="405" stroke="#203A5E" stroke-width="7"/>
+<rect x="130" y="292" width="20" height="110" fill="#EDF4FC" stroke="#203A5E" stroke-width="3"/>
+<text x="140" y="265" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Gate A</text>
+<rect x="425" y="292" width="20" height="110" fill="#EDF4FC" stroke="#203A5E" stroke-width="3"/>
+<text x="435" y="265" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Gate B</text>
+<rect x="820" y="292" width="20" height="110" fill="#EDF4FC" stroke="#203A5E" stroke-width="3"/>
+<text x="830" y="265" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Gate C</text>
+<rect x="260" y="345" width="100" height="53" fill="#D6E8FA" stroke="#203A5E" stroke-width="3"/>
+<circle cx="282" cy="407" r="14" fill="#FFFFFF" stroke="#203A5E" stroke-width="3"/>
+<circle cx="344" cy="407" r="14" fill="#FFFFFF" stroke="#203A5E" stroke-width="3"/>
+<text x="285" y="453" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">6 m / 2 s</text>
+<text x="640" y="453" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">6 m / 3 s</text>
+<text x="480" y="517" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">Photo-gate timing; uniform motion not assumed</text>
+</svg>

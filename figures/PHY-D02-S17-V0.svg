@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Eye physics examination diagram">
+<title>Eye physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Myopic eye and its optical correction</text>
+<path d="M435 180 Q730 270 435 453" stroke="#203A5E" stroke-width="4" fill="none"/>
+<path d="M435 180 Q280 310 435 453" stroke="#203A5E" stroke-width="4" fill="none"/>
+<path d="M335 218 Q390 318 335 415" stroke="#347DB0" stroke-width="5" fill="none"/>
+<line x1="130" y1="247" x2="335" y2="247" stroke="#B64030" stroke-width="3" marker-end="url(#r)"/>
+<line x1="130" y1="382" x2="335" y2="382" stroke="#B64030" stroke-width="3" marker-end="url(#r)"/>
+<line x1="335" y1="247" x2="462" y2="309" stroke="#B64030" stroke-width="3"/>
+<line x1="335" y1="382" x2="462" y2="309" stroke="#B64030" stroke-width="3"/>
+<circle cx="462" cy="309" r="7" fill="#B64030" stroke="#203A5E" stroke-width="3"/>
+<text x="482" y="286" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">Focus before retina</text>
+<text x="480" y="510" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Corrective spectacle lens power = -2 D</text>
+</svg>

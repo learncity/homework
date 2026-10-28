@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="lattice diagram">
+<title>lattice diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Lattice — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<line x1="330" y1="195" x2="415" y2="195" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="330" y1="195" x2="330" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="330" cy="195" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="415" y1="195" x2="500" y2="195" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="415" y1="195" x2="415" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="415" cy="195" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="500" y1="195" x2="585" y2="195" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="500" y1="195" x2="500" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="500" cy="195" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="585" y1="195" x2="585" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="585" cy="195" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="330" y1="280" x2="415" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="330" y1="280" x2="330" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="330" cy="280" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="415" y1="280" x2="500" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="415" y1="280" x2="415" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="415" cy="280" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="500" y1="280" x2="585" y2="280" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="500" y1="280" x2="500" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="500" cy="280" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="585" y1="280" x2="585" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="585" cy="280" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="330" y1="365" x2="415" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="330" y1="365" x2="330" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="330" cy="365" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="415" y1="365" x2="500" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="415" y1="365" x2="415" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="415" cy="365" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="500" y1="365" x2="585" y2="365" stroke="#A6BDCE" stroke-width="2"/>
+<line x1="500" y1="365" x2="500" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="500" cy="365" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="585" y1="365" x2="585" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="585" cy="365" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="330" y1="450" x2="415" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="330" cy="450" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="415" y1="450" x2="500" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="415" cy="450" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<line x1="500" y1="450" x2="585" y2="450" stroke="#A6BDCE" stroke-width="2"/>
+<circle cx="500" cy="450" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<circle cx="585" cy="450" r="15" fill="#71A5D2" stroke="#203A5E" stroke-width="3"/>
+<text x="720" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Spacing=0.25 nm</text>
+<text x="710" y="297" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">4 atoms per edge</text>
+<text x="490" y="511" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">2-D crystalline lattice slice (schematic)</text>
+</svg>

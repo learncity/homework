@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Interference physics examination diagram">
+<title>Interference physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Two coherent ripple-tank sources</text>
+<circle cx="310" cy="322" r="12" fill="#B64030" stroke="#203A5E" stroke-width="3"/>
+<circle cx="620" cy="322" r="12" fill="#B64030" stroke="#203A5E" stroke-width="3"/>
+<circle cx="310" cy="322" r="78" fill="none" stroke="#8BB9D8" stroke-width="2"/>
+<circle cx="310" cy="322" r="156" fill="none" stroke="#8BB9D8" stroke-width="2"/>
+<circle cx="310" cy="322" r="234" fill="none" stroke="#8BB9D8" stroke-width="2"/>
+<circle cx="620" cy="322" r="78" fill="none" stroke="#8BB9D8" stroke-width="2"/>
+<circle cx="620" cy="322" r="156" fill="none" stroke="#8BB9D8" stroke-width="2"/>
+<circle cx="620" cy="322" r="234" fill="none" stroke="#8BB9D8" stroke-width="2"/>
+<text x="310" y="352" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">S₁</text>
+<text x="620" y="352" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">S₂</text>
+<text x="480" y="518" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Source separation = 12 cm; wavelength = 3 cm</text>
+<text x="480" y="120" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Sources oscillate in phase</text>
+</svg>

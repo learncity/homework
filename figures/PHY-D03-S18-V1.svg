@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: grav field">
+<title>Physics diagram: grav field</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Grav Field — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<circle cx="305" cy="305" r="105" fill="#D2E8FA" stroke="#203A5E" stroke-width="3"/>
+<text x="304" y="313" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">Earth</text>
+<circle cx="305" cy="305" r="205" fill="none" stroke="#879BAC" stroke-width="3"/>
+<circle cx="510" cy="305" r="9" fill="#B64030" stroke="#203A5E" stroke-width="3"/>
+<line x1="305" y1="305" x2="510" y2="305" stroke="#B64030" stroke-width="3"/>
+<text x="422" y="287" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">r=3R</text>
+<text x="710" y="264" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">P: 2 kg object</text>
+<text x="710" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Surface g₀=10 N/kg</text>
+<text x="480" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Earth radius R=6.4×10⁶ m; schematic not to scale</text>
+</svg>

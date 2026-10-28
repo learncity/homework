@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Ammeter physics examination diagram">
+<title>Ammeter physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Ammeter and voltmeter connected to a resistor</text>
+<path d="M180 230 H380 M470 230 H770 V420 H180 V330" stroke="#203A5E" stroke-width="4" fill="none"/>
+<circle cx="425" cy="230" r="45" fill="#ffffff" stroke="#203A5E" stroke-width="3"/>
+<text x="425" y="238" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="normal" fill="#203A5E" text-anchor="middle">A</text>
+<rect x="520" y="398" width="155" height="45" fill="#FFF" stroke="#203A5E" stroke-width="3"/>
+<text x="595" y="429" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">6 Ω</text>
+<line x1="180" y1="230" x2="180" y2="265" stroke="#203A5E" stroke-width="4"/>
+<line x1="180" y1="300" x2="180" y2="330" stroke="#203A5E" stroke-width="4"/>
+<line x1="160" y1="271" x2="200" y2="271" stroke="#203A5E" stroke-width="4"/>
+<line x1="168" y1="288" x2="192" y2="288" stroke="#203A5E" stroke-width="3"/>
+<text x="260" y="322" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">12 V</text>
+<path d="M520 421 V345 H560 M640 345 H675 V420" stroke="#203A5E" stroke-width="3" fill="none"/>
+<circle cx="600" cy="345" r="38" fill="#ffffff" stroke="#203A5E" stroke-width="3"/>
+<text x="600" y="353" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">V</text>
+<text x="480" y="524" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Ideal ammeter and voltmeter; negligible wire resistance</text>
+</svg>

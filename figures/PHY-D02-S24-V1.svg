@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Transformer Load physics examination diagram">
+<title>Transformer Load physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Loaded ideal transformer</text>
+<rect x="395" y="173" width="165" height="285" fill="#E0EAF3" stroke="#203A5E" stroke-width="3"/>
+<path d="M335 180.0 Q305 192.0 335 204.0" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 207.2 Q305 219.2 335 231.2" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 234.4 Q305 246.4 335 258.4" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 261.7 Q305 273.7 335 285.7" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 288.9 Q305 300.9 335 312.9" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 316.1 Q305 328.1 335 340.1" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 343.3 Q305 355.3 335 367.3" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 370.6 Q305 382.6 335 394.6" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 397.8 Q305 409.8 335 421.8" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M335 425.0 Q305 437.0 335 449.0" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M613 180.0 Q583 192.0 613 204.0" stroke="#203A5E" stroke-width="3" fill="none"/>
+<path d="M613 425.0 Q583 437.0 613 449.0" stroke="#203A5E" stroke-width="3" fill="none"/>
+<text x="230" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Primary: 500 turns</text>
+<text x="725" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Secondary: 100 turns</text>
+<text x="230" y="353" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">200 V</text>
+<text x="740" y="353" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Load current = 3 A</text>
+<text x="480" y="511" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Assume zero power loss (ideal transformer)</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="acc motion diagram">
+<title>acc motion diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Acc Motion — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<line x1="165" y1="440" x2="835" y2="440" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="165" y1="440" x2="165" y2="135" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<polyline points="165,440 165,371.25 780,165 780,440" fill="#D7EBFA" stroke="#8BACD1" stroke-width="1"/>
+<line x1="165" y1="371.25" x2="780" y2="165" stroke="#B64030" stroke-width="5"/>
+<text x="126" y="378.25" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">4</text>
+<text x="123" y="173" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">16</text>
+<text x="165" y="470" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">0</text>
+<text x="780" y="470" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">6 s</text>
+<text x="470" y="519" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Time (s)</text>
+<text x="75" y="295" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">v (m/s)</text>
+</svg>

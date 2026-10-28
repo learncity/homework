@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Balance physics examination diagram">
+<title>Balance physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Balanced metre rule about its pivot</text>
+<line x1="175" y1="285" x2="800" y2="285" stroke="#203A5E" stroke-width="8"/>
+<path d="M475 298 L440 365 L510 365 Z" stroke="#203A5E" stroke-width="4" fill="#DDEEFF"/>
+<line x1="315" y1="270" x2="315" y2="352" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="715" y1="270" x2="715" y2="352" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="260" y="210" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">30 N</text>
+<text x="715" y="210" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Unknown force</text>
+<text x="345" y="418" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">40 cm</text>
+<text x="625" y="418" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">60 cm</text>
+<text x="475" y="390" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">O</text>
+<text x="480" y="504" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Neglect the weight of the rule</text>
+</svg>

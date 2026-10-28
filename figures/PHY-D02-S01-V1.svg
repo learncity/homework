@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Micrometer physics examination diagram">
+<title>Micrometer physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Micrometer screw gauge</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Sleeve reading + thimble reading; least count = 0.01 mm</text>
+<rect x="100" y="235" width="750" height="130" fill="#EBF2F8" stroke="#203A5E" stroke-width="3"/>
+<rect x="195" y="194" width="370" height="210" fill="#D2E6F5" stroke="#203A5E" stroke-width="3"/>
+<line x1="215" y1="228" x2="215" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="215" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">0</text>
+<line x1="263" y1="228" x2="263" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="263" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">1</text>
+<line x1="311" y1="228" x2="311" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="311" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">2</text>
+<line x1="359" y1="228" x2="359" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="359" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">3</text>
+<line x1="407" y1="228" x2="407" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="407" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">4</text>
+<line x1="455" y1="228" x2="455" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="455" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">5</text>
+<line x1="503" y1="228" x2="503" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="503" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">6</text>
+<line x1="551" y1="228" x2="551" y2="260" stroke="#203A5E" stroke-width="2"/>
+<text x="551" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#203A5E" text-anchor="middle">7</text>
+<rect x="565" y="185" width="156" height="222" fill="#F9F2E1" stroke="#203A5E" stroke-width="3"/>
+<line x1="565" y1="196" x2="565" y2="403" stroke="#B64030" stroke-width="5"/>
+<line x1="572" y1="206.0" x2="592" y2="206.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="209.5" x2="580" y2="209.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="213.0" x2="580" y2="213.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="216.5" x2="580" y2="216.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="220.0" x2="580" y2="220.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="223.5" x2="592" y2="223.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="227.0" x2="580" y2="227.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="230.5" x2="580" y2="230.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="234.0" x2="580" y2="234.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="237.5" x2="580" y2="237.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="241.0" x2="592" y2="241.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="244.5" x2="580" y2="244.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="248.0" x2="580" y2="248.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="251.5" x2="580" y2="251.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="255.0" x2="580" y2="255.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="258.5" x2="592" y2="258.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="262.0" x2="580" y2="262.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="265.5" x2="580" y2="265.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="269.0" x2="580" y2="269.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="272.5" x2="580" y2="272.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="276.0" x2="592" y2="276.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="279.5" x2="580" y2="279.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="283.0" x2="580" y2="283.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="286.5" x2="580" y2="286.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="290.0" x2="580" y2="290.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="293.5" x2="592" y2="293.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="297.0" x2="580" y2="297.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="300.5" x2="580" y2="300.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="304.0" x2="580" y2="304.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="307.5" x2="580" y2="307.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="311.0" x2="592" y2="311.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="314.5" x2="580" y2="314.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="318.0" x2="580" y2="318.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="321.5" x2="580" y2="321.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="325.0" x2="580" y2="325.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="328.5" x2="592" y2="328.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="332.0" x2="580" y2="332.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="335.5" x2="580" y2="335.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="339.0" x2="580" y2="339.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="342.5" x2="580" y2="342.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="346.0" x2="592" y2="346.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="349.5" x2="580" y2="349.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="353.0" x2="580" y2="353.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="356.5" x2="580" y2="356.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="360.0" x2="580" y2="360.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="363.5" x2="592" y2="363.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="367.0" x2="580" y2="367.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="370.5" x2="580" y2="370.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="374.0" x2="580" y2="374.0" stroke="#203A5E" stroke-width="1"/>
+<line x1="572" y1="377.5" x2="580" y2="377.5" stroke="#203A5E" stroke-width="1"/>
+<line x1="571" y1="332" x2="635" y2="332" stroke="#B64030" stroke-width="3"/>
+<text x="675" y="339" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#B64030" text-anchor="middle">36</text>
+<text x="375" y="446" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Last visible sleeve division = 7 mm</text>
+<text x="660" y="470" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Thimble coincidence = 36 divisions</text>
+<text x="480" y="513" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">Each thimble division represents 0.01 mm</text>
+</svg>

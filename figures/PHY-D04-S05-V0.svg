@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="particle mix diagram">
+<title>particle mix diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Particle Mix — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<rect x="225" y="155" width="525" height="296" fill="#F9FCFF" stroke="#203A5E" stroke-width="3"/>
+<line x1="487" y1="155" x2="487" y2="451" stroke="#B64030" stroke-width="4" stroke-dasharray="9 6"/>
+<circle cx="371.1373500742617" cy="284.22004028605284" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="372.55535584050773" cy="230.08187040989893" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="422.42410528775184" cy="380.1320960256272" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="388.53617718704925" cy="218.93578223407317" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="360.381904243664" cy="259.6487932241686" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="302.9992954575169" cy="411.53450892245655" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="461.2700824183645" cy="190.82720093545524" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="432.3541399046937" cy="326.575318465269" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="330.900469014853" cy="248.91922695133178" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="393.0925475926107" cy="291.00996970716824" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="395.4026349206141" cy="340.82865577272133" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="278.19136667898914" cy="366.58458878838974" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="458.27160879037245" cy="415.5613229783953" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="380.0252859559023" cy="190.75533378610288" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="250.85969056158237" cy="212.55532407293953" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="449.4924815359168" cy="253.59511657306456" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="327.6228675520104" cy="398.26168742302275" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="316.64512665076757" cy="313.40267071501455" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="342.43856301631394" cy="195.79358479882467" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="373.9237998488092" cy="385.1084991318422" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="283.16081069813015" cy="234.5046493907081" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="337.5284840355462" cy="188.97274318124684" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="355.2799417067082" cy="378.76983605640055" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="389.47287901693113" cy="309.63654776362364" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="431.2866570440032" cy="216.37421679805058" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="370.2539210949823" cy="270.9244807127856" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="377.4765639880916" cy="207.438515560348" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="414.4086926274395" cy="203.4752174637977" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="285.2691141081685" cy="376.2102897420156" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="450.91111193538006" cy="285.275255120011" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="600.6132979941365" cy="239.65209590220348" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="570.7865258806335" cy="329.9924233467224" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="550.1905278942352" cy="209.03424855237884" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="609.5272597577422" cy="220.0798869988506" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="650.8271138802726" cy="379.5165288698438" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="678.3874373263354" cy="296.67241382451647" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="586.3802488312548" cy="285.63466340564753" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="513.0718350306006" cy="353.15528779188185" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="582.974645643996" cy="257.6198467758097" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<circle cx="529.1039569379254" cy="288.8775900182469" r="4" fill="#2D79B5" stroke="#203A5E" stroke-width="3"/>
+<text x="355" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">30 particles</text>
+<text x="615" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">10 particles</text>
+<text x="488" y="524" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Equal-volume chambers; partition opened at t=0</text>
+</svg>

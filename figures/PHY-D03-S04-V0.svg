@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: photoelectric">
+<title>Physics diagram: photoelectric</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Photoelectric — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="370" y="205" width="220" height="160" fill="#D7EAF6" stroke="#203A5E" stroke-width="3"/>
+<text x="480" y="238" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Metal cathode</text>
+<line x1="140" y1="135" x2="260" y2="220" stroke="#DDA02B" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="202" y1="135" x2="322" y2="220" stroke="#DDA02B" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="264" y1="135" x2="384" y2="220" stroke="#DDA02B" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="610" y1="255" x2="710" y2="205" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="635" y1="255" x2="735" y2="187" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<line x1="660" y1="255" x2="760" y2="169" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<rect x="580" y="395" width="275" height="67" fill="#FFF5DE" stroke="#203A5E" stroke-width="3"/>
+<text x="717.5" y="435.5" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Variable opposing V</text>
+<text x="255" y="160" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">λ = 400 nm</text>
+<text x="480" y="394" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Work function φ = 2 eV</text>
+<text x="743" y="306" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Photoelectrons</text>
+</svg>

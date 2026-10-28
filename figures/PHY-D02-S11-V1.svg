@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Rods physics examination diagram">
+<title>Rods physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Heat conduction through two metal rods</text>
+<rect x="200" y="180" width="115" height="260" fill="#F6C66C" stroke="#203A5E" stroke-width="3"/>
+<text x="259" y="330" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">HOT</text>
+<rect x="315" y="213" width="195" height="44" fill="#C3D1DE" stroke="#203A5E" stroke-width="3"/>
+<text x="412.5" y="242" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">20 cm</text>
+<text x="775" y="242" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Rod A</text>
+<rect x="315" y="343" width="375" height="44" fill="#C3D1DE" stroke="#203A5E" stroke-width="3"/>
+<text x="502.5" y="372" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">40 cm</text>
+<text x="775" y="372" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Rod B</text>
+<text x="480" y="516" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Same material, equal area, equal ΔT</text>
+<text x="480" y="545" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#203A5E" text-anchor="middle">Rod A transfers 60 J/s in the steady state</text>
+</svg>

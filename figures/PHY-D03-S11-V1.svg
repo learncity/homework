@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: shm energy">
+<title>Physics diagram: shm energy</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Shm Energy — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<line x1="130" y1="335" x2="255" y2="335" stroke="#203A5E" stroke-width="8"/>
+<path d="M255 335 l20 -35 l25 70 l25 -70 l25 70 l25 -70 l25 35" stroke="#203A5E" stroke-width="5" fill="none"/>
+<rect x="405" y="276" width="160" height="118" fill="#E5E8F6" stroke="#203A5E" stroke-width="3"/>
+<text x="485" y="341" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="normal" fill="#203A5E" text-anchor="middle">0.4 kg</text>
+<line x1="585" y1="395" x2="800" y2="395" stroke="#203A5E" stroke-width="4"/>
+<line x1="570" y1="459" x2="770" y2="459" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="660" y="481" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Amplitude 0.05 m</text>
+<text x="510" y="518" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Period 1 s; negligible damping</text>
+<text x="485" y="197" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Centre is equilibrium; extremes at ±A</text>
+</svg>

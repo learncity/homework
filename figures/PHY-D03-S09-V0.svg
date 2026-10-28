@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: hydro">
+<title>Physics diagram: hydro</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Hydro — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<rect x="105" y="184" width="280" height="230" fill="#CDE6F9" stroke="#203A5E" stroke-width="3"/>
+<text x="244" y="235" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="normal" fill="#203A5E" text-anchor="middle">Reservoir</text>
+<path d="M385 220 V420 H600" stroke="#203A5E" stroke-width="15" fill="none"/>
+<circle cx="625" cy="419" r="65" fill="#E9EFF5" stroke="#203A5E" stroke-width="3"/>
+<text x="625" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Turbine</text>
+<rect x="725" y="366" width="160" height="100" fill="#F0F6FC" stroke="#203A5E" stroke-width="3"/>
+<text x="805.0" y="423.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#203A5E" text-anchor="middle">Generator</text>
+<line x1="690" y1="420" x2="715" y2="420" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="504" y="180" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Head h=20 m</text>
+<text x="480" y="510" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Flow Q=2 m³/s; η=80%</text>
+</svg>

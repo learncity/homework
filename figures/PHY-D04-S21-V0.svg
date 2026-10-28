@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="uniform equations diagram">
+<title>uniform equations diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Uniform Equations — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<line x1="165" y1="440" x2="830" y2="440" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="165" y1="440" x2="165" y2="135" stroke="#203A5E" stroke-width="3" marker-end="url(#ar)"/>
+<polyline points="165,440 165,400.7142857142857 780,165 780,440" fill="#DEF1F7" stroke="#AACCDC" stroke-width="1"/>
+<line x1="165" y1="400.7142857142857" x2="780" y2="165" stroke="#B64030" stroke-width="4"/>
+<text x="120" y="407.7142857142857" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">2</text>
+<text x="121" y="172" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">14</text>
+<text x="780" y="473" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">4 s</text>
+<text x="515" y="510" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Uniform a = 3 m/s²</text>
+<text x="100" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">v(m/s)</text>
+</svg>

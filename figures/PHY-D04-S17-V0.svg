@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="cart collision diagram">
+<title>cart collision diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Cart Collision — Physics illustration</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Measurements and labels are authoritative; sketches are schematic unless scaled</text>
+<rect x="180" y="270" width="200" height="92" fill="#D7EAF8" stroke="#203A5E" stroke-width="3"/>
+<rect x="610" y="270" width="152" height="92" fill="#F1E4C6" stroke="#203A5E" stroke-width="3"/>
+<line x1="135" y1="386" x2="820" y2="386" stroke="#203A5E" stroke-width="5"/>
+<circle cx="225" cy="383" r="16" fill="#E2EAF0" stroke="#203A5E" stroke-width="3"/>
+<circle cx="337" cy="383" r="16" fill="#E2EAF0" stroke="#203A5E" stroke-width="3"/>
+<circle cx="638" cy="383" r="16" fill="#E2EAF0" stroke="#203A5E" stroke-width="3"/>
+<circle cx="734" cy="383" r="16" fill="#E2EAF0" stroke="#203A5E" stroke-width="3"/>
+<line x1="393" y1="312" x2="550" y2="312" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="280" y="238" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">m₁=2 kg</text>
+<text x="675" y="238" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">m₂=1 kg</text>
+<text x="480" y="293" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">u₁=3 m/s</text>
+<text x="680" y="453" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">u₂=0; carts stick</text>
+</svg>

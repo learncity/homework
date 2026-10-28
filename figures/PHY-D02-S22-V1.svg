@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Ldr physics examination diagram">
+<title>Ldr physics examination diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Potential divider with a light sensor</text>
+<path d="M480 160 V232 M480 295 V364 M480 418 V480" stroke="#203A5E" stroke-width="4" fill="none"/>
+<rect x="450" y="232" width="60" height="63" fill="#F3F7FB" stroke="#203A5E" stroke-width="3"/>
+<rect x="450" y="364" width="60" height="54" fill="#F3F7FB" stroke="#203A5E" stroke-width="3"/>
+<text x="640" y="268" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#203A5E" text-anchor="middle">Fixed resistor: 4000 Ω</text>
+<text x="668" y="396" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">LDR: 2000 Ω</text>
+<line x1="480" y1="340" x2="660" y2="340" stroke="#B64030" stroke-width="4"/>
+<text x="730" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Vout</text>
+<text x="480" y="129" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="normal" fill="#203A5E" text-anchor="middle">Input = 12 V</text>
+<text x="480" y="520" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Vout measured across the LDR (lower resistor)</text>
+</svg>

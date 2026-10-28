@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Hydraulic diagram">
+<title>Hydraulic diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Two connected hydraulic pistons</text>
+<rect x="190" y="230" width="120" height="220" fill="#F7FBFD" stroke="#203A5E" stroke-width="3"/>
+<rect x="550" y="155" width="215" height="295" fill="#F7FBFD" stroke="#203A5E" stroke-width="3"/>
+<rect x="201" y="282" width="98" height="166" fill="#A1D7EA" stroke="none" stroke-width="0"/>
+<rect x="562" y="225" width="191" height="223" fill="#A1D7EA" stroke="none" stroke-width="0"/>
+<line x1="250" y1="168" x2="250" y2="278" stroke="#B64030" stroke-width="5" marker-end="url(#r)"/>
+<line x1="665" y1="226" x2="665" y2="130" stroke="#203A5E" stroke-width="5" marker-end="url(#ar)"/>
+<text x="220" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#172B4D" text-anchor="middle">F₁ = 40 N</text>
+<text x="750" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#172B4D" text-anchor="middle">F₂ = ?</text>
+<text x="245" y="488" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#172B4D" text-anchor="middle">A₁ = 4 cm²</text>
+<text x="660" y="488" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#172B4D" text-anchor="middle">A₂ = 20 cm²</text>
+<line x1="300" y1="420" x2="555" y2="420" stroke="#6EC4E8" stroke-width="14"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Physics diagram: thermistor">
+<title>Physics diagram: thermistor</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Thermistor — interpret the labelled physics diagram</text>
+<text x="480" y="90" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#667085" text-anchor="middle">Schematic; labelled data govern any numerical calculation</text>
+<line x1="470" y1="155" x2="470" y2="222" stroke="#203A5E" stroke-width="3"/>
+<rect x="438" y="222" width="65" height="72" fill="#E1F0F9" stroke="#203A5E" stroke-width="3"/>
+<line x1="470" y1="294" x2="470" y2="359" stroke="#203A5E" stroke-width="3"/>
+<rect x="438" y="359" width="65" height="72" fill="#FFEBCF" stroke="#203A5E" stroke-width="3"/>
+<line x1="470" y1="431" x2="470" y2="471" stroke="#203A5E" stroke-width="3"/>
+<line x1="477" y1="333" x2="680" y2="333" stroke="#B64030" stroke-width="3"/>
+<text x="720" y="340" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#B64030" text-anchor="middle">Vout</text>
+<text x="270" y="263" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">Fixed 4 kΩ</text>
+<text x="276" y="395" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" fill="#203A5E" text-anchor="middle">NTC 2 kΩ</text>
+<text x="480" y="126" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#203A5E" text-anchor="middle">Vs = 12 V</text>
+<text x="570" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">0 V / return</text>
+<text x="480" y="521" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#203A5E" text-anchor="middle">Output measured across the lower NTC thermistor</text>
+</svg>

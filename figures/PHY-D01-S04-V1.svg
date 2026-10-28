@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Vectors diagram">
+<title>Vectors diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Two perpendicular displacements</text>
+<line x1="220" y1="420" x2="630" y2="420" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="630" y1="420" x2="630" y2="170" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+<line x1="220" y1="420" x2="630" y2="170" stroke="#B64030" stroke-width="3" stroke-dasharray="12 7"/>
+<text x="420" y="450" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="normal" fill="#172B4D" text-anchor="middle">6 m east</text>
+<text x="699" y="307" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">8 m north</text>
+<text x="230" y="448" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">A</text>
+<text x="650" y="160" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" fill="#172B4D" text-anchor="middle">B</text>
+<rect x="601" y="386" width="29" height="33" fill="#FFF" stroke="#203A5E" stroke-width="2"/>
+<text x="795" y="450" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">E</text>
+<line x1="755" y1="425" x2="828" y2="425" stroke="#203A5E" stroke-width="4" marker-end="url(#ar)"/>
+</svg>

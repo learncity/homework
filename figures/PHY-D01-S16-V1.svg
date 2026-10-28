@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-label="Lens diagram">
+<title>Lens diagram</title>
+<rect width="960" height="560" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#203A5E"/></marker><marker id="r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7" fill="#B64030"/></marker></defs>
+<text x="480" y="52" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold" fill="#172B4D" text-anchor="middle">Converging lens with object and image</text>
+<line x1="120" y1="312" x2="860" y2="312" stroke="#203A5E" stroke-width="3"/>
+<path d="M480 160 Q449 312 480 460 Q511 312 480 160" stroke="#266FA2" stroke-width="4" fill="#D7EDFA"/>
+<line x1="360" y1="298" x2="360" y2="325" stroke="#203A5E" stroke-width="2"/>
+<text x="360" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">F</text>
+<line x1="600" y1="298" x2="600" y2="325" stroke="#203A5E" stroke-width="2"/>
+<text x="600" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">F</text>
+<line x1="240" y1="298" x2="240" y2="325" stroke="#203A5E" stroke-width="2"/>
+<text x="240" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">2F</text>
+<line x1="720" y1="298" x2="720" y2="325" stroke="#203A5E" stroke-width="2"/>
+<text x="720" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#172B4D" text-anchor="middle">2F</text>
+<line x1="240" y1="313" x2="240" y2="205" stroke="#B64030" stroke-width="5" marker-end="url(#r)"/>
+<text x="240" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#172B4D" text-anchor="middle">Object</text>
+<line x1="240" y1="205" x2="480" y2="205" stroke="#24966F" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="480" y1="205" x2="720" y2="415" stroke="#24966F" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="240" y1="205" x2="720" y2="415" stroke="#B64030" stroke-width="2"/>
+<line x1="720" y1="312" x2="720" y2="415" stroke="#B64030" stroke-width="4" marker-end="url(#r)"/>
+<text x="720" y="445" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#172B4D" text-anchor="middle">Image</text>
+<text x="480" y="519" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" fill="#172B4D" text-anchor="middle">Focal length = 12 cm; object distance = 24 cm</text>
+</svg>
