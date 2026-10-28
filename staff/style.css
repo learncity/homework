@@ -168,6 +168,9 @@ input[type=checkbox], input[type=radio] { width: 22px; height: 22px; min-height:
 .previewHead h3 { margin: 0; }
 .pq { border-top: 1px solid var(--line); padding: 14px 0 6px; }
 .pqHead { margin-bottom: 6px; font-size: 15px; }
+/* Same reason as the pupil portal: unspaced Physics working must wrap, not
+   push the preview off a phone screen. */
+.pqPrompt, .pqOpt, .pqKey { overflow-wrap: anywhere; }
 .pqPrompt { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
 .pqOpt { display: flex; align-items: baseline; gap: 12px; padding: 9px 12px; margin-bottom: 6px; border: 1px solid var(--line); border-radius: 8px; font-size: 17px; }
 .pqOpt .ltr { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--indigo); color: var(--indigo-d); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }

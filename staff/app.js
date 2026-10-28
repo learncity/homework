@@ -531,6 +531,10 @@ function blueprintHtml(r) {
          '<div class="stat"><b>' + t.marks + '</b><span>theory marks</span></div>' : '') +
     '</div>';
   html += '<p class="muted">The objective paper is marked by the portal. The theory paper is shown on the clock, written on paper and handed to you; type the mark into the class report afterwards and the portal shows a combined grade.</p>';
+  /* Said before the exam is set, not only on the report, so nobody reads the
+     combined grade as the whole Physics result. */
+  if (o.notInPortal) html += '<p class="muted"><b>Not in the portal:</b> ' + esc(o.notInPortal) +
+    '. The combined grade leaves it out.</p>';
   html += '<h3>How ' + esc(o.label) + ' is made up</h3>' +
     '<p class="muted">Weighted by the number of learning outcomes each part of the syllabus has. Every pupil gets a different draw to this same shape.</p>' +
     '<div class="tableWrap"><table><thead><tr><th>Part of the syllabus</th><th>Topics</th>' +
@@ -620,7 +624,9 @@ function loadClassReport(after) {
       '<p class="muted">The point for handing in on time is given automatically. The extra ' +
       'two are yours to give, after reading the work, when it is of an appreciable standard.' +
       (isExam ? ' Type each pupil\'s theory mark out of ' + theoryMarks +
-        ' once you have marked their paper, and the combined grade appears beside it.' : '') + '</p>' +
+        ' once you have marked their paper, and the combined grade appears beside it.' : '') +
+      (isExam && r.papers && r.papers.notInPortal ? ' ' + esc(r.papers.notInPortal.charAt(0).toUpperCase() +
+        r.papers.notInPortal.slice(1)) + ' is not in the portal, so the combined grade leaves it out.' : '') + '</p>' +
       '<div class="tableWrap"><table>' +
       '<thead><tr><th>Pupil</th><th>State</th><th>' + (isExam ? 'Objective' : 'Score') + '</th>' +
       (isExam ? '<th>Theory mark</th><th>Combined</th>' : '') +
