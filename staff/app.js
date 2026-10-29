@@ -536,7 +536,12 @@ function blueprintHtml(r) {
   if (o.notInPortal) html += '<p class="muted"><b>Not in the portal:</b> ' + esc(o.notInPortal) +
     '. The combined grade leaves it out.</p>';
   html += '<h3>How ' + esc(o.label) + ' is made up</h3>' +
-    '<p class="muted">Weighted by the number of learning outcomes each part of the syllabus has. Every pupil gets a different draw to this same shape.</p>' +
+    /* Biology's parts carry set weights rather than outcome counts, and the
+       Topics column would otherwise read as the reason for the split. */
+    '<p class="muted">' + (o.weighting === 'set'
+      ? 'Each part of the syllabus carries a set share of the paper, agreed for this subject, not one based on how many outcomes it has.'
+      : 'Weighted by the number of learning outcomes each part of the syllabus has.') +
+    ' Every pupil gets a different draw to this same shape.</p>' +
     '<div class="tableWrap"><table><thead><tr><th>Part of the syllabus</th><th>Topics</th>' +
     '<th>Questions</th><th>Released</th></tr></thead><tbody>' +
     o.rows.map(function (x) {
