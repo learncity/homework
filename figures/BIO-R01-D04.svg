@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Flower — simplified longitudinal section</title><desc id="desc">A stigma on top of central style, B anther at side, C ovary at base, and D an ovule within ovary.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Flower — simplified longitudinal section</text><line x1="356" y1="155" x2="356" y2="330" stroke="#287A55" stroke-width="9" marker-end="none"/>
+<ellipse cx="356" cy="143" rx="30" ry="14" fill="#FFE49A" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="358" cy="339" rx="72" ry="52" fill="#B1DA9C" stroke="#1D4D4F" stroke-width="2"/>
+<circle cx="359" cy="342" r="13" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<line x1="230" y1="193" x2="345" y2="260" stroke="#397A50" stroke-width="5" marker-end="none"/>
+<ellipse cx="230" cy="184" rx="18" ry="34" fill="#ECC276" stroke="#1D4D4F" stroke-width="2"/>
+<line x1="480" y1="193" x2="345" y2="260" stroke="#397A50" stroke-width="5" marker-end="none"/>
+<ellipse cx="480" cy="184" rx="18" ry="34" fill="#ECC276" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="270" cy="205" rx="60" ry="32" fill="#F5D4E8" stroke="#AC6799" stroke-width="2"/>
+<ellipse cx="438" cy="205" rx="60" ry="32" fill="#F5D4E8" stroke="#AC6799" stroke-width="2"/>
+<ellipse cx="280" cy="272" rx="60" ry="32" fill="#F5D4E8" stroke="#AC6799" stroke-width="2"/>
+<ellipse cx="442" cy="272" rx="60" ry="32" fill="#F5D4E8" stroke="#AC6799" stroke-width="2"/>
+<circle cx="358" cy="109" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="358" y="115" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">A</text>
+<circle cx="230" cy="185" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="230" y="191" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">B</text>
+<circle cx="430" cy="344" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="430" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">C</text>
+<circle cx="360" cy="342" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="360" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">D</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

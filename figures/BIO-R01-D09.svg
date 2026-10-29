@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Nephron — simplified pathway</title><desc id="desc">Diagram A glomerulus/Bowman capsule, B proximal tubule, C loop of Henle, D collecting duct; arrows follow filtrate movement.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Nephron — simplified pathway</text><circle cx="190" cy="146" r="43" fill="#FBE1DA" stroke="#185D70" stroke-width="2"/>
+<circle cx="190" cy="146" r="25" fill="#D06B6B" stroke="#185D70" stroke-width="2"/>
+<text x="190" y="153" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="19" fill="#FFFFFF">A</text>
+<line x1="233" y1="146" x2="295" y2="146" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="295" y="117" width="97" height="58" rx="12" fill="#B5DAEC" stroke="#1D4D4F" stroke-width="2"/>
+<text x="344" y="151" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="23" fill="#163C40">B</text>
+<line x1="392" y1="146" x2="467" y2="146" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="467" y1="146" x2="467" y2="315" stroke="#24475B" stroke-width="3" marker-end="none"/>
+<line x1="467" y1="315" x2="518" y2="315" stroke="#24475B" stroke-width="3" marker-end="none"/>
+<line x1="518" y1="315" x2="518" y2="157" stroke="#24475B" stroke-width="3" marker-end="none"/>
+<circle cx="492" cy="313" r="25" fill="#C8DADC" stroke="#185D70" stroke-width="2"/>
+<text x="492" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="19" fill="#163C40">C</text>
+<line x1="518" y1="157" x2="585" y2="157" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="580" y="108" width="54" height="260" rx="12" fill="#D1E5E8" stroke="#1D4D4F" stroke-width="2"/>
+<text x="607" y="246" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="25" fill="#163C40">D</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

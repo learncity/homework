@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Leaf cross-section — simplified</title><desc id="desc">Layer A upper epidermis; B palisade mesophyll; C spongy mesophyll; D stomatal pore with adjacent guard cells on lower epidermis.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Leaf cross-section — simplified</text><rect x="130" y="100" width="460" height="48" rx="0" fill="#CADFEB" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="130" y="150" width="460" height="110" rx="0" fill="#C3E8B3" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="130" y="266" width="460" height="83" rx="0" fill="#D8F1D8" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="130" y="351" width="460" height="34" rx="0" fill="#D5E7E1" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="165" y="164" width="34" height="75" rx="15" fill="#83C583" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="240" y="164" width="34" height="75" rx="15" fill="#83C583" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="315" y="164" width="34" height="75" rx="15" fill="#83C583" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="390" y="164" width="34" height="75" rx="15" fill="#83C583" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="465" y="164" width="34" height="75" rx="15" fill="#83C583" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="540" y="164" width="34" height="75" rx="15" fill="#83C583" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="190" cy="286" rx="35" ry="19" fill="#A8DDA4" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="278" cy="322" rx="35" ry="19" fill="#A8DDA4" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="390" cy="290" rx="35" ry="19" fill="#A8DDA4" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="480" cy="327" rx="35" ry="19" fill="#A8DDA4" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="355" cy="360" rx="33" ry="13" fill="#7AB68F" stroke="#1D4D4F" stroke-width="2"/>
+<ellipse cx="425" cy="360" rx="33" ry="13" fill="#7AB68F" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="387" y="352" width="7" height="16" rx="0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="160" cy="125" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="160" y="131" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">A</text>
+<circle cx="220" cy="203" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="220" y="209" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">B</text>
+<circle cx="375" cy="306" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="375" y="312" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">C</text>
+<circle cx="390" cy="364" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="390" y="370" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">D</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

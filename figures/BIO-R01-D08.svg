@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Seed germination — controlled treatments</title><desc id="desc">Bars show seeds germinated out of 20: A moist 25°C light 18; B dry 25°C light 0; C moist 5°C light 6; D moist 25°C dark 17.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Seed germination — controlled treatments</text><line x1="110" y1="348" x2="620" y2="348" stroke="#24475B" stroke-width="3" marker-end="none"/>
+<line x1="110" y1="348" x2="110" y2="100" stroke="#24475B" stroke-width="3" marker-end="none"/>
+<rect x="175" y="168" width="65" height="180" rx="0" fill="#9CCDBE" stroke="#1D4D4F" stroke-width="2"/>
+<text x="207" y="373" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="19" fill="#163C40">A</text>
+<text x="207" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="17" fill="#163C40">18</text>
+<rect x="292" y="348" width="65" height="1" rx="0" fill="#9CCDBE" stroke="#1D4D4F" stroke-width="2"/>
+<text x="324" y="373" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="19" fill="#163C40">B</text>
+<text x="324" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="17" fill="#163C40">0</text>
+<rect x="409" y="288" width="65" height="60" rx="0" fill="#9CCDBE" stroke="#1D4D4F" stroke-width="2"/>
+<text x="441" y="373" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="19" fill="#163C40">C</text>
+<text x="441" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="17" fill="#163C40">6</text>
+<rect x="526" y="178" width="65" height="170" rx="0" fill="#9CCDBE" stroke="#1D4D4F" stroke-width="2"/>
+<text x="558" y="373" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="19" fill="#163C40">D</text>
+<text x="558" y="170" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="17" fill="#163C40">17</text>
+<text x="90" y="351" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="14" fill="#163C40">0</text>
+<text x="90" y="301" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="14" fill="#163C40">5</text>
+<text x="90" y="251" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="14" fill="#163C40">10</text>
+<text x="90" y="201" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="14" fill="#163C40">15</text>
+<text x="90" y="151" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="14" fill="#163C40">20</text>
+<text x="360" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="18" fill="#163C40">Number germinated (out of 20)</text>
+<text x="230" y="77" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="13" fill="#163C40">A: warm, moist, light</text>
+<text x="495" y="77" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="13" fill="#163C40">B: warm, dry, light</text>
+<text x="230" y="94" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="13" fill="#163C40">C: cold, moist, light</text>
+<text x="495" y="94" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="13" fill="#163C40">D: warm, moist, dark</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

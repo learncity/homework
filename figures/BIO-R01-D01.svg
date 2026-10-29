@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Plant cell — labelled structures</title><desc id="desc">A simplified plant cell with A cell wall, B chloroplast, C nucleus and D central vacuole.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Plant cell — labelled structures</text><rect x="120" y="86" width="480" height="295" rx="14" fill="#E5F3D5" stroke="#336749" stroke-width="2"/>
+<rect x="136" y="104" width="448" height="260" rx="14" fill="#F6F4DF" stroke="#94B279" stroke-width="2"/>
+<ellipse cx="356" cy="238" rx="125" ry="85" fill="#D3EBD4" stroke="#609262" stroke-width="2"/>
+<circle cx="235" cy="160" r="35" fill="#F5D3E7" stroke="#AA6392" stroke-width="2"/>
+<ellipse cx="490" cy="154" rx="30" ry="14" fill="#9ADA74" stroke="#317748" stroke-width="2"/>
+<ellipse cx="475" cy="260" rx="30" ry="14" fill="#9ADA74" stroke="#317748" stroke-width="2"/>
+<ellipse cx="260" cy="310" rx="30" ry="14" fill="#9ADA74" stroke="#317748" stroke-width="2"/>
+<ellipse cx="395" cy="150" rx="30" ry="14" fill="#9ADA74" stroke="#317748" stroke-width="2"/>
+<circle cx="100" cy="116" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="100" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">A</text>
+<circle cx="514" cy="172" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="514" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">B</text>
+<circle cx="238" cy="160" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="238" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">C</text>
+<circle cx="357" cy="237" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="357" y="243" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">D</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

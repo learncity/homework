@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Compound light microscope — labelled parts</title><desc id="desc">A eyepiece near top; B objective lens assembly; C stage; D coarse focus knob.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Compound light microscope — labelled parts</text><rect x="325" y="75" width="65" height="100" rx="12" fill="#BEDDF1" stroke="#23617C" stroke-width="2"/>
+<rect x="308" y="160" width="120" height="22" rx="0" fill="#D8E4E9" stroke="#1D4D4F" stroke-width="2"/>
+<line x1="375" y1="182" x2="375" y2="218" stroke="#347485" stroke-width="9" marker-end="none"/>
+<rect x="258" y="237" width="250" height="19" rx="0" fill="#CED9E1" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="344" y="257" width="26" height="90" rx="0" fill="#B7D9D8" stroke="#1D4D4F" stroke-width="2"/>
+<rect x="246" y="351" width="320" height="25" rx="0" fill="#D7E5EC" stroke="#1D4D4F" stroke-width="2"/>
+<circle cx="453" cy="207" r="25" fill="#CBDCE4" stroke="#185D70" stroke-width="2"/>
+<circle cx="355" cy="100" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="355" y="106" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">A</text>
+<circle cx="376" cy="206" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="376" y="212" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">B</text>
+<circle cx="278" cy="245" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="278" y="251" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">C</text>
+<circle cx="455" cy="207" r="18" fill="#FFFFFF" stroke="#185D70" stroke-width="2"/>
+<text x="455" y="213" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">D</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

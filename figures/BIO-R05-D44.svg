@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610" role="img" aria-labelledby="t d"><title id="t">Mean seedling height by light treatment</title><desc id="d">Equal-aged seedlings observed after a fixed week under different light doses. Data: Dark 2 cm, Low 5 cm, Medium 9 cm, High 11 cm.</desc>
+<rect width="920" height="610" fill="#FAFCFF"/>
+<text x="40" y="62" font-size="30" font-family="Arial" font-weight="bold" fill="#172B4D">Mean seedling height by light treatment</text>
+<text x="40" y="95" font-size="17" font-family="Arial" fill="#43536A">Equal-aged seedlings observed after a fixed week under different light doses.</text>
+<line x1="70" y1="455" x2="860" y2="455" stroke="#596D87" stroke-width="3"/>
+<rect x="95" y="401.4" width="106" height="53.6" rx="5" fill="#276B9B"/>
+<text x="148" y="393.4" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">2</text>
+<text x="148" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Dark</text>
+<rect x="295" y="320.9" width="106" height="134.1" rx="5" fill="#276B9B"/>
+<text x="348" y="312.9" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">5</text>
+<text x="348" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Low</text>
+<rect x="495" y="213.6" width="106" height="241.4" rx="5" fill="#276B9B"/>
+<text x="548" y="205.6" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">9</text>
+<text x="548" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Medium</text>
+<rect x="695" y="160.0" width="106" height="295.0" rx="5" fill="#276B9B"/>
+<text x="748" y="152.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">11</text>
+<text x="748" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">High</text>
+<text x="40" y="553" font-size="17" font-family="Arial" fill="#172B4D">Unit: cm. Values are observations, not proof of cause.</text></svg>

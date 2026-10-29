@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610" role="img" aria-labelledby="t d"><title id="t">Dissolved oxygen in four river sites</title><desc id="d">One illustrative sampling date; values are milligrams per litre. Data: Upstream 8 mg/L, Farm inlet 4 mg/L, Village 5 mg/L, Downstream 7 mg/L.</desc>
+<rect width="920" height="610" fill="#FAFCFF"/>
+<text x="40" y="62" font-size="30" font-family="Arial" font-weight="bold" fill="#172B4D">Dissolved oxygen in four river sites</text>
+<text x="40" y="95" font-size="17" font-family="Arial" fill="#43536A">One illustrative sampling date; values are milligrams per litre.</text>
+<line x1="70" y1="455" x2="860" y2="455" stroke="#596D87" stroke-width="3"/>
+<rect x="95" y="160.0" width="106" height="295.0" rx="5" fill="#276B9B"/>
+<text x="148" y="152.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">8</text>
+<text x="148" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Upstream</text>
+<rect x="295" y="307.5" width="106" height="147.5" rx="5" fill="#276B9B"/>
+<text x="348" y="299.5" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">4</text>
+<text x="348" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Farm inlet</text>
+<rect x="495" y="270.6" width="106" height="184.4" rx="5" fill="#276B9B"/>
+<text x="548" y="262.6" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">5</text>
+<text x="548" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Village</text>
+<rect x="695" y="196.9" width="106" height="258.1" rx="5" fill="#276B9B"/>
+<text x="748" y="188.9" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">7</text>
+<text x="748" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Downstream</text>
+<text x="40" y="553" font-size="17" font-family="Arial" fill="#172B4D">Unit: mg/L. Values are observations, not proof of cause.</text></svg>

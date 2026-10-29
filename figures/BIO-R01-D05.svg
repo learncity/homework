@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Simplified double circulation</title><desc id="desc">Blood pathway from body to RA to RV to lungs to LA to LV to body; diagram is a flow scheme, not a heart cross-section.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Simplified double circulation</text><rect x="47" y="180" width="86" height="64" rx="10" fill="#F9DDD4" stroke="#1D4D4F" stroke-width="2"/>
+<text x="90" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">BODY</text>
+<rect x="162" y="180" width="86" height="64" rx="10" fill="#D3E8FA" stroke="#1D4D4F" stroke-width="2"/>
+<text x="205" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">RA</text>
+<rect x="267" y="180" width="86" height="64" rx="10" fill="#D3E8FA" stroke="#1D4D4F" stroke-width="2"/>
+<text x="310" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">RV</text>
+<rect x="377" y="180" width="86" height="64" rx="10" fill="#F9DDD4" stroke="#1D4D4F" stroke-width="2"/>
+<text x="420" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">LUNGS</text>
+<rect x="492" y="180" width="86" height="64" rx="10" fill="#F9DDD4" stroke="#1D4D4F" stroke-width="2"/>
+<text x="535" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">LA</text>
+<rect x="607" y="180" width="86" height="64" rx="10" fill="#F9DDD4" stroke="#1D4D4F" stroke-width="2"/>
+<text x="650" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="17" fill="#163C40">LV</text>
+<line x1="135" y1="212" x2="157" y2="212" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="250" y1="212" x2="262" y2="212" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="355" y1="212" x2="372" y2="212" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="465" y1="212" x2="487" y2="212" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="580" y1="212" x2="602" y2="212" stroke="#24475B" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="350" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="18" fill="#163C40">Return from LV to BODY completes the circulation</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>

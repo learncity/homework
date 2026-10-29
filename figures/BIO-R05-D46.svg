@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610" role="img" aria-labelledby="t d"><title id="t">Recorded vaccination uptake by community</title><desc id="d">Each community has 100 eligible people; values are percentage vaccinated. Data: A 60 percent, B 75 percent, C 80 percent, D 90 percent.</desc>
+<rect width="920" height="610" fill="#FAFCFF"/>
+<text x="40" y="62" font-size="30" font-family="Arial" font-weight="bold" fill="#172B4D">Recorded vaccination uptake by community</text>
+<text x="40" y="95" font-size="17" font-family="Arial" fill="#43536A">Each community has 100 eligible people; values are percentage vaccinated.</text>
+<line x1="70" y1="455" x2="860" y2="455" stroke="#596D87" stroke-width="3"/>
+<rect x="95" y="258.3" width="106" height="196.7" rx="5" fill="#276B9B"/>
+<text x="148" y="250.3" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">60</text>
+<text x="148" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">A</text>
+<rect x="295" y="209.2" width="106" height="245.8" rx="5" fill="#276B9B"/>
+<text x="348" y="201.2" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">75</text>
+<text x="348" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">B</text>
+<rect x="495" y="192.8" width="106" height="262.2" rx="5" fill="#276B9B"/>
+<text x="548" y="184.8" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">80</text>
+<text x="548" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">C</text>
+<rect x="695" y="160.0" width="106" height="295.0" rx="5" fill="#276B9B"/>
+<text x="748" y="152.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">90</text>
+<text x="748" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">D</text>
+<text x="40" y="553" font-size="17" font-family="Arial" fill="#172B4D">Unit: percent. Values are observations, not proof of cause.</text></svg>

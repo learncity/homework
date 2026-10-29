@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610" role="img" aria-labelledby="t d"><title id="t">Catalase oxygen production by temperature</title><desc id="d">Equal substrate and enzyme amounts; values are mL oxygen in two minutes. Data: 10 °C 2 mL oxygen, 20 °C 6 mL oxygen, 30 °C 10 mL oxygen, 50 °C 3 mL oxygen.</desc>
+<rect width="920" height="610" fill="#FAFCFF"/>
+<text x="40" y="62" font-size="30" font-family="Arial" font-weight="bold" fill="#172B4D">Catalase oxygen production by temperature</text>
+<text x="40" y="95" font-size="17" font-family="Arial" fill="#43536A">Equal substrate and enzyme amounts; values are mL oxygen in two minutes.</text>
+<line x1="70" y1="455" x2="860" y2="455" stroke="#596D87" stroke-width="3"/>
+<rect x="95" y="396.0" width="106" height="59.0" rx="5" fill="#276B9B"/>
+<text x="148" y="388.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">2</text>
+<text x="148" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">10 °C</text>
+<rect x="295" y="278.0" width="106" height="177.0" rx="5" fill="#276B9B"/>
+<text x="348" y="270.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">6</text>
+<text x="348" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">20 °C</text>
+<rect x="495" y="160.0" width="106" height="295.0" rx="5" fill="#276B9B"/>
+<text x="548" y="152.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">10</text>
+<text x="548" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">30 °C</text>
+<rect x="695" y="366.5" width="106" height="88.5" rx="5" fill="#276B9B"/>
+<text x="748" y="358.5" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">3</text>
+<text x="748" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">50 °C</text>
+<text x="40" y="553" font-size="17" font-family="Arial" fill="#172B4D">Unit: mL oxygen. Values are observations, not proof of cause.</text></svg>

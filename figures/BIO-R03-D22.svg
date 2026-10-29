@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+<title id="title">Grassland food-web relationships</title>
+<desc id="desc">Arrows indicate energy flow from food to consumer. Grass → grasshopper; Grass → rabbit; Grasshopper → frog; Frog → hawk; Rabbit → hawk</desc>
+<rect x="0" y="0" width="980" height="520" rx="0" fill="#FCFDFC"/>
+<rect x="0" y="0" width="980" height="16" rx="0" fill="#197568"/>
+<text x="34" y="61" fill="#162E41" font-size="32" font-weight="bold" font-family="Arial, sans-serif">Grassland food-web relationships</text>
+<text x="34" y="94" fill="#526577" font-size="17" font-family="Arial, sans-serif">Biology assessment stimulus · D22</text>
+<rect x="30" y="128" width="920" height="44" rx="8" fill="#143C53"/>
+<text x="46" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif">Organism</text>
+<text x="426" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif">Feeding link</text>
+<rect x="30" y="178" width="920" height="46" rx="6" fill="#EDF5F2"/>
+<text x="46" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Grass</text>
+<text x="426" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">→ grasshopper</text>
+<rect x="30" y="228" width="920" height="46" rx="6" fill="#F7F9FB"/>
+<text x="46" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Grass</text>
+<text x="426" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">→ rabbit</text>
+<rect x="30" y="278" width="920" height="46" rx="6" fill="#EDF5F2"/>
+<text x="46" y="309" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Grasshopper</text>
+<text x="426" y="309" fill="#15394E" font-size="18" font-family="Arial, sans-serif">→ frog</text>
+<rect x="30" y="328" width="920" height="46" rx="6" fill="#F7F9FB"/>
+<text x="46" y="359" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Frog</text>
+<text x="426" y="359" fill="#15394E" font-size="18" font-family="Arial, sans-serif">→ hawk</text>
+<rect x="30" y="378" width="920" height="46" rx="6" fill="#EDF5F2"/>
+<text x="46" y="409" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Rabbit</text>
+<text x="426" y="409" fill="#15394E" font-size="18" font-family="Arial, sans-serif">→ hawk</text>
+<text x="36" y="485" fill="#536778" font-size="16" font-family="Arial, sans-serif">Arrows indicate energy flow from food to consumer.</text>
+</svg>

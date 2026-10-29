@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610" role="img" aria-labelledby="t d"><title id="t">Breathing rate across activity stages</title><desc id="d">Rate per minute for one consenting volunteer; not a clinical test. Data: At rest 14 breaths/min, Walking 20 breaths/min, Jogging 32 breaths/min, Recovery 18 breaths/min.</desc>
+<rect width="920" height="610" fill="#FAFCFF"/>
+<text x="40" y="62" font-size="30" font-family="Arial" font-weight="bold" fill="#172B4D">Breathing rate across activity stages</text>
+<text x="40" y="95" font-size="17" font-family="Arial" fill="#43536A">Rate per minute for one consenting volunteer; not a clinical test.</text>
+<line x1="70" y1="455" x2="860" y2="455" stroke="#596D87" stroke-width="3"/>
+<rect x="95" y="325.9" width="106" height="129.1" rx="5" fill="#276B9B"/>
+<text x="148" y="317.9" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">14</text>
+<text x="148" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">At rest</text>
+<rect x="295" y="270.6" width="106" height="184.4" rx="5" fill="#276B9B"/>
+<text x="348" y="262.6" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">20</text>
+<text x="348" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Walking</text>
+<rect x="495" y="160.0" width="106" height="295.0" rx="5" fill="#276B9B"/>
+<text x="548" y="152.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">32</text>
+<text x="548" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Jogging</text>
+<rect x="695" y="289.1" width="106" height="165.9" rx="5" fill="#276B9B"/>
+<text x="748" y="281.1" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">18</text>
+<text x="748" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Recovery</text>
+<text x="40" y="553" font-size="17" font-family="Arial" fill="#172B4D">Unit: breaths/min. Values are observations, not proof of cause.</text></svg>

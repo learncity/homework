@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610" role="img" aria-labelledby="t d"><title id="t">Biomass at successive trophic levels</title><desc id="d">Illustrative standing biomass in grams per square metre. Data: Grass 1000 g/m², Grasshopper 120 g/m², Frog 18 g/m², Snake 3 g/m².</desc>
+<rect width="920" height="610" fill="#FAFCFF"/>
+<text x="40" y="62" font-size="30" font-family="Arial" font-weight="bold" fill="#172B4D">Biomass at successive trophic levels</text>
+<text x="40" y="95" font-size="17" font-family="Arial" fill="#43536A">Illustrative standing biomass in grams per square metre.</text>
+<line x1="70" y1="455" x2="860" y2="455" stroke="#596D87" stroke-width="3"/>
+<rect x="95" y="160.0" width="106" height="295.0" rx="5" fill="#276B9B"/>
+<text x="148" y="152.0" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">1000</text>
+<text x="148" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Grass</text>
+<rect x="295" y="419.6" width="106" height="35.4" rx="5" fill="#276B9B"/>
+<text x="348" y="411.6" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">120</text>
+<text x="348" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Grasshopper</text>
+<rect x="495" y="449.7" width="106" height="5.3" rx="5" fill="#276B9B"/>
+<text x="548" y="441.7" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">18</text>
+<text x="548" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Frog</text>
+<rect x="695" y="454.1" width="106" height="0.9" rx="5" fill="#276B9B"/>
+<text x="748" y="446.1" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial" fill="#172B4D">3</text>
+<text x="748" y="492" text-anchor="middle" font-size="17" font-family="Arial" fill="#172B4D">Snake</text>
+<text x="40" y="553" font-size="17" font-family="Arial" fill="#172B4D">Unit: g/m². Values are observations, not proof of cause.</text></svg>

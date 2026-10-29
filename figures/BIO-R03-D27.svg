@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 370" role="img" aria-labelledby="title desc">
+<title id="title">Leaf stomatal counts</title>
+<desc id="desc">Counts from equal-area fields of one terrestrial dicot leaf. Upper epidermis 8; Lower epidermis 28</desc>
+<rect x="0" y="0" width="980" height="370" rx="0" fill="#FCFDFC"/>
+<rect x="0" y="0" width="980" height="16" rx="0" fill="#197568"/>
+<text x="34" y="61" fill="#162E41" font-size="32" font-weight="bold" font-family="Arial, sans-serif">Leaf stomatal counts</text>
+<text x="34" y="94" fill="#526577" font-size="17" font-family="Arial, sans-serif">Biology assessment stimulus · D27</text>
+<rect x="30" y="128" width="920" height="44" rx="8" fill="#143C53"/>
+<text x="46" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif">Leaf surface</text>
+<text x="426" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif">Stomata per field</text>
+<rect x="30" y="178" width="920" height="46" rx="6" fill="#EDF5F2"/>
+<text x="46" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Upper epidermis</text>
+<text x="426" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">8</text>
+<rect x="30" y="228" width="920" height="46" rx="6" fill="#F7F9FB"/>
+<text x="46" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Lower epidermis</text>
+<text x="426" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">28</text>
+<text x="36" y="335" fill="#536778" font-size="16" font-family="Arial, sans-serif">Counts from equal-area fields of one terrestrial dicot leaf.</text>
+</svg>

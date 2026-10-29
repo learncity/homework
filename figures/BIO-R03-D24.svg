@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 370" role="img" aria-labelledby="title desc">
+<title id="title">Punnett square: Aa × aa</title>
+<desc id="desc">Column gametes A and a; row gametes a and a. a Aa aa; a Aa aa</desc>
+<rect x="0" y="0" width="980" height="370" rx="0" fill="#FCFDFC"/>
+<rect x="0" y="0" width="980" height="16" rx="0" fill="#197568"/>
+<text x="34" y="61" fill="#162E41" font-size="32" font-weight="bold" font-family="Arial, sans-serif">Punnett square: Aa × aa</text>
+<text x="34" y="94" fill="#526577" font-size="17" font-family="Arial, sans-serif">Biology assessment stimulus · D24</text>
+<rect x="30" y="128" width="920" height="44" rx="8" fill="#143C53"/>
+<text x="46" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif"></text>
+<text x="346" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif">A</text>
+<text x="646" y="158" fill="white" font-weight="bold" font-size="19" font-family="Arial, sans-serif">a</text>
+<rect x="30" y="178" width="920" height="46" rx="6" fill="#EDF5F2"/>
+<text x="46" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">a</text>
+<text x="346" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Aa</text>
+<text x="646" y="209" fill="#15394E" font-size="18" font-family="Arial, sans-serif">aa</text>
+<rect x="30" y="228" width="920" height="46" rx="6" fill="#F7F9FB"/>
+<text x="46" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">a</text>
+<text x="346" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">Aa</text>
+<text x="646" y="259" fill="#15394E" font-size="18" font-family="Arial, sans-serif">aa</text>
+<text x="36" y="335" fill="#536778" font-size="16" font-family="Arial, sans-serif">Column gametes A and a; row gametes a and a.</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 720 450" width="720" height="450"><title id="title">Punnett square — Tt × Tt</title><desc id="desc">Two heterozygous parents each produce gametes T and t. Four equally likely cells: TT, Tt, Tt and tt.</desc><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#24475B" stroke-width="1.4"/></marker></defs><rect width="720" height="450" fill="#FCFEFF"/><rect x="18" y="12" width="684" height="425" rx="16" fill="#FFFFFF" stroke="#C2D6DF" stroke-width="2"/><text x="360" y="46" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold" fill="#17475A">Punnett square — Tt × Tt</text><line x1="280" y1="150" x2="280" y2="290" stroke="#547A94" stroke-width="2" marker-end="none"/>
+<line x1="395" y1="150" x2="395" y2="290" stroke="#547A94" stroke-width="2" marker-end="none"/>
+<line x1="510" y1="150" x2="510" y2="290" stroke="#547A94" stroke-width="2" marker-end="none"/>
+<line x1="280" y1="150" x2="510" y2="150" stroke="#547A94" stroke-width="2" marker-end="none"/>
+<line x1="280" y1="220" x2="510" y2="220" stroke="#547A94" stroke-width="2" marker-end="none"/>
+<line x1="280" y1="290" x2="510" y2="290" stroke="#547A94" stroke-width="2" marker-end="none"/>
+<text x="335" y="143" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="23" fill="#163C40">T</text>
+<text x="450" y="143" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="23" fill="#163C40">t</text>
+<text x="262" y="197" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="23" fill="#163C40">T</text>
+<text x="262" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="23" fill="#163C40">t</text>
+<text x="335" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="25" fill="#163C40">TT</text>
+<text x="450" y="193" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="25" fill="#163C40">Tt</text>
+<text x="335" y="263" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="25" fill="#163C40">Tt</text>
+<text x="450" y="263" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="25" fill="#163C40">tt</text>
+<text x="180" y="115" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="18" fill="#163C40">Parent 1: Tt</text>
+<text x="530" y="115" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="18" fill="#163C40">Parent 2: Tt</text>
+<text x="356" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-weight="normal" font-size="17" fill="#163C40">T is dominant over t</text><text x="360" y="422" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#57717C">Schematic for Biology assessment — not to scale</text></svg>
