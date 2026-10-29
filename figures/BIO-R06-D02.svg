@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="800" viewBox="0 0 1300 800" role="img" aria-labelledby="title desc">
+<title id="title">Biology Round 6 diagram 02: Yeast respiration at four temperatures</title>
+<desc id="desc">Hypothetical teaching dataset. Horizontal axis: Temperature (°C). Vertical axis: CO₂ production (mL/h). Values: 10 4; 20 9; 30 17; 40 7. pH, enzyme concentration and incubation period should be kept the same.</desc>
+<rect width="1300" height="800" fill="#ffffff"/>
+<text x="650" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#183153">Yeast respiration at four temperatures</text>
+<text x="650" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#425875">HYPOTHETICAL CLASSROOM DATA · compare measurements, not causation</text>
+<line x1="155" y1="610" x2="1155" y2="610" stroke="#263a54" stroke-width="3"/>
+<line x1="155" y1="610" x2="155" y2="170" stroke="#263a54" stroke-width="3"/>
+<line x1="155" x2="1155" y1="610.0" y2="610.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="617.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">0</text>
+<line x1="155" x2="1155" y1="522.0" y2="522.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="529.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">4</text>
+<line x1="155" x2="1155" y1="434.0" y2="434.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="441.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">8</text>
+<line x1="155" x2="1155" y1="346.0" y2="346.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="353.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">12</text>
+<line x1="155" x2="1155" y1="258.0" y2="258.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="265.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">16</text>
+<line x1="155" x2="1155" y1="170.0" y2="170.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="177.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">20</text>
+<rect x="212.0" y="522.0" width="136" height="88.0" rx="8" fill="#167e8a"/>
+<text x="280.0" y="510.0" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">4</text>
+<text x="280.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">10</text>
+<rect x="462.0" y="412.0" width="136" height="198.0" rx="8" fill="#167e8a"/>
+<text x="530.0" y="400.0" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">9</text>
+<text x="530.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">20</text>
+<rect x="712.0" y="236.0" width="136" height="374.0" rx="8" fill="#167e8a"/>
+<text x="780.0" y="224.0" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">17</text>
+<text x="780.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">30</text>
+<rect x="962.0" y="456.0" width="136" height="154.0" rx="8" fill="#167e8a"/>
+<text x="1030.0" y="444.0" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">7</text>
+<text x="1030.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">40</text>
+<text x="650" y="720" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#243f61">Temperature (°C)</text>
+<text transform="translate(44 380) rotate(-90)" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#243f61">CO₂ production (mL/h)</text>
+<text x="650" y="770" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#5b6b7f">BIO-R06-D02 · Static SVG · Source: original synthetic assessment data</text>
+</svg>

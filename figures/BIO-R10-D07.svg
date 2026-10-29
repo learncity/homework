@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+<title id="title">Invertebrate observations by quadrat</title>
+<desc id="desc">Synthetic Biology data; Organisms counted: Plot A=60, Plot B=30, Plot C=45, Plot D=15. Results are limited to sampled areas and times.</desc>
+<rect width="980" height="560" fill="#ffffff"/>
+<text x="490" y="54" text-anchor="middle" font-family="Arial" font-size="27" font-weight="bold" fill="#1F2A44">Invertebrate observations by quadrat</text>
+<text x="490" y="84" text-anchor="middle" font-family="Arial" font-size="18" fill="#475569">Organisms counted • synthetic classroom observations</text>
+<line x1="120" y1="457" x2="905" y2="457" stroke="#334155" stroke-width="2"/>
+<line x1="120" y1="100" x2="120" y2="457" stroke="#334155" stroke-width="2"/>
+<line x1="120" y1="457.0" x2="905" y2="457.0" stroke="#CBD5E1"/>
+<text x="105" y="463.0" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">0</text>
+<line x1="120" y1="369.5" x2="905" y2="369.5" stroke="#CBD5E1"/>
+<text x="105" y="375.5" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">19</text>
+<line x1="120" y1="282.0" x2="905" y2="282.0" stroke="#CBD5E1"/>
+<text x="105" y="288.0" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">38</text>
+<line x1="120" y1="194.5" x2="905" y2="194.5" stroke="#CBD5E1"/>
+<text x="105" y="200.5" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">56</text>
+<line x1="120" y1="107.0" x2="905" y2="107.0" stroke="#CBD5E1"/>
+<text x="105" y="113.0" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">75</text>
+<rect x="180" y="177.0" width="96" height="280.0" fill="#1F2A44"/>
+<text x="228" y="167.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">60</text>
+<text x="228" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Plot A</text>
+<rect x="361" y="317.0" width="96" height="140.0" fill="#F2A900"/>
+<text x="409" y="307.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">30</text>
+<text x="409" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Plot B</text>
+<rect x="542" y="247.0" width="96" height="210.0" fill="#1F2A44"/>
+<text x="590" y="237.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">45</text>
+<text x="590" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Plot C</text>
+<rect x="723" y="387.0" width="96" height="70.0" fill="#F2A900"/>
+<text x="771" y="377.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">15</text>
+<text x="771" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Plot D</text>
+<text x="490" y="530" text-anchor="middle" font-family="Arial" font-size="14" fill="#64748B">Classroom illustration — not empirical research or causal proof</text>
+</svg>

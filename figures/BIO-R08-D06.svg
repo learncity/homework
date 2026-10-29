@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="570" viewBox="0 0 960 570" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Plant shoot response to light</title>
+<desc id="desc">Plant shoot response to light. North side 33, East side 42, South side 58, West side 39. These observations alone cannot isolate auxin concentration as the causal mechanism.</desc>
+<rect width="960" height="570" fill="#ffffff"/>
+<text x="480" y="49" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#15253a">Plant shoot response to light</text>
+<text x="110" y="86" font-family="Arial,sans-serif" font-size="16" fill="#3f536c">Illustrative classroom dataset • not clinical or published measurements</text>
+<line x1="110" y1="465.0" x2="900" y2="465.0" stroke="#dce5ee" stroke-width="1"/>
+<text x="95" y="470.0" text-anchor="end" font-family="Arial" font-size="18" fill="#41556a">0</text>
+<line x1="110" y1="394.0" x2="900" y2="394.0" stroke="#dce5ee" stroke-width="1"/>
+<text x="95" y="399.0" text-anchor="end" font-family="Arial" font-size="18" fill="#41556a">14</text>
+<line x1="110" y1="323.0" x2="900" y2="323.0" stroke="#dce5ee" stroke-width="1"/>
+<text x="95" y="328.0" text-anchor="end" font-family="Arial" font-size="18" fill="#41556a">28</text>
+<line x1="110" y1="252.0" x2="900" y2="252.0" stroke="#dce5ee" stroke-width="1"/>
+<text x="95" y="257.0" text-anchor="end" font-family="Arial" font-size="18" fill="#41556a">42</text>
+<line x1="110" y1="181.0" x2="900" y2="181.0" stroke="#dce5ee" stroke-width="1"/>
+<text x="95" y="186.0" text-anchor="end" font-family="Arial" font-size="18" fill="#41556a">56</text>
+<line x1="110" y1="110.0" x2="900" y2="110.0" stroke="#dce5ee" stroke-width="1"/>
+<text x="95" y="115.0" text-anchor="end" font-family="Arial" font-size="18" fill="#41556a">70</text>
+<rect x="156.0" y="297.6" width="110" height="167.4" rx="8" fill="#256b83"/>
+<text x="211.0" y="287.6" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#163b4c">33</text>
+<text x="211.0" y="494.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#253c51">North side</text>
+<rect x="353.5" y="252.0" width="110" height="213.0" rx="8" fill="#256b83"/>
+<text x="408.5" y="242.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#163b4c">42</text>
+<text x="408.5" y="494.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#253c51">East side</text>
+<rect x="551.0" y="170.9" width="110" height="294.1" rx="8" fill="#256b83"/>
+<text x="606.0" y="160.9" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#163b4c">58</text>
+<text x="606.0" y="494.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#253c51">South side</text>
+<rect x="748.5" y="267.2" width="110" height="197.8" rx="8" fill="#256b83"/>
+<text x="803.5" y="257.2" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#163b4c">39</text>
+<text x="803.5" y="494.0" text-anchor="middle" font-family="Arial" font-size="17" fill="#253c51">West side</text>
+<text x="110" y="548" font-family="Arial" font-size="17" font-weight="600" fill="#36576d">Measure: Mean shoot length (mm)</text>
+</svg>

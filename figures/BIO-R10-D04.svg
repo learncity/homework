@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+<title id="title">Seed germination in four classroom trays</title>
+<desc id="desc">Synthetic Biology data; Germinated seeds: Tray P=40, Tray Q=20, Tray R=30, Tray S=10. Different totals sown or uncontrolled treatment differences could affect interpretation.</desc>
+<rect width="980" height="560" fill="#ffffff"/>
+<text x="490" y="54" text-anchor="middle" font-family="Arial" font-size="27" font-weight="bold" fill="#1F2A44">Seed germination in four classroom trays</text>
+<text x="490" y="84" text-anchor="middle" font-family="Arial" font-size="18" fill="#475569">Germinated seeds • synthetic classroom observations</text>
+<line x1="120" y1="457" x2="905" y2="457" stroke="#334155" stroke-width="2"/>
+<line x1="120" y1="100" x2="120" y2="457" stroke="#334155" stroke-width="2"/>
+<line x1="120" y1="457.0" x2="905" y2="457.0" stroke="#CBD5E1"/>
+<text x="105" y="463.0" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">0</text>
+<line x1="120" y1="369.5" x2="905" y2="369.5" stroke="#CBD5E1"/>
+<text x="105" y="375.5" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">12</text>
+<line x1="120" y1="282.0" x2="905" y2="282.0" stroke="#CBD5E1"/>
+<text x="105" y="288.0" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">25</text>
+<line x1="120" y1="194.5" x2="905" y2="194.5" stroke="#CBD5E1"/>
+<text x="105" y="200.5" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">38</text>
+<line x1="120" y1="107.0" x2="905" y2="107.0" stroke="#CBD5E1"/>
+<text x="105" y="113.0" text-anchor="end" font-family="Arial" font-size="16" fill="#334155">50</text>
+<rect x="180" y="177.0" width="96" height="280.0" fill="#1F2A44"/>
+<text x="228" y="167.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">40</text>
+<text x="228" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Tray P</text>
+<rect x="361" y="317.0" width="96" height="140.0" fill="#F2A900"/>
+<text x="409" y="307.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">20</text>
+<text x="409" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Tray Q</text>
+<rect x="542" y="247.0" width="96" height="210.0" fill="#1F2A44"/>
+<text x="590" y="237.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">30</text>
+<text x="590" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Tray R</text>
+<rect x="723" y="387.0" width="96" height="70.0" fill="#F2A900"/>
+<text x="771" y="377.0" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1F2A44">10</text>
+<text x="771" y="487" text-anchor="middle" font-family="Arial" font-size="17" fill="#1F2A44">Tray S</text>
+<text x="490" y="530" text-anchor="middle" font-family="Arial" font-size="14" fill="#64748B">Classroom illustration — not empirical research or causal proof</text>
+</svg>
