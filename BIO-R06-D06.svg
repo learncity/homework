@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="800" viewBox="0 0 1300 800" role="img" aria-labelledby="title desc">
+<title id="title">Biology Round 6 diagram 06: Pondweed bubble counts at four lamp distances</title>
+<desc id="desc">Hypothetical teaching dataset. Horizontal axis: Lamp distance (cm). Vertical axis: Bubbles per minute. Values: 10 41; 20 28; 30 19; 40 11. Control temperature and plant size; bubble rate is an imperfect proxy for oxygen output.</desc>
+<rect width="1300" height="800" fill="#ffffff"/>
+<text x="650" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#183153">Pondweed bubble counts at four lamp distances</text>
+<text x="650" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#425875">HYPOTHETICAL CLASSROOM DATA · compare measurements, not causation</text>
+<line x1="155" y1="610" x2="1155" y2="610" stroke="#263a54" stroke-width="3"/>
+<line x1="155" y1="610" x2="155" y2="170" stroke="#263a54" stroke-width="3"/>
+<line x1="155" x2="1155" y1="610.0" y2="610.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="617.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">0</text>
+<line x1="155" x2="1155" y1="522.0" y2="522.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="529.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">9</text>
+<line x1="155" x2="1155" y1="434.0" y2="434.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="441.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">18</text>
+<line x1="155" x2="1155" y1="346.0" y2="346.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="353.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">27</text>
+<line x1="155" x2="1155" y1="258.0" y2="258.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="265.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">36</text>
+<line x1="155" x2="1155" y1="170.0" y2="170.0" stroke="#e4eaf0" stroke-width="2"/>
+<text x="131" y="177.0" text-anchor="end" font-family="Arial,sans-serif" font-size="21" fill="#3c4d62">45</text>
+<rect x="212.0" y="209.1" width="136" height="400.9" rx="8" fill="#167e8a"/>
+<text x="280.0" y="197.1" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">41</text>
+<text x="280.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">10</text>
+<rect x="462.0" y="336.2" width="136" height="273.8" rx="8" fill="#167e8a"/>
+<text x="530.0" y="324.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">28</text>
+<text x="530.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">20</text>
+<rect x="712.0" y="424.2" width="136" height="185.8" rx="8" fill="#167e8a"/>
+<text x="780.0" y="412.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">19</text>
+<text x="780.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">30</text>
+<rect x="962.0" y="502.4" width="136" height="107.6" rx="8" fill="#167e8a"/>
+<text x="1030.0" y="490.4" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="26" fill="#183153">11</text>
+<text x="1030.0" y="654" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#263a54">40</text>
+<text x="650" y="720" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#243f61">Lamp distance (cm)</text>
+<text transform="translate(44 380) rotate(-90)" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" fill="#243f61">Bubbles per minute</text>
+<text x="650" y="770" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#5b6b7f">BIO-R06-D06 · Static SVG · Source: original synthetic assessment data</text>
+</svg>
