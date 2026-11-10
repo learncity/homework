@@ -441,7 +441,7 @@ window.addEventListener('error', function (e) {
         : (p.state === 'in_progress' ? 'Started — carry on' : p.questions + ' questions, ' + p.minutes + ' min');
       return '<button class="paper" type="button" data-id="' + esc(a.assignmentId) + '" data-paper="' + which +
         '"' + (p.state === 'done' ? ' disabled' : '') + '>' +
-        '<span class="pname">' + esc(p.label) + ' \u00b7 ' + (which === 'theory' ? 'theory' : 'objective') + '</span>' +
+        '<span class="pname">' + esc(p.label) + ' \u00b7 ' + (which === 'objective' ? 'objective' : 'theory') + '</span>' +
         '<span class="pmeta">' + esc(state) + '</span></button>';
     }
 
@@ -449,10 +449,11 @@ window.addEventListener('error', function (e) {
       '<span class="top"><span class="kicker">' + esc(a.board + ' ' + a.subject + ' exam') + '</span>' +
       '<span class="tag ' + tag + '">' + esc(label) + '</span></span>' +
       '<span class="ttl">Full paper, whole syllabus</span>' +
-      '<span class="meta">Due ' + esc(when) + ' · both papers</span>' +
+      '<span class="meta">Due ' + esc(when) + ' · ' + (a.papers.theory2 ? 'all three papers' : 'both papers') + '</span>' +
       (a.notInPortal ? '<span class="meta">' + esc(notInPortalText(a.notInPortal)) + '</span>' : '') +
       '<div class="papers">' + paperBtn(a.papers.objective, 'objective') +
-      paperBtn(a.papers.theory, 'theory') + '</div></div>';
+      paperBtn(a.papers.theory, 'theory') +
+      (a.papers.theory2 ? paperBtn(a.papers.theory2, 'theory2') : '') + '</div></div>';
   }
 
   function openAssignment(btn) {
@@ -545,13 +546,28 @@ window.addEventListener('error', function (e) {
     if (!t) {
       $('examTheoryBtn').classList.add('hidden');
       $('examTheoryNote').textContent = '';
+      $('examTheory2Btn').classList.add('hidden');
+      $('examTheory2Note').classList.add('hidden');
       return;
     }
     $('examTheoryBtn').classList.remove('hidden');
     $('examTheoryBtn').disabled = !t.ready;
     $('examTheoryBtn').textContent = t.label + ' \u2014 theory';
-    $('examTheoryNote').textContent = t.ready
-      ? t.questions + ' questions in ' + t.minutes + ' minutes. You write on paper; the model answers are shown when you finish.'
+    $('examTheoryNote').textContent = theoryNote(t);
+    /* Geography has a second written paper; every other subject hides it. */
+    var t2 = b.theory2;
+    $('examTheory2Btn').classList.toggle('hidden', !t2);
+    $('examTheory2Note').classList.toggle('hidden', !t2);
+    if (t2) {
+      $('examTheory2Btn').disabled = !t2.ready;
+      $('examTheory2Btn').textContent = t2.label + ' \u2014 theory';
+      $('examTheory2Note').textContent = theoryNote(t2);
+    }
+  }
+
+  function theoryNote(t) {
+    return t.ready
+      ? t.questions + ' questions in ' + t.minutes + ' minutes. You write on paper; the answers are shown when you finish.'
       : 'Not enough written tasks have been released for a full theory paper yet.';
   }
 
@@ -938,9 +954,12 @@ window.addEventListener('error', function (e) {
     /* Said plainly, because a grade from half an exam reads far better or worse
        than the real thing. */
     if (r.objectiveOnly) {
-      html += '<div class="banner warn">This grade is for the objective paper only.' +
-        (r.theoryMarks ? ' ' + esc(r.theoryLabel || 'The theory paper') + ' is worth ' + r.theoryMarks +
-          ' marks, so your real grade depends on it too.' : ' Your real grade depends on the theory paper too.') +
+      var still = r.theoryPapers && r.theoryPapers.length > 1
+        ? ' ' + r.theoryPapers.map(function (p) { return esc(p.label) + ' (' + p.marks + ' marks)'; }).join(' and ') +
+          ' are still to come, so your real grade depends on them too.'
+        : (r.theoryMarks ? ' ' + esc(r.theoryLabel || 'The theory paper') + ' is worth ' + r.theoryMarks +
+          ' marks, so your real grade depends on it too.' : ' Your real grade depends on the theory paper too.');
+      html += '<div class="banner warn">This grade is for the objective paper only.' + still +
         (r.notInPortal ? ' ' + esc(capFirst(r.notInPortal)) + ' is not in the portal, so it is not in this grade either.' : '') + '</div>';
     }
     /* Appended, not assigned: an over-time paper that also missed its points
@@ -1057,7 +1076,10 @@ window.addEventListener('error', function (e) {
       attemptId: SELF.attempt.attemptId, questionId: q.id, rating: ''
     }, function (r) {
       if (!r.success) { say('selfMsg', 'error', r.error); $('revealBtn').disabled = false; return; }
-      var html = '<div class="explain"><p><b>Model answer</b></p><p>' + esc(r.modelAnswer) + '</p>';
+      /* Geography's written tasks come with a mark scheme and no model answer;
+         an empty "Model answer" heading would read as something missing. */
+      var html = '<div class="explain">' +
+        (r.modelAnswer ? '<p><b>Model answer</b></p><p>' + esc(r.modelAnswer) + '</p>' : '');
       if (r.workedSolution) html += '<p><b>Working</b></p><p>' + esc(r.workedSolution) + '</p>';
       if (r.markScheme) html += '<p><b>How marks are given</b></p><p>' + esc(r.markScheme) + '</p>';
       if (r.commonError) html += '<p><b>Watch out for:</b> ' + esc(r.commonError) + '</p>';
@@ -1093,7 +1115,8 @@ window.addEventListener('error', function (e) {
       var paper = e.target.closest ? e.target.closest('.paper') : null;
       if (paper) {
         var id = paper.getAttribute('data-id');
-        if (paper.getAttribute('data-paper') === 'theory') startTheoryPaper({ assignmentId: id });
+        var which = paper.getAttribute('data-paper');
+        if (which === 'theory' || which === 'theory2') startTheoryPaper({ assignmentId: id, paper: which });
         else startExamPaper({ assignmentId: id });
         return;
       }
@@ -1120,6 +1143,10 @@ window.addEventListener('error', function (e) {
     $('examTheoryBtn').addEventListener('click', function () {
       if (!window.confirm('Get paper and a pen first \u2014 you write your answers by hand. Start the clock now?')) return;
       startTheoryPaper({ board: BOARD, subject: SUBJECT || undefined });
+    });
+    $('examTheory2Btn').addEventListener('click', function () {
+      if (!window.confirm('Get paper and a pen first \u2014 you write your answers by hand. Start the clock now?')) return;
+      startTheoryPaper({ board: BOARD, subject: SUBJECT || undefined, paper: 'theory2' });
     });
     $('thFinishBtn').addEventListener('click', finishTheory);
     $('thPrintBtn').addEventListener('click', function () { window.print(); });
