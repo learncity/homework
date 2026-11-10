@@ -521,16 +521,22 @@ function loadExamBlueprint() {
 }
 
 function blueprintHtml(r) {
-  const o = r.objective, t = r.theory;
+  const o = r.objective, t = r.theory, t2 = r.theory2;
+  const writtenStats = function (w) {
+    return w ? '<div class="stat"><b>' + w.questions + '</b><span>' + esc(w.label) + ' questions</span></div>' +
+      '<div class="stat"><b>' + w.minutes + '</b><span>' + esc(w.label) + ' minutes</span></div>' +
+      '<div class="stat"><b>' + w.marks + '</b><span>' + esc(w.label) + ' marks</span></div>' : '';
+  };
   let html = '<div class="stats">' +
     '<div class="stat"><b>' + o.questions + '</b><span>' + esc(o.label) + ' questions</span></div>' +
     '<div class="stat"><b>' + o.minutes + '</b><span>minutes</span></div>' +
     '<div class="stat"><b>' + o.marks + '</b><span>marks</span></div>' +
-    (t ? '<div class="stat"><b>' + t.questions + '</b><span>' + esc(t.label) + ' questions</span></div>' +
-         '<div class="stat"><b>' + t.minutes + '</b><span>theory minutes</span></div>' +
-         '<div class="stat"><b>' + t.marks + '</b><span>theory marks</span></div>' : '') +
+    writtenStats(t) + writtenStats(t2) +
     '</div>';
-  html += '<p class="muted">The objective paper is marked by the portal. The theory paper is shown on the clock, written on paper and handed to you; type the mark into the class report afterwards and the portal shows a combined grade.</p>';
+  html += t2
+    ? '<p class="muted">The objective paper is marked by the portal. ' + esc(t.label) + ' and ' + esc(t2.label) +
+      ' are each shown on the clock, written on paper and handed to you; type both marks into the class report afterwards and the portal shows a combined grade.</p>'
+    : '<p class="muted">The objective paper is marked by the portal. The theory paper is shown on the clock, written on paper and handed to you; type the mark into the class report afterwards and the portal shows a combined grade.</p>';
   /* Said before the exam is set, not only on the report, so nobody reads the
      combined grade as the whole Physics result. */
   if (o.notInPortal) html += '<p class="muted"><b>Not in the portal:</b> ' + esc(o.notInPortal) +
@@ -551,19 +557,27 @@ function blueprintHtml(r) {
     '<tr><td><b>Total</b></td><td><b>' + o.outcomesReady + '</b></td><td><b>' + o.questions +
     '</b></td><td><b>' + o.available + '</b></td></tr>' +
     '</tbody></table></div>';
-  if (t && t.note) html += '<p class="muted"><b>' + esc(t.label) + ':</b> ' + esc(t.note) + '</p>';
+  /* Geography's two written papers each draw from their own parts, so say
+     which, or the split between them is invisible until a pupil sits them. */
+  [t, t2].forEach(function (w) {
+    if (!w) return;
+    const from = t2 && w.rows && w.rows.length
+      ? ' Drawn from: ' + w.rows.map(function (x) { return x.domain; }).join(', ') + '.' : '';
+    if (w.note || from) html += '<p class="muted"><b>' + esc(w.label) + ':</b> ' + esc((w.note || '') + from) + '</p>';
+  });
   return html;
 }
 
 /* The mark a teacher has worked out on paper. One number per pupil, out of the
    theory paper's own total. */
-function saveTheoryScore(btn, studentId) {
-  const box = document.querySelector('[data-theory="' + studentId + '"]');
+function saveTheoryScore(btn, studentId, paper) {
+  paper = paper === 'theory2' ? 'theory2' : 'theory';
+  const box = document.querySelector('[data-theory="' + studentId + '"][data-paper="' + paper + '"]');
   if (!box) return;
   const raw = String(box.value).trim();
   btn.disabled = true;
   msg('repMsg', '', 'Saving the mark...');
-  call('enterTheoryScore', { assignmentId: $('repAssignment').value, studentId: studentId, score: raw })
+  call('enterTheoryScore', { assignmentId: $('repAssignment').value, studentId: studentId, score: raw, paper: paper })
     .then(function (r) {
       btn.disabled = false;
       if (!r || !r.success) { msg('repMsg', 'error', (r && r.error) || 'Could not save the mark.'); return; }
@@ -625,16 +639,21 @@ function loadClassReport(after) {
 
     const isExam = r.mode === 'Exam';
     const theoryMarks = isExam && r.papers && r.papers.theory ? r.papers.theory.marks : 0;
+    const t2 = isExam && r.papers && r.papers.theory2 ? r.papers.theory2 : null;
+    const t1Label = isExam && r.papers && r.papers.theory ? r.papers.theory.label : 'Theory';
     html += '<h3>Pupil by pupil</h3>' +
       '<p class="muted">The point for handing in on time is given automatically. The extra ' +
       'two are yours to give, after reading the work, when it is of an appreciable standard.' +
-      (isExam ? ' Type each pupil\'s theory mark out of ' + theoryMarks +
+      (isExam && t2 ? ' Type each pupil\'s ' + esc(t1Label) + ' mark out of ' + theoryMarks + ' and ' + esc(t2.label) +
+        ' mark out of ' + t2.marks + ' once you have marked their papers; the combined grade appears when both are in.' : '') +
+      (isExam && !t2 ? ' Type each pupil\'s theory mark out of ' + theoryMarks +
         ' once you have marked their paper, and the combined grade appears beside it.' : '') +
       (isExam && r.papers && r.papers.notInPortal ? ' ' + esc(r.papers.notInPortal.charAt(0).toUpperCase() +
         r.papers.notInPortal.slice(1)) + ' is not in the portal, so the combined grade leaves it out.' : '') + '</p>' +
       '<div class="tableWrap"><table>' +
       '<thead><tr><th>Pupil</th><th>State</th><th>' + (isExam ? 'Objective' : 'Score') + '</th>' +
-      (isExam ? '<th>Theory mark</th><th>Combined</th>' : '') +
+      (isExam ? (t2 ? '<th>' + esc(t1Label) + ' mark</th><th>' + esc(t2.label) + ' mark</th>' : '<th>Theory mark</th>') +
+        '<th>Combined</th>' : '') +
       '<th>On time</th><th>Auto</th>' +
       '<th>Quality</th>' + (isExam ? '' : '<th>Retries</th>') + '<th>Handed in</th></tr></thead><tbody>' +
       r.students.map(function (x) {
@@ -651,16 +670,21 @@ function loadClassReport(after) {
         }
         let examCells = '';
         if (isExam) {
-          const val = (x.theoryScore === null || x.theoryScore === undefined) ? '' : x.theoryScore;
-          examCells = '<td class="theoryCell"><input type="number" min="0" max="' + theoryMarks +
-            '" data-theory="' + esc(x.studentId) + '" value="' + esc(val) + '" placeholder="/' + theoryMarks + '">' +
-            '<button class="small" data-act="theory" data-id="' + esc(x.studentId) + '">Save</button>' +
-            (x.theoryMarkedBy ? '<span class="muted">' + esc(x.theoryMarkedBy) + '</span>' : '') + '</td>' +
+          const markCell = function (paper, score, marks, by) {
+            const val = (score === null || score === undefined) ? '' : score;
+            return '<td class="theoryCell"><input type="number" min="0" max="' + marks +
+              '" data-theory="' + esc(x.studentId) + '" data-paper="' + paper + '" value="' + esc(val) +
+              '" placeholder="/' + marks + '">' +
+              '<button class="small" data-act="theory" data-paper="' + paper + '" data-id="' + esc(x.studentId) + '">Save</button>' +
+              (by ? '<span class="muted">' + esc(by) + '</span>' : '') + '</td>';
+          };
+          examCells = markCell('theory', x.theoryScore, theoryMarks, x.theoryMarkedBy) +
+            (t2 ? markCell('theory2', x.theory2Score, t2.marks, x.theory2MarkedBy) : '') +
             '<td>' + (x.combined
               ? '<b>' + esc(x.combined.grade) + '</b> ' + x.combined.percent + '%<br>' +
                 '<span class="muted">' + x.combined.objectiveMark + ' + ' + x.combined.theoryMark +
-                ' of ' + x.combined.totalMarks + '</span>'
-              : '<span class="muted">needs the theory mark</span>') + '</td>';
+                (t2 ? ' + ' + x.combined.theory2Mark : '') + ' of ' + x.combined.totalMarks + '</span>'
+              : '<span class="muted">' + (t2 ? 'needs both theory marks' : 'needs the theory mark') + '</span>') + '</td>';
         }
         return '<tr data-row="' + esc(x.studentId) + '"><td>' + esc(x.name) +
           '<br><span class="muted">' + esc(x.studentId) + '</span></td>' +
@@ -925,7 +949,7 @@ function wire() {
   $('repLoadBtn').addEventListener('click', function () { loadClassReport(); });
   $('repBody').addEventListener('click', function (e) {
     const t = e.target.closest ? e.target.closest('[data-act="theory"]') : null;
-    if (t) { saveTheoryScore(t, t.getAttribute('data-id')); return; }
+    if (t) { saveTheoryScore(t, t.getAttribute('data-id'), t.getAttribute('data-paper')); return; }
     const b = e.target.closest ? e.target.closest('[data-act="merit"]') : null;
     if (b) giveMerit(b, b.getAttribute('data-id'), b.getAttribute('data-name'));
   });
@@ -936,7 +960,7 @@ function wire() {
     if (!box) return;
     e.preventDefault();
     const btn = box.parentNode.querySelector('[data-act="theory"]');
-    if (btn) saveTheoryScore(btn, box.getAttribute('data-theory'));
+    if (btn) saveTheoryScore(btn, box.getAttribute('data-theory'), box.getAttribute('data-paper'));
   });
   $('pracLoadBtn').addEventListener('click', loadPracticeReport);
 
