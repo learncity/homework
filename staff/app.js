@@ -533,14 +533,18 @@ function blueprintHtml(r) {
     '<div class="stat"><b>' + o.marks + '</b><span>marks</span></div>' +
     writtenStats(t) + writtenStats(t2) +
     '</div>';
-  html += t2
+  /* Literature: the portal can set none of the written papers, so the grade is
+     this paper's own and nothing is typed in afterwards. */
+  html += !t
+    ? '<p class="muted">The paper is marked by the portal and its grade appears in the class report straight away. There is no written paper in the portal for this subject.</p>'
+    : t2
     ? '<p class="muted">The objective paper is marked by the portal. ' + esc(t.label) + ' and ' + esc(t2.label) +
       ' are each shown on the clock, written on paper and handed to you; type both marks into the class report afterwards and the portal shows a combined grade.</p>'
     : '<p class="muted">The objective paper is marked by the portal. The theory paper is shown on the clock, written on paper and handed to you; type the mark into the class report afterwards and the portal shows a combined grade.</p>';
   /* Said before the exam is set, not only on the report, so nobody reads the
      combined grade as the whole Physics result. */
   if (o.notInPortal) html += '<p class="muted"><b>Not in the portal:</b> ' + esc(o.notInPortal) +
-    '. The combined grade leaves it out.</p>';
+    (t ? '. The combined grade leaves it out.</p>' : '. The grade leaves it out.</p>');
   html += '<h3>How ' + esc(o.label) + ' is made up</h3>' +
     /* Biology's parts carry set weights rather than outcome counts, and the
        Topics column would otherwise read as the reason for the split. */
@@ -641,18 +645,23 @@ function loadClassReport(after) {
     const theoryMarks = isExam && r.papers && r.papers.theory ? r.papers.theory.marks : 0;
     const t2 = isExam && r.papers && r.papers.theory2 ? r.papers.theory2 : null;
     const t1Label = isExam && r.papers && r.papers.theory ? r.papers.theory.label : 'Theory';
+    /* An exam with no written paper in the portal (Literature) has no mark box;
+       its grade is the objective paper's own. */
+    const noWritten = isExam && r.papers && !r.papers.theory;
     html += '<h3>Pupil by pupil</h3>' +
       '<p class="muted">The point for handing in on time is given automatically. The extra ' +
       'two are yours to give, after reading the work, when it is of an appreciable standard.' +
       (isExam && t2 ? ' Type each pupil\'s ' + esc(t1Label) + ' mark out of ' + theoryMarks + ' and ' + esc(t2.label) +
         ' mark out of ' + t2.marks + ' once you have marked their papers; the combined grade appears when both are in.' : '') +
-      (isExam && !t2 ? ' Type each pupil\'s theory mark out of ' + theoryMarks +
+      (isExam && !t2 && !noWritten ? ' Type each pupil\'s theory mark out of ' + theoryMarks +
         ' once you have marked their paper, and the combined grade appears beside it.' : '') +
+      (noWritten ? ' There is no written paper in the portal for this subject, so the grade is the objective paper\'s own.' : '') +
       (isExam && r.papers && r.papers.notInPortal ? ' ' + esc(r.papers.notInPortal.charAt(0).toUpperCase() +
-        r.papers.notInPortal.slice(1)) + ' is not in the portal, so the combined grade leaves it out.' : '') + '</p>' +
+        r.papers.notInPortal.slice(1)) + ' is not in the portal, so the ' + (noWritten ? '' : 'combined ') + 'grade leaves it out.' : '') + '</p>' +
       '<div class="tableWrap"><table>' +
       '<thead><tr><th>Pupil</th><th>State</th><th>' + (isExam ? 'Objective' : 'Score') + '</th>' +
-      (isExam ? (t2 ? '<th>' + esc(t1Label) + ' mark</th><th>' + esc(t2.label) + ' mark</th>' : '<th>Theory mark</th>') +
+      (noWritten ? '<th>Grade</th>'
+        : isExam ? (t2 ? '<th>' + esc(t1Label) + ' mark</th><th>' + esc(t2.label) + ' mark</th>' : '<th>Theory mark</th>') +
         '<th>Combined</th>' : '') +
       '<th>On time</th><th>Auto</th>' +
       '<th>Quality</th>' + (isExam ? '' : '<th>Retries</th>') + '<th>Handed in</th></tr></thead><tbody>' +
@@ -669,7 +678,10 @@ function loadClassReport(after) {
           merit = '<span class="muted">–</span>';
         }
         let examCells = '';
-        if (isExam) {
+        if (noWritten) {
+          examCells = '<td>' + (x.combined ? '<b>' + esc(x.combined.grade) + '</b> ' + x.combined.percent + '%'
+            : '<span class="muted">–</span>') + '</td>';
+        } else if (isExam) {
           const markCell = function (paper, score, marks, by) {
             const val = (score === null || score === undefined) ? '' : score;
             return '<td class="theoryCell"><input type="number" min="0" max="' + marks +
