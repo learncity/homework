@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="550" viewBox="0 0 940 550" role="img" aria-labelledby="chartTitle chartDesc">
+<title id="chartTitle">Estimated real sector value added</title>
+<desc id="chartDesc">Fictional teaching dataset. Farm: 95 ₦ billion; Ind: 120 ₦ billion; Trade: 145 ₦ billion; ICT: 100 ₦ billion</desc>
+<rect width="940" height="550" fill="#ffffff"/>
+<text x="60" y="56" font-size="26" font-family="Arial" font-weight="bold" fill="#1F2A44">Estimated real sector value added</text>
+<text x="60" y="88" font-size="15" font-family="Arial" fill="#526077">Synthetic Economics classroom data • ₦ billion</text>
+<line x1="90" x2="855" y1="460.0" y2="460.0" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="465.0" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">0</text>
+<line x1="90" x2="855" y1="376.2" y2="376.2" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="381.2" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">43</text>
+<line x1="90" x2="855" y1="292.5" y2="292.5" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="297.5" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">86</text>
+<line x1="90" x2="855" y1="208.8" y2="208.8" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="213.8" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">128</text>
+<line x1="90" x2="855" y1="125.0" y2="125.0" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="130.0" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">171</text>
+<line x1="90" x2="855" y1="460" y2="460" stroke="#263B58" stroke-width="2"/>
+<rect x="115.0" y="274.0" width="100" height="186.0" rx="8" fill="#2373A8"/>
+<text x="165.0" y="262.0" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">95</text>
+<rect x="300.0" y="225.0" width="100" height="235.0" rx="8" fill="#2373A8"/>
+<text x="350.0" y="213.0" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">120</text>
+<rect x="485.0" y="176.1" width="100" height="283.9" rx="8" fill="#2373A8"/>
+<text x="535.0" y="164.1" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">145</text>
+<rect x="670.0" y="264.2" width="100" height="195.8" rx="8" fill="#2373A8"/>
+<text x="720.0" y="252.2" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">100</text>
+<text x="165.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">Farm</text>
+<text x="350.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">Ind</text>
+<text x="535.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">Trade</text>
+<text x="720.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">ICT</text>
+</svg>

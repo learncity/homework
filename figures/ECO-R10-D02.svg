@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="550" viewBox="0 0 940 550" role="img" aria-labelledby="chartTitle chartDesc">
+<title id="chartTitle">Community population registration</title>
+<desc id="chartDesc">Fictional teaching dataset. W1: 82 households; W2: 116 households; W3: 94 households; W4: 135 households</desc>
+<rect width="940" height="550" fill="#ffffff"/>
+<text x="60" y="56" font-size="26" font-family="Arial" font-weight="bold" fill="#1F2A44">Community population registration</text>
+<text x="60" y="88" font-size="15" font-family="Arial" fill="#526077">Synthetic Economics classroom data • households</text>
+<line x1="90" x2="855" y1="460.0" y2="460.0" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="465.0" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">0</text>
+<line x1="90" x2="855" y1="376.2" y2="376.2" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="381.2" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">40</text>
+<line x1="90" x2="855" y1="292.5" y2="292.5" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="297.5" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">80</text>
+<line x1="90" x2="855" y1="208.8" y2="208.8" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="213.8" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">119</text>
+<line x1="90" x2="855" y1="125.0" y2="125.0" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="130.0" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">159</text>
+<line x1="90" x2="855" y1="460" y2="460" stroke="#263B58" stroke-width="2"/>
+<rect x="115.0" y="287.6" width="100" height="172.4" rx="8" fill="#2373A8"/>
+<text x="165.0" y="275.6" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">82</text>
+<rect x="300.0" y="216.1" width="100" height="243.9" rx="8" fill="#2373A8"/>
+<text x="350.0" y="204.1" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">116</text>
+<rect x="485.0" y="262.3" width="100" height="197.7" rx="8" fill="#2373A8"/>
+<text x="535.0" y="250.3" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">94</text>
+<rect x="670.0" y="176.1" width="100" height="283.9" rx="8" fill="#2373A8"/>
+<text x="720.0" y="164.1" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">135</text>
+<text x="165.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W1</text>
+<text x="350.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W2</text>
+<text x="535.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W3</text>
+<text x="720.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W4</text>
+</svg>

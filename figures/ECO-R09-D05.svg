@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="550" viewBox="0 0 940 550" role="img" aria-labelledby="chartTitle chartDesc">
+<title id="chartTitle">Fictional food-basket weekly cost</title>
+<desc id="chartDesc">Fictional teaching dataset. W1: 125 ₦ thousand; W2: 132 ₦ thousand; W3: 143 ₦ thousand; W4: 139 ₦ thousand</desc>
+<rect width="940" height="550" fill="#ffffff"/>
+<text x="60" y="56" font-size="26" font-family="Arial" font-weight="bold" fill="#1F2A44">Fictional food-basket weekly cost</text>
+<text x="60" y="88" font-size="15" font-family="Arial" fill="#526077">Synthetic Economics classroom data • ₦ thousand</text>
+<line x1="90" x2="855" y1="460.0" y2="460.0" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="465.0" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">0</text>
+<line x1="90" x2="855" y1="376.2" y2="376.2" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="381.2" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">42</text>
+<line x1="90" x2="855" y1="292.5" y2="292.5" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="297.5" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">84</text>
+<line x1="90" x2="855" y1="208.8" y2="208.8" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="213.8" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">127</text>
+<line x1="90" x2="855" y1="125.0" y2="125.0" stroke="#E4EAF2" stroke-width="1"/>
+<text x="82" y="130.0" font-size="14" font-family="Arial" fill="#5C6778" text-anchor="end">169</text>
+<line x1="90" x2="855" y1="460" y2="460" stroke="#263B58" stroke-width="2"/>
+<polyline points="165.0,211.8 350.0,197.9 535.0,176.1 720.0,184.0" fill="none" stroke="#2373A8" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="165.0" cy="211.8" r="8" fill="#F2A900" stroke="#184C77" stroke-width="2"/>
+<text x="165.0" y="192.8" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">125</text>
+<circle cx="350.0" cy="197.9" r="8" fill="#F2A900" stroke="#184C77" stroke-width="2"/>
+<text x="350.0" y="178.9" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">132</text>
+<circle cx="535.0" cy="176.1" r="8" fill="#F2A900" stroke="#184C77" stroke-width="2"/>
+<text x="535.0" y="157.1" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">143</text>
+<circle cx="720.0" cy="184.0" r="8" fill="#F2A900" stroke="#184C77" stroke-width="2"/>
+<text x="720.0" y="165.0" font-size="19" font-family="Arial" text-anchor="middle" font-weight="bold" fill="#152A44">139</text>
+<text x="165.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W1</text>
+<text x="350.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W2</text>
+<text x="535.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W3</text>
+<text x="720.0" y="496" font-size="17" font-family="Arial" text-anchor="middle" fill="#21334C">W4</text>
+</svg>
