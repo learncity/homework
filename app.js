@@ -89,6 +89,24 @@ window.addEventListener('error', function (e) {
     return esc(v).replace(/\*\*([^*\n]+?)\*\*/g, '<b>$1</b>');
   }
 
+  /* A prompt with a blank line in it is a passage and then its question:
+     English comprehension and cloze, and every Literature question. The
+     passage is set apart in reading type, smaller than the question, so a line
+     of verse fits a phone. Verse and scripts are short lines, and one that is
+     still too long wraps indented under itself, so a reader can see where each
+     line of the poem really ends. Prose keeps ordinary paragraphs. */
+  function fmtPrompt(v) {
+    var s = String(v == null ? '' : v);
+    var cut = s.lastIndexOf('\n\n');
+    if (cut < 0) return fmt(s);
+    var lines = s.slice(0, cut).split('\n');
+    var verse = lines.filter(function (l) { return l; }).length >= 3 &&
+      lines.every(function (l) { return l.length <= 90; });
+    return '<div class="passage' + (verse ? ' verse' : '') + '">' + lines.map(function (l) {
+      return l ? '<span class="ln">' + fmt(l) + '</span>' : '<span class="gap"></span>';
+    }).join('') + '</div>' + fmt(s.slice(cut + 2));
+  }
+
   /* A question's diagram, if it has one. The id is checked again here so a bad
      sheet value can never become anything but a file name under figures/. */
   function figHtml(q) {
@@ -426,8 +444,9 @@ window.addEventListener('error', function (e) {
     }).join('');
   }
 
-  /* An exam is two papers under one card, so it cannot be a single button like
-     the other homework. Each paper is opened on its own. */
+  /* An exam is two or three papers under one card, so it cannot be a single
+     button like the other homework. Each paper is opened on its own. Literature
+     has only the one paper the portal can set. */
   function examCardHtml(a) {
     var when = prettyDate(a.due);
     var done = a.state === 'done';
@@ -448,11 +467,11 @@ window.addEventListener('error', function (e) {
     return '<div class="card hw exam ' + st + '">' +
       '<span class="top"><span class="kicker">' + esc(a.board + ' ' + a.subject + ' exam') + '</span>' +
       '<span class="tag ' + tag + '">' + esc(label) + '</span></span>' +
-      '<span class="ttl">Full paper, whole syllabus</span>' +
-      '<span class="meta">Due ' + esc(when) + ' · ' + (a.papers.theory2 ? 'all three papers' : 'both papers') + '</span>' +
+      '<span class="ttl">' + (a.papers.theory ? 'Full paper, whole syllabus' : 'Objective questions, whole syllabus') + '</span>' +
+      '<span class="meta">Due ' + esc(when) + ' · ' + (a.papers.theory2 ? 'all three papers' : a.papers.theory ? 'both papers' : 'one paper') + '</span>' +
       (a.notInPortal ? '<span class="meta">' + esc(notInPortalText(a.notInPortal)) + '</span>' : '') +
       '<div class="papers">' + paperBtn(a.papers.objective, 'objective') +
-      paperBtn(a.papers.theory, 'theory') +
+      (a.papers.theory ? paperBtn(a.papers.theory, 'theory') : '') +
       (a.papers.theory2 ? paperBtn(a.papers.theory2, 'theory2') : '') + '</div></div>';
   }
 
@@ -776,7 +795,7 @@ window.addEventListener('error', function (e) {
     var n = Q.questions.length;
     $('qProgress').textContent = 'Question ' + (Q.i + 1) + ' of ' + n;
     $('qTrack').style.width = Math.round(100 * (Q.i + 1) / n) + '%';
-    $('qPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt) + figHtml(q);
+    $('qPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmtPrompt(q.prompt) + figHtml(q);
 
     var picked = Q.answers[q.id] || '';
     $('qOptions').innerHTML = ['A', 'B', 'C', 'D'].filter(function (L) {
@@ -863,7 +882,7 @@ window.addEventListener('error', function (e) {
     $('thBody').innerHTML = r.questions.map(function (q, i) {
       return '<div class="card tq"><div class="tqHead"><b>Question ' + (i + 1) + '</b>' +
         '<span class="marks">' + esc(q.marks || '') + ' marks</span></div>' +
-        '<div class="tqPrompt">' + fmt(q.prompt) + figHtml(q) + '</div></div>';
+        '<div class="tqPrompt">' + fmtPrompt(q.prompt) + figHtml(q) + '</div></div>';
     }).join('');
     $('thFinishBtn').classList.remove('hidden');
     $('thExitBtn').classList.remove('hidden');
@@ -923,7 +942,7 @@ window.addEventListener('error', function (e) {
           if (a.workedSolution) ex += '<p><b>How to get there.</b> ' + fmt(a.workedSolution) + '</p>';
           return '<div class="card tq"><div class="tqHead"><b>Question ' + (i + 1) + '</b>' +
             '<span class="marks">' + esc(a.marks || '') + ' marks</span></div>' +
-            '<div class="tqPrompt">' + fmt(a.prompt) + figHtml(a) + '</div>' +
+            '<div class="tqPrompt">' + fmtPrompt(a.prompt) + figHtml(a) + '</div>' +
             (ex ? '<div class="explain">' + ex + '</div>' : '') + '</div>';
         }).join('');
         say('theoryMsg', 'ok', 'Mark your own work against these, honestly.');
@@ -953,7 +972,12 @@ window.addEventListener('error', function (e) {
     }
     /* Said plainly, because a grade from half an exam reads far better or worse
        than the real thing. */
-    if (r.objectiveOnly) {
+    if (r.objectiveOnly && r.theoryPapers && !r.theoryPapers.length) {
+      /* Literature: no written paper in the portal, so nothing is "still to
+         come" here; what is missing is the set-text part, said plainly. */
+      html += '<div class="banner warn">This grade covers only what the portal can set.' +
+        (r.notInPortal ? ' ' + esc(capFirst(r.notInPortal)) + ' is not in the portal, so your real grade depends on it too.' : '') + '</div>';
+    } else if (r.objectiveOnly) {
       var still = r.theoryPapers && r.theoryPapers.length > 1
         ? ' ' + r.theoryPapers.map(function (p) { return esc(p.label) + ' (' + p.marks + ' marks)'; }).join(' and ') +
           ' are still to come, so your real grade depends on them too.'
@@ -1022,7 +1046,7 @@ window.addEventListener('error', function (e) {
         if (x.commonError) ex += '<p><b>Watch out for:</b> ' + esc(x.commonError) + '</p>';
 
         return '<div class="review"><div class="q"><span class="n">Question ' + num + '</span><br>' +
-          fmt(q.prompt) + figHtml(q) + '</div>' + opts + '<div class="explain">' + ex + '</div></div>';
+          fmtPrompt(q.prompt) + figHtml(q) + '</div>' + opts + '<div class="explain">' + ex + '</div></div>';
       }).join('');
 
     show('Results');
@@ -1061,7 +1085,7 @@ window.addEventListener('error', function (e) {
     var q = SELF.questions[SELF.i], n = SELF.questions.length;
     $('sProgress').textContent = 'Question ' + (SELF.i + 1) + ' of ' + n;
     $('sTrack').style.width = Math.round(100 * (SELF.i + 1) / n) + '%';
-    $('sPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmt(q.prompt) + figHtml(q);
+    $('sPrompt').innerHTML = (q.topic ? '<span class="topic">' + esc(q.topic) + '</span>' : '') + fmtPrompt(q.prompt) + figHtml(q);
     $('sAnswer').classList.add('hidden');
     $('sAnswer').innerHTML = '';
     $('sRate').classList.add('hidden');

@@ -208,6 +208,14 @@ button:disabled { opacity: .5; cursor: default; }
    phone sideways. Only question text breaks this way; labels and buttons don't. */
 .prompt, .opt, .explain, .tqPrompt { overflow-wrap: anywhere; }
 .prompt { font-size: 22px; font-weight: 600; line-height: 1.5; color: var(--ink); margin-bottom: 20px; white-space: pre-line; }
+/* A passage above its question: reading type, set apart; see fmtPrompt. */
+.passage { font-size: 18px; font-weight: 400; line-height: 1.55; color: var(--ink); white-space: normal;
+  background: var(--page); border-left: 4px solid var(--line); border-radius: 0 8px 8px 0;
+  padding: 12px 14px; margin-bottom: 16px; }
+.passage .ln { display: block; }
+.passage.verse .ln { padding-left: 1.2em; text-indent: -1.2em; }
+.passage .gap { display: block; height: .75em; }
+.passage b { font-weight: 700; }
 .prompt .topic { display: block; font-size: 14px; font-weight: 800; color: var(--indigo-d); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
 
 .opt {
@@ -316,6 +324,7 @@ button:disabled { opacity: .5; cursor: default; }
   .card { border: 0; padding: 0 0 6pt; margin: 0 0 10pt; break-inside: avoid; }
   .tq { border-bottom: 1px solid #ccc; }
   .tqPrompt { font-size: 12pt; }
+  .passage { font-size: 11pt; background: none; padding: 0 0 0 8pt; }
   #theoryHead { border-bottom: 2px solid #000; margin-bottom: 14pt; }
   .fig { border: 0; max-width: 60%; }
 }
