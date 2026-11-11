@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Average unit cost across five output batches</title>
+<desc id="desc">Synthetic Economics class data: 40 210 ₦ per unit, 50 195 ₦ per unit, 60 181 ₦ per unit, 70 188 ₦ per unit, 80 204 ₦ per unit</desc>
+<rect width="900" height="560" fill="#FFFFFF"/>
+<text x="56" y="60" font-family="Arial" font-size="27" fill="#102C50" font-weight="bold">Average unit cost across five output batches</text>
+<text x="56" y="95" font-size="16" font-family="Arial" fill="#555">Illustrative classroom data — not official statistics · Units: ₦ per unit</text>
+<line x1="120" y1="420.0" x2="810" y2="420.0" stroke="#E2E8F0"/>
+<text x="106" y="425.0" font-family="Arial" text-anchor="end" font-size="15">0</text>
+<line x1="120" y1="361.6" x2="810" y2="361.6" stroke="#E2E8F0"/>
+<text x="106" y="366.6" font-family="Arial" text-anchor="end" font-size="15">44</text>
+<line x1="120" y1="303.2" x2="810" y2="303.2" stroke="#E2E8F0"/>
+<text x="106" y="308.2" font-family="Arial" text-anchor="end" font-size="15">88</text>
+<line x1="120" y1="244.8" x2="810" y2="244.8" stroke="#E2E8F0"/>
+<text x="106" y="249.8" font-family="Arial" text-anchor="end" font-size="15">132</text>
+<line x1="120" y1="186.4" x2="810" y2="186.4" stroke="#E2E8F0"/>
+<text x="106" y="191.4" font-family="Arial" text-anchor="end" font-size="15">176</text>
+<line x1="120" y1="128.0" x2="810" y2="128.0" stroke="#E2E8F0"/>
+<text x="106" y="133.0" font-family="Arial" text-anchor="end" font-size="15">220</text>
+<line x1="120" y1="420" x2="810" y2="420" stroke="#334155" stroke-width="2"/>
+<polyline points="189.0,141.3 327.0,161.2 465.0,179.8 603.0,170.5 741.0,149.2" fill="none" stroke="#287D92" stroke-width="4"/>
+<circle cx="189.0" cy="141.3" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="189.0" y="128.3" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">210</text>
+<circle cx="327.0" cy="161.2" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="327.0" y="148.2" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">195</text>
+<circle cx="465.0" cy="179.8" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="465.0" y="166.8" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">181</text>
+<circle cx="603.0" cy="170.5" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="603.0" y="157.5" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">188</text>
+<circle cx="741.0" cy="149.2" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="741.0" y="136.2" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">204</text>
+<text x="189.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">40</text>
+<text x="327.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">50</text>
+<text x="465.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">60</text>
+<text x="603.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">70</text>
+<text x="741.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">80</text>
+<text x="465" y="500" text-anchor="middle" font-family="Arial" font-size="17">Batch</text>
+</svg>

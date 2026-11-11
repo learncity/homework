@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Teaching-only consumer basket index</title>
+<desc id="desc">Synthetic Economics class data: Y1 100 index points, Y2 106 index points, Y3 113 index points, Y4 129 index points, Y5 137 index points</desc>
+<rect width="900" height="560" fill="#FFFFFF"/>
+<text x="56" y="60" font-family="Arial" font-size="27" fill="#102C50" font-weight="bold">Teaching-only consumer basket index</text>
+<text x="56" y="95" font-size="16" font-family="Arial" fill="#555">Illustrative classroom data — not official statistics · Units: index points</text>
+<line x1="120" y1="420.0" x2="810" y2="420.0" stroke="#E2E8F0"/>
+<text x="106" y="425.0" font-family="Arial" text-anchor="end" font-size="15">0</text>
+<line x1="120" y1="361.6" x2="810" y2="361.6" stroke="#E2E8F0"/>
+<text x="106" y="366.6" font-family="Arial" text-anchor="end" font-size="15">30</text>
+<line x1="120" y1="303.2" x2="810" y2="303.2" stroke="#E2E8F0"/>
+<text x="106" y="308.2" font-family="Arial" text-anchor="end" font-size="15">60</text>
+<line x1="120" y1="244.8" x2="810" y2="244.8" stroke="#E2E8F0"/>
+<text x="106" y="249.8" font-family="Arial" text-anchor="end" font-size="15">90</text>
+<line x1="120" y1="186.4" x2="810" y2="186.4" stroke="#E2E8F0"/>
+<text x="106" y="191.4" font-family="Arial" text-anchor="end" font-size="15">120</text>
+<line x1="120" y1="128.0" x2="810" y2="128.0" stroke="#E2E8F0"/>
+<text x="106" y="133.0" font-family="Arial" text-anchor="end" font-size="15">150</text>
+<line x1="120" y1="420" x2="810" y2="420" stroke="#334155" stroke-width="2"/>
+<polyline points="189.0,225.3 327.0,213.7 465.0,200.0 603.0,168.9 741.0,153.3" fill="none" stroke="#287D92" stroke-width="4"/>
+<circle cx="189.0" cy="225.3" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="189.0" y="212.3" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">100</text>
+<circle cx="327.0" cy="213.7" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="327.0" y="200.7" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">106</text>
+<circle cx="465.0" cy="200.0" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="465.0" y="187.0" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">113</text>
+<circle cx="603.0" cy="168.9" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="603.0" y="155.9" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">129</text>
+<circle cx="741.0" cy="153.3" r="7" fill="#D38B27" stroke="#FFF" stroke-width="2"/>
+<text x="741.0" y="140.3" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">137</text>
+<text x="189.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">Y1</text>
+<text x="327.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">Y2</text>
+<text x="465.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">Y3</text>
+<text x="603.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">Y4</text>
+<text x="741.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">Y5</text>
+<text x="465" y="500" text-anchor="middle" font-family="Arial" font-size="17">Year</text>
+</svg>

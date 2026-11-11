@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Modelled income impact at five investment levels</title>
+<desc id="desc">Synthetic Economics class data: I1 20 ₦ million, I2 32 ₦ million, I3 48 ₦ million, I4 40 ₦ million, I5 64 ₦ million</desc>
+<rect width="900" height="560" fill="#FFFFFF"/>
+<text x="56" y="60" font-family="Arial" font-size="27" fill="#102C50" font-weight="bold">Modelled income impact at five investment levels</text>
+<text x="56" y="95" font-size="16" font-family="Arial" fill="#555">Illustrative classroom data — not official statistics · Units: ₦ million</text>
+<line x1="120" y1="420.0" x2="810" y2="420.0" stroke="#E2E8F0"/>
+<text x="106" y="425.0" font-family="Arial" text-anchor="end" font-size="15">0</text>
+<line x1="120" y1="361.6" x2="810" y2="361.6" stroke="#E2E8F0"/>
+<text x="106" y="366.6" font-family="Arial" text-anchor="end" font-size="15">16</text>
+<line x1="120" y1="303.2" x2="810" y2="303.2" stroke="#E2E8F0"/>
+<text x="106" y="308.2" font-family="Arial" text-anchor="end" font-size="15">32</text>
+<line x1="120" y1="244.8" x2="810" y2="244.8" stroke="#E2E8F0"/>
+<text x="106" y="249.8" font-family="Arial" text-anchor="end" font-size="15">48</text>
+<line x1="120" y1="186.4" x2="810" y2="186.4" stroke="#E2E8F0"/>
+<text x="106" y="191.4" font-family="Arial" text-anchor="end" font-size="15">64</text>
+<line x1="120" y1="128.0" x2="810" y2="128.0" stroke="#E2E8F0"/>
+<text x="106" y="133.0" font-family="Arial" text-anchor="end" font-size="15">80</text>
+<line x1="120" y1="420" x2="810" y2="420" stroke="#334155" stroke-width="2"/>
+<rect x="155.9" y="347.0" width="66.2" height="73.0" fill="#287D92" rx="3"/>
+<text x="189.0" y="337.0" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">20</text>
+<rect x="293.9" y="303.2" width="66.2" height="116.8" fill="#287D92" rx="3"/>
+<text x="327.0" y="293.2" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">32</text>
+<rect x="431.9" y="244.8" width="66.2" height="175.2" fill="#287D92" rx="3"/>
+<text x="465.0" y="234.8" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">48</text>
+<rect x="569.9" y="274.0" width="66.2" height="146.0" fill="#287D92" rx="3"/>
+<text x="603.0" y="264.0" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">40</text>
+<rect x="707.9" y="186.4" width="66.2" height="233.6" fill="#287D92" rx="3"/>
+<text x="741.0" y="176.4" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">64</text>
+<text x="189.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">I1</text>
+<text x="327.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">I2</text>
+<text x="465.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">I3</text>
+<text x="603.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">I4</text>
+<text x="741.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">I5</text>
+<text x="465" y="500" text-anchor="middle" font-family="Arial" font-size="17">Investment level</text>
+</svg>

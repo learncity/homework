@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" role="img">
+<title>Price index</title><desc>Consumer price index (previous base=100); supplied values are printed beside their marks.</desc>
+<rect width="900" height="530" fill="#ffffff"/>
+<rect x="0" y="0" width="900" height="11" fill="#182b48"/>
+<text x="54" y="68" font-size="31" font-weight="700" fill="#192b43" font-family="Arial">Price index</text>
+<text x="54" y="104" font-size="19" fill="#52667a" font-family="Arial">Consumer price index (previous base=100)</text>
+<rect x="99" y="219.78" width="90" height="222.22" rx="4" fill="#2667a5"/>
+<text x="144" y="206.78" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">100</text>
+<text x="144" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">2022</text>
+<rect x="293" y="208.67" width="90" height="233.33" rx="4" fill="#2667a5"/>
+<text x="338" y="195.67" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">105</text>
+<text x="338" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">2023</text>
+<rect x="487" y="195.33" width="90" height="246.67" rx="4" fill="#2667a5"/>
+<text x="532" y="182.33" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">111</text>
+<text x="532" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">2024</text>
+<rect x="681" y="182.00" width="90" height="260.00" rx="4" fill="#2667a5"/>
+<text x="726" y="169.00" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">117</text>
+<text x="726" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">2025</text>
+<line x1="75" y1="442" x2="841" y2="442" stroke="#52667a" stroke-width="2"/>
+<text x="54" y="504" font-size="15" fill="#64748b" font-family="Arial">Economics · Synthetic instructional dataset</text></svg>

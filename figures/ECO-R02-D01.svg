@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" role="img">
+<title>Savings by month</title><desc>Household emergency savings (₦ thousand); supplied values are printed beside their marks.</desc>
+<rect width="900" height="530" fill="#ffffff"/>
+<rect x="0" y="0" width="900" height="11" fill="#182b48"/>
+<text x="54" y="68" font-size="31" font-weight="700" fill="#192b43" font-family="Arial">Savings by month</text>
+<text x="54" y="104" font-size="19" fill="#52667a" font-family="Arial">Household emergency savings (₦ thousand)</text>
+<rect x="99" y="342.95" width="90" height="99.05" rx="4" fill="#2667a5"/>
+<text x="144" y="329.95" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">8</text>
+<text x="144" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">Jan</text>
+<rect x="293" y="293.43" width="90" height="148.57" rx="4" fill="#2667a5"/>
+<text x="338" y="280.43" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">12</text>
+<text x="338" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">Feb</text>
+<rect x="487" y="256.29" width="90" height="185.71" rx="4" fill="#2667a5"/>
+<text x="532" y="243.29" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">15</text>
+<text x="532" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">Mar</text>
+<rect x="681" y="182.00" width="90" height="260.00" rx="4" fill="#2667a5"/>
+<text x="726" y="169.00" font-size="23" text-anchor="middle" font-weight="700" fill="#122238" font-family="Arial">21</text>
+<text x="726" y="476" font-size="19" text-anchor="middle" fill="#1f2937" font-family="Arial">Apr</text>
+<line x1="75" y1="442" x2="841" y2="442" stroke="#52667a" stroke-width="2"/>
+<text x="54" y="504" font-size="15" fill="#64748b" font-family="Arial">Economics · Synthetic instructional dataset</text></svg>

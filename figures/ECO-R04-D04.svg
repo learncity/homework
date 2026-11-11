@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Agricultural harvest from five cooperatives</title>
+<desc id="desc">Synthetic Economics class data: C1 15 tonnes, C2 22 tonnes, C3 18 tonnes, C4 31 tonnes, C5 26 tonnes</desc>
+<rect width="900" height="560" fill="#FFFFFF"/>
+<text x="56" y="60" font-family="Arial" font-size="27" fill="#102C50" font-weight="bold">Agricultural harvest from five cooperatives</text>
+<text x="56" y="95" font-size="16" font-family="Arial" fill="#555">Illustrative classroom data — not official statistics · Units: tonnes</text>
+<line x1="120" y1="420.0" x2="810" y2="420.0" stroke="#E2E8F0"/>
+<text x="106" y="425.0" font-family="Arial" text-anchor="end" font-size="15">0</text>
+<line x1="120" y1="361.6" x2="810" y2="361.6" stroke="#E2E8F0"/>
+<text x="106" y="366.6" font-family="Arial" text-anchor="end" font-size="15">10</text>
+<line x1="120" y1="303.2" x2="810" y2="303.2" stroke="#E2E8F0"/>
+<text x="106" y="308.2" font-family="Arial" text-anchor="end" font-size="15">20</text>
+<line x1="120" y1="244.8" x2="810" y2="244.8" stroke="#E2E8F0"/>
+<text x="106" y="249.8" font-family="Arial" text-anchor="end" font-size="15">30</text>
+<line x1="120" y1="186.4" x2="810" y2="186.4" stroke="#E2E8F0"/>
+<text x="106" y="191.4" font-family="Arial" text-anchor="end" font-size="15">40</text>
+<line x1="120" y1="128.0" x2="810" y2="128.0" stroke="#E2E8F0"/>
+<text x="106" y="133.0" font-family="Arial" text-anchor="end" font-size="15">50</text>
+<line x1="120" y1="420" x2="810" y2="420" stroke="#334155" stroke-width="2"/>
+<rect x="155.9" y="332.4" width="66.2" height="87.6" fill="#287D92" rx="3"/>
+<text x="189.0" y="322.4" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">15</text>
+<rect x="293.9" y="291.5" width="66.2" height="128.5" fill="#287D92" rx="3"/>
+<text x="327.0" y="281.5" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">22</text>
+<rect x="431.9" y="314.9" width="66.2" height="105.1" fill="#287D92" rx="3"/>
+<text x="465.0" y="304.9" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">18</text>
+<rect x="569.9" y="239.0" width="66.2" height="181.0" fill="#287D92" rx="3"/>
+<text x="603.0" y="229.0" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">31</text>
+<rect x="707.9" y="268.2" width="66.2" height="151.8" fill="#287D92" rx="3"/>
+<text x="741.0" y="258.2" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">26</text>
+<text x="189.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">C1</text>
+<text x="327.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">C2</text>
+<text x="465.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">C3</text>
+<text x="603.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">C4</text>
+<text x="741.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">C5</text>
+<text x="465" y="500" text-anchor="middle" font-family="Arial" font-size="17">Cooperative</text>
+</svg>

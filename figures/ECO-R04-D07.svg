@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Unemployment by selected district</title>
+<desc id="desc">Synthetic Economics class data: North 14 %, East 11 %, South 20 %, West 16 %, Central 9 %</desc>
+<rect width="900" height="560" fill="#FFFFFF"/>
+<text x="56" y="60" font-family="Arial" font-size="27" fill="#102C50" font-weight="bold">Unemployment by selected district</text>
+<text x="56" y="95" font-size="16" font-family="Arial" fill="#555">Illustrative classroom data — not official statistics · Units: %</text>
+<line x1="120" y1="420.0" x2="810" y2="420.0" stroke="#E2E8F0"/>
+<text x="106" y="425.0" font-family="Arial" text-anchor="end" font-size="15">0</text>
+<line x1="120" y1="361.6" x2="810" y2="361.6" stroke="#E2E8F0"/>
+<text x="106" y="366.6" font-family="Arial" text-anchor="end" font-size="15">6</text>
+<line x1="120" y1="303.2" x2="810" y2="303.2" stroke="#E2E8F0"/>
+<text x="106" y="308.2" font-family="Arial" text-anchor="end" font-size="15">12</text>
+<line x1="120" y1="244.8" x2="810" y2="244.8" stroke="#E2E8F0"/>
+<text x="106" y="249.8" font-family="Arial" text-anchor="end" font-size="15">18</text>
+<line x1="120" y1="186.4" x2="810" y2="186.4" stroke="#E2E8F0"/>
+<text x="106" y="191.4" font-family="Arial" text-anchor="end" font-size="15">24</text>
+<line x1="120" y1="128.0" x2="810" y2="128.0" stroke="#E2E8F0"/>
+<text x="106" y="133.0" font-family="Arial" text-anchor="end" font-size="15">30</text>
+<line x1="120" y1="420" x2="810" y2="420" stroke="#334155" stroke-width="2"/>
+<rect x="155.9" y="283.7" width="66.2" height="136.3" fill="#287D92" rx="3"/>
+<text x="189.0" y="273.7" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">14</text>
+<rect x="293.9" y="312.9" width="66.2" height="107.1" fill="#287D92" rx="3"/>
+<text x="327.0" y="302.9" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">11</text>
+<rect x="431.9" y="225.3" width="66.2" height="194.7" fill="#287D92" rx="3"/>
+<text x="465.0" y="215.3" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">20</text>
+<rect x="569.9" y="264.3" width="66.2" height="155.7" fill="#287D92" rx="3"/>
+<text x="603.0" y="254.3" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">16</text>
+<rect x="707.9" y="332.4" width="66.2" height="87.6" fill="#287D92" rx="3"/>
+<text x="741.0" y="322.4" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold">9</text>
+<text x="189.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">North</text>
+<text x="327.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">East</text>
+<text x="465.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">South</text>
+<text x="603.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">West</text>
+<text x="741.0" y="448" text-anchor="middle" font-family="Arial" font-size="16" fill="#334155">Central</text>
+<text x="465" y="500" text-anchor="middle" font-family="Arial" font-size="17">District</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" role="img">
+<title>Market schedules</title><desc>Demand and supply quantities by unit price; supplied values are printed beside their marks.</desc>
+<rect width="900" height="530" fill="#ffffff"/>
+<rect x="0" y="0" width="900" height="11" fill="#182b48"/>
+<text x="54" y="68" font-size="31" font-weight="700" fill="#192b43" font-family="Arial">Market schedules</text>
+<text x="54" y="104" font-size="19" fill="#52667a" font-family="Arial">Demand and supply quantities by unit price</text>
+<text x="62" y="160" font-size="19" font-weight="bold" fill="#192b43" font-family="Arial">Price</text>
+<text x="340" y="160" font-size="19" font-weight="bold" fill="#182b48" font-family="Arial">Demand Qd</text>
+<text x="630" y="160" font-size="19" font-weight="bold" fill="#192b43" font-family="Arial">Supply Qs</text>
+<rect x="44" y="175" width="810" height="54" fill="#f1f5f9"/>
+<text x="62" y="211" font-size="23" fill="#1e293b" font-family="Arial">₦10</text>
+<text x="355" y="211" font-size="23" fill="#1e293b" font-family="Arial">80</text>
+<text x="648" y="211" font-size="23" fill="#1e293b" font-family="Arial">20</text>
+<rect x="44" y="242" width="810" height="54" fill="#ffffff"/>
+<text x="62" y="278" font-size="23" fill="#1e293b" font-family="Arial">₦20</text>
+<text x="355" y="278" font-size="23" fill="#1e293b" font-family="Arial">60</text>
+<text x="648" y="278" font-size="23" fill="#1e293b" font-family="Arial">30</text>
+<rect x="44" y="309" width="810" height="54" fill="#f1f5f9"/>
+<text x="62" y="345" font-size="23" fill="#1e293b" font-family="Arial">₦30</text>
+<text x="355" y="345" font-size="23" fill="#1e293b" font-family="Arial">40</text>
+<text x="648" y="345" font-size="23" fill="#1e293b" font-family="Arial">40</text>
+<rect x="44" y="376" width="810" height="54" fill="#ffffff"/>
+<text x="62" y="412" font-size="23" fill="#1e293b" font-family="Arial">₦40</text>
+<text x="355" y="412" font-size="23" fill="#1e293b" font-family="Arial">20</text>
+<text x="648" y="412" font-size="23" fill="#1e293b" font-family="Arial">50</text>
+<text x="54" y="504" font-size="15" fill="#64748b" font-family="Arial">Economics · Synthetic instructional dataset</text></svg>
